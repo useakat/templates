@@ -1,0 +1,560 @@
+*.--  This file contains the default version of every bank needed to run
+*.--  Any card in this file is over-ridden if it appears in the user's cards
+*.PRINT
+*DO VERS -iF    #. Database version
+ 3.0
+*DO NEUT        #. Default to electron and muon neutrinos (and anti-)
+   12  -12  14  -14
+#. Was 1 2 for bebc
+*DO PDFL -iI    #. Default PDFLIB group and set (GRV98LO); third number is obsolete
+ 5 12 1
+*DO BAMN
+    'BMNL' 'BAVH'
+*DO BAMX
+    'BMXL' 'BAVH'
+*DO BMNL
+    'bartol98lo_min.flux'
+*DO BMXL
+    'bartol98lo_max.flux'
+*DO BAVH
+    'bartol96hi.flux'
+*DO HOAV
+   'HOLO' 'HOMI' 'HOHI'
+*DO HOMN
+   'HOLO' 'HOMI' 'HOHI'
+*DO HOMX
+   'HOLO' 'HOMI' 'HOHI'
+*DO H3MN
+   'HOLO' 'HO3D'
+*DO H3AV
+   'HOLO' 'HO3D'
+*DO H3MX
+   'HOLO' 'HO3D'
+*DO HOLO
+   'honda96lo.flux'
+*DO HOMI
+   'honda97mid.flux'
+*DO HOHI
+   'honda96hi.flux'
+*DO HO3D
+   'honda3d.flux'
+*DO IMMN     #. Dummy entries for IMB fluxes, which come from block data
+*DO IMMX
+*DO IMAV
+*DO ROMB     #. Requested precision for numerical integration
+  3.0E-3
+#. Define composition for rock (102 is the internal value for the Propmu package)
+*DO SKRK
+   'SKRK'  102
+#. Define atoms, giving the number of neutrons and protons, their binding energies and
+#. Fermi momenta
+*DO ATOM
+ 'SKRK' 'X' 11  22
+   0  0
+*DO ATOM
+ 'OXYG' 'O' 8 16        #. Atomic number 8, Mass number 16
+    1  1                #. One "shell" for proton and neutron
+        27. 225. 8     #. 8 protons with Ebind=27 MeV, p_fermi=225 MeV
+        27. 225. 8     #. Ditto for neutrons
+*DO ATOM
+ 'DEUT' 'D' 1  2
+   1   1
+        0.  0. 1
+        0.  0. 1
+*DO ATOM
+ 'HYDR' 'H' 1  1        #. Atomic number 1, Mass number 1
+    0  0                #. No nuclear shells
+*DO ATOM
+ 'VACU' '0' 0 0
+    0  0
+*DO ATOM
+ 'IRON' 'Fe' 26  56
+    1  1
+       34.  258.  26  #. 26 protons
+       34.  258.  30  #. 30 neutrons
+*DO ATOM
+ 'CARB'  'C' 6 12
+    1  1
+       25.  220.  6
+       25.  220.  6
+#. Define macroscopic materials
+#. Vacuum
+*DO MATE
+ 'VACU'
+    0.00  1
+        'VACU' 1
+#. Canonical rock
+*DO MATE
+ 'SKRK'
+   2.65  1
+    'SKRK' 1
+#. Water
+*DO MATE 
+ 'H2O'  
+    1.0  2              #. Density 1.0 g/cm^3; two constituent atom types
+        'OXYG' 1        #. One oxygen atom
+        'HYDR' 2        #. Two hydrogen atoms
+#. DHO
+*DO MATE
+ 'D2O'
+    1.0  3
+        'OXYG' 1
+        'DEUT' 1
+        'HYDR' 1
+#. Solid iron
+*DO MATE
+ 'IRON'
+     7.87  1
+        'IRON'  1
+#.  Minerva Scintillator (CH_1.7)
+*DO MATE
+ 'PSCN'
+     1.04  2
+        'CARB'  10
+        'HYDR'  17
+#. Default detector: SK50.  By default the program will generate events up to 50 cm outside
+#. the black sheet.
+*DO DETE
+   'SK50'
+#. Target detector specifications.  The first word on the TARG card is selected by the
+#. DETE card.  For example, using a DETE 'SKAL' card tells the program to find the TARG
+#. card whose first word is SKAL.
+#.
+#. HCU: Pure Hydrogen detector
+*DO TARG
+ 'HCU' 1
+    'CUBE' 50. 50. 50. 1
+        'HYDR'  1
+#. SKAL: SK full water volume
+*DO TARG
+ 'SKAL' 1
+    'CYLI' 1965. 1965. 2070. 2
+        'H2O'  0.99985
+        'D2O'  0.00015
+#. 1KFV: 1kton fiducial volume
+*DO TARG
+ '1KFV' 1
+    'CYLI' 300. 300. 300. 2
+        'H2O'  0.99985
+        'D2O'  0.00015
+#. SKFV: Generate events in the 2m SK fiducial volume
+*DO TARG
+  'SKFV' 1
+     'CYLI' 1490. 1490. 1610.  2
+          'H2O' 0.99985
+          'D2O' 0.00015
+#. SK50: Generate events to 50 cm outside inner detector surface by default
+*DO TARG
+   'SK50' 1
+        'CYLI' 1740. 1740. 1860. 2
+             'H2O' 0.99985
+             'D2O' 0.00015
+#. SKID: Generate events in SK inner detector
+*DO TARG
+   'SKID'  1
+        'CYLI' 1690. 1690. 1810. 2
+             'H2O' 0.99985
+             'D2O' 0.00015
+#. SKOD: Generate event in OD, insensitive region, and outer 25cm of ID
+*DO TARG
+ 'SKOD' 2
+    'CYLI' 1665. 1665. 1785. 1
+        'VACU' 1.00
+    'CYLI' 1965. 1965. 2070. 2
+        'H2O'  0.99985
+        'D2O'  0.00015
+#. IMB3: Generate events in IMB water volume
+*DO TARG
+ 'IMB3' 1
+   'CUBE'  1208. 892. 924. 1
+      'H2O ' 1.00
+#. UNO: Generate events in Uno water volume
+*DO TARG
+ 'UNO ' 1
+    'CUBE'  9000.  3000.  3000.  2
+        'H2O'  0.99985
+        'D2O'  0.00015
+#. UNOC: Central Uno water volume
+*DO TARG
+  'UNOC' 1
+    'CUBE' 2500.  2500.  2500.  1
+       'H2O'  1.00
+#. LENS: Low energy neutrino superbeam; 1kton target
+*DO TARG
+  'LENS'  1
+    'CUBE'  500.  500.  500.  2
+       'H2O ' 0.99985
+       'D2O ' 0.00015
+#. MINERvA: 1 ton (plastic scint) target
+*DO TARG
+  'MINR'  1
+    'CUBE'  49.35  49.35  49.35  1
+       'PSCN' 1.000
+#. FREJus: 40kt target
+*DO TARG
+   'FREJ' 1
+     'CUBE'  1710. 1710.  1710.  2
+       'H2O ' 0.99985
+       'D2O ' 0.00015
+#. 2km fiducial volume
+*DO TARG
+   '2KFV' 1
+     'CYLI'  300.0  300.0  1000.0  2
+       'H2O'  0.99985
+       'D2O'  0.00015
+#. HyperK (1 megaton cube)
+*DO TARG
+   'HYPK' 1
+     'CUBE' 500.  500.  500.  2
+        'H2O' 0.99985
+        'D2O' 0.00015
+#. Generic Iron calorimeter (1 meter cubed, pure iron-56)
+*DO  TARG
+   'FECU'  1
+     'CUBE'  50.  50.  50.  1
+        'IRON'  1.000
+#.
+#. Best estimate CKM matrix - giving three angles rather than nine
+#. components ensures that it's unitary
+#.
+*DO QCKM                
+  12.68  0.178  2.235   #. Mixing angles in degrees (th_12, th_13, th_23)
+#.  0.9751  0.2215  0.0035  Vud  Vus  Vub
+#.  0.2210  0.9743  0.0410  Vcd  Vcs  Vcb
+#.  0.0090  0.0400  0.9991  Vtd  Vts  Vtb
+*DO QQED
+  0.2319  1.16639e-11    #. sin^2(theta_W) and G_f (in MeV^-2)
+*DO QFRM
+#. Vector and axial form factor masses, in MeV/c^2
+#. Third number is axial mass for resonant 1-pi reactions
+#. Fourth number is axial mass for resonance multi-pi reactions
+#. The fifth number is for coherent/diffractive reactions
+  840.  1030.  1100.  1300.  1030.
+#. Quasi-elastic vector form-factor model
+#. Add this QEVF card (or uncomment) to use Bosted model
+#. The model name given on QEVF is the name of another card
+#. containing the fit names.  Each fit name is the name of
+#. yet another card containing the fit parameters.
+#. For Gep, Gmp, and Gmn, the parameters are coefficients of
+#. a polynomial in SQRT(Qsq) in the denominator (replaces dipole expression)
+#. For Gen, the two parameters are "a" and "b" parameters used in all
+#. fits to Gen.
+*DO QEVF
+#. BOST is a model name
+  'BOST'
+*DO BOST
+#. The model card (BOST) lists the names of the fits used in the model
+#. The last two letters indicate the specific form factor
+  'BOEP' 'BOMP' 'BOEN' 'BOMN'
+#. Each of the next four cards is a fit to one of the four Sachs form factors
+#. The fit is a polynomial in SQRT(Qsq)
+*DO BOEP
+  0.62 0.68 2.80 0.83
+*DO BOMP
+  0.35 2.44 0.50 1.04 0.34
+*DO BOMN
+  -1.74 9.29 -7.63 4.63
+#. The Gen parameterization is different from the others
+*DO BOEN
+  1.25 18.3
+*DO QFKR
+  1.05E+06               #. Omega parameter in FKR model
+*DO RSBT
+#. Resonance width threshold correction
+#. If =1, correction only applies below nominal mass
+#. If =2, correction applies for all energies
+  2
+*DO PROC                 #. Processes to simulate (default ALL)
+    'ELAS' 'CCQE' 'NCQE' 'CCRS' 'NCRS' 'CCDI' 'NCDI' 'CCCO' 'NCCO' 'CCDF' 'NCDF'
+#. Tell resonant reactions to cut off at the threshold given on the DUTH card
+*DO DUAL
+#. Kinematic parameters for duality
+*DO DUTH
+#.  Wthreshold(MeV)   Wsaturation(MeV)  Charm mass           
+#.  for deep-inel     for DIS           for deep-inel(MeV)   
+    1700.             2000.               1300.
+*DO DUPO
+#. Parameterize the turn-on of DIS; sigma_eff = sigmaDIS * F(W):
+#. F(W) = 0  if W < Wlo
+#. F(W) = p0 if Wlo < W < Whi
+#. F(W) = p0 + p1*X(W) if Whi < W < 2 GeV, where X(W) = (W-Whi)/(2.0 - Whi)
+#. F(W) = 1.0 if W > 2 GeV
+#.  Wlo          Whi       p0     p1
+    1700.0      1700.0     0.0  0.38223
+*DO RSTH
+#.   W for start of          W for end of
+#.   Resonance cutoff        resonance cutoff
+        2000.                   2000.
+#. Resonance interference mode
+#. 1 = all channels interfere coherently
+#. 2 = 1pi channels interfere coherently, others incoherent
+#. 3 = all channels are added incoherently
+*DO RSIF
+  2
+*DO DUCO
+#. Constants for Bodek/Yang duality model (in GeV, where dimensioned)
+#.   A      B     C1V    C2V   Csea     N   Q2Cut  Q2MinR  xMinR xMaxR  cLowR
+   0.419  0.223  0.544  0.431  0.380  1.011  0.8    0.35   0.05   0.7   3.207
+*DO DUAV
+#. Constants for axial vector extension to Bodek/Yang
+#.  gA         mA         Z
+  -1.267      1050.      0.5
+*DO FZTI
+#. Hadron formation time in fermi/c
+   2.0
+#. Neutrino-electron reactions
+*DO ELCH
+#.  ID     in-nu    target    lepton   out-nu
+    98     12        11        11        12
+    98    -12        11        11       -12
+    99     14        11        13        12
+*DO COPA
+#.  First number is for parameterization of nuclear radius; r(fm) = word1 * a**1/3
+#.  Second number is radius of bare nucleon (in fm)
+#.  Third number is set to 1 if you want only the simplified exponential
+#.  absorption in the nucleus rather than propagation through the nuclear MC
+    1.03   0.8   1  
+*DO COCH
+#.  ID     f_pi/m_pi    nu_i    nu_f    mes_f
+    96       0.93        12      12      111
+    97       0.93        12      11      211
+    97       0.93       -12     -11     -211
+*DO QECH
+#.  ID     Up_ckm  Dn_ckm  Nu_i     targ   lep_f   Nucl_f   
+    1       1        1      12      2112    11      2212
+    1       1        1     -12      2212   -11      2112
+    2       1        1      12      2112    12      2112
+    2       1        1      12      2212    12      2212
+    2       1        1     -12      2112   -12      2112
+    2       1        1     -12      2212   -12      2212
+   95       1        2     -12      2212   -11      3122
+   95       1        2     -12      2112   -11      3112
+   95       1        2     -12      2212   -11      3212
+*DO DUCH
+#.  ID   Nu_i  targ   lep_f
+    91    12   2212    11
+    91    12   2112    11
+    91   -12   2212   -11
+    91   -12   2112   -11
+    92    12   2212    12
+    92    12   2112    12
+    92   -12   2212   -12
+    92   -12   2112   -12
+#. Description of resonance reactions
+*DO RSCH
+#.  ID  IsoPar Branch Nu_i targ   Lep_f Bary_f  N_f X_f
+     3    1      1     12  2212    11   2212     1  211
+     4    2      0     12  2112    11   2212     1  111
+     4    2      1     12  2112    11   2212     1  111
+     5    3      0     12  2112    11   2112     1  211
+     5    3      1     12  2112    11   2112     1  211
+     6    2      0     12  2212    12   2212     1  111
+     6    2      1     12  2212    12   2212     1  111
+     7    3      0     12  2212    12   2112     1  211
+     7    3      1     12  2212    12   2112     1  211
+     8    4      0     12  2112    12   2112     1  111
+     8    4      1     12  2112    12   2112     1  111
+     9    5      0     12  2112    12   2212     1 -211
+     9    5      1     12  2112    12   2212     1 -211
+    10    1      1    -12  2112   -11   2112     1 -211
+    11    4      0    -12  2212   -11   2112     1  111
+    11    4      1    -12  2212   -11   2112     1  111
+    12    5      0    -12  2212   -11   2212     1 -211
+    12    5      1    -12  2212   -11   2212     1 -211
+    13    2      0    -12  2212   -12   2212     1  111
+    13    2      1    -12  2212   -12   2212     1  111
+    14    3      0    -12  2212   -12   2112     1  211
+    14    3      1    -12  2212   -12   2112     1  211
+    15    4      0    -12  2112   -12   2112     1  111
+    15    4      1    -12  2112   -12   2112     1  111
+    16    5      0    -12  2112   -12   2212     1 -211
+    16    5      1    -12  2112   -12   2212     1 -211
+#. Delta+pi production
+    17    6      2     12  2212    11   2214     1  211    
+    18    7      2     12  2212    11   2224     1  111
+    19    8      2     12  2112    11   2214     1  111
+    20    9      2     12  2112    11   2114     1  211
+    21   10      2     12  2112    11   2224     1 -211
+    22    8      2     12  2212    12   2214     1  111
+    23    9      2     12  2212    12   2114     1  211
+    24   10      2     12  2212    12   2224     1 -211
+    25   11      2     12  2112    12   2214     1 -211
+    26   12      2     12  2112    12   2114     1  111
+    27   13      2     12  2112    12   1114     1  211
+    28   14      2    -12  2112   -11   2114     1 -211
+    29   15      2    -12  2112   -11   1114     1  111
+    30   11      2    -12  2212   -11   2214     1 -211
+    31   12      2    -12  2212   -11   2114     1  111
+    32   13      2    -12  2212   -11   1114     1  211
+    33    8      2    -12  2212   -12   2214     1  111
+    34    9      2    -12  2212   -12   2114     1  211
+    35   10      2    -12  2212   -12   2224     1 -211
+    36   11      2    -12  2112   -12   2214     1 -211
+    37   12      2    -12  2112   -12   2114     1  111
+    38   13      2    -12  2112   -12   1114     1  211
+#. Rho production
+    39   1       3     12  2212    11   2212     1  213
+    40   2       3     12  2112    11   2212     1  113
+    41   3       3     12  2112    11   2112     1  213
+    42   2       3     12  2212    12   2212     1  113
+    43   3       3     12  2212    12   2112     1  213
+    44   4       3     12  2112    12   2112     1  113
+    45   5       3     12  2112    12   2212     1 -213
+    46   1       3    -12  2112   -11   2112     1 -213
+    47   4       3    -12  2212   -11   2112     1  113
+    48   5       3    -12  2212   -11   2212     1 -213
+    49   2       3    -12  2212   -12   2212     1  113
+    50   3       3    -12  2212   -12   2112     1  213
+    51   4       3    -12  2112   -12   2112     1  113
+    52   5       3    -12  2112   -12   2212     1 -213
+#. Sigma+K production
+    53   1       4     12  2212    11   3222     1  321
+    54   2       4     12  2112    11   3212     1  321
+    55   3       4     12  2112    11   3222     1  311
+    56   2       4     12  2212    12   3212     1  321
+    57   3       4     12  2212    12   3222     1  311
+    58   4       4     12  2112    12   3212     1  311
+    59   5       4     12  2112    12   3112     1  321
+    60   1       4    -12  2112   -11   3112     1  311
+    61   4       4    -12  2212   -11   3212     1  311
+    62   5       4    -12  2212   -11   3112     1  321
+    63   2       4    -12  2212   -12   3212     1  321
+    64   3       4    -12  2212   -12   3222     1  311
+    65   4       4    -12  2112   -12   3212     1  311
+    66   5       4    -12  2112   -12   3112     1  321
+#.Eta production
+    67  16       5     12  2112    11   2212     1  221
+    68  16       5     12  2212    12   2212     1  221
+    69  16       5     12  2112    12   2112     1  221
+    70  16       5    -12  2212   -11   2112     1  221
+    71  16       5    -12  2212   -12   2212     1  221
+    72  16       5    -12  2112   -12   2112     1  221
+#.Lambda+K production
+    73  16       6     12  2112    11   3122     1  321
+    74  16       6     12  2212    12   3122     1  321
+    75  16       6     12  2112    12   3122     1  311
+    76  16       6    -12  2212   -11   3122     1  311
+    77  16       6    -12  2212   -12   3122     1  321
+    78  16       6    -12  2112   -12   3122     1  311
+#.Two pion production
+    79  17       7     12  2112    11   2212     2  211 -211
+    80  18       7     12  2112    11   2212     2  111  111
+    81  17       7     12  2212    12   2212     2  211 -211
+    82  18       7     12  2212    12   2212     2  111  111
+    83  17       7     12  2112    12   2112     2  211 -211
+    84  18       7     12  2112    12   2112     2  111  111
+    85  17       7    -12  2212   -11   2112     2  211 -211
+    86  18       7    -12  2212   -11   2112     2  111  111
+    87  17       7    -12  2212   -12   2212     2  211 -211
+    88  18       7    -12  2212   -12   2212     2  111  111
+    89  17       7    -12  2112   -12   2112     2  211 -211
+    90  18       7    -12  2112   -12   2112     2  111  111
+#.Gamma production
+    93  19       8     12  2112    11   2212     1  22
+    94  19       8     12  2112    12   2112     1  22
+    94  19       8     12  2212    12   2212     1  22
+    93  19       8    -12  2212   -11   2112     1  22
+    94  19       8    -12  2112   -12   2112     1  22
+    94  19       8    -12  2212   -12   2212     1  22
+*DO QEPS
+#. Pseudo-scalar form factor paramaters: model, f_pi, g_nnpi, lambda_nnpi
+  'LATT' 92.5 13.13 750.
+#. Axial form factor value for q^2=0 and exponent of the axial form factor
+*DO QEAX
+    1.2571  2.0
+*DO RSRS
+#. nResonances     nDecayModes
+      18               8
+#.I L J N DK Mass  Wid  Breit  1pi  pi+Del rho   SigK  eta   LamK  >1pi  gamma
+  2 1 3 0  1 1232. 124. 0.928 0.9944 0.00  0.00  0.00  0.00  0.00  0.00  0.0056
+  1 0 1 1 -1 1535. 150. 1.130  0.475 0.00  0.02  0.00  0.425 0.00  0.075 0.005
+  1 2 3 1 -1 1520. 120. 0.939  0.55  0.20  0.20  0.00  0.00  0.00  0.045 0.005
+  1 0 1 1  1 1650. 150. 1.033  0.70  0.05  0.09  0.029 0.03  0.07  0.05  0.001
+  1 2 3 1 -1 1700. 100. 1.113  0.10  0.45  0.05  0.00  0.05  0.05  0.30  0.00
+  1 2 5 1  1 1675. 150. 0.956  0.45  0.55  0.00  0.00  0.00  0.00  0.00  0.00
+  2 0 1 1  1 1620. 140. 1.026  0.25  0.45  0.16  0.00  0.00  0.00  0.14  0.00
+  2 2 3 1  1 1700. 300. 0.769  0.15  0.45  0.40  0.00  0.00  0.00  0.00  0.00
+  1 1 1 2  1 1440. 350. 0.987  0.65  0.25  0.025 0.00  0.00  0.00  0.075 0.00
+  2 1 3 2  1 1600. 350. 0.811  0.175 0.55  0.05  0.00  0.00  0.00  0.225 0.00
+  1 1 3 2  1 1720. 150. 1.169  0.15  0.00  0.77  0.00  0.00  0.08  0.00  0.00
+  1 3 5 2  1 1680. 130. 0.902  0.65  0.10  0.09  0.00  0.00  0.00  0.16  0.00
+  2 1 1 2 -1 1910. 300. 1.219  0.225 0.05  0.05  0.00  0.00  0.00  0.675 0.00
+  2 1 3 2  1 1920. 250. 1.172  0.20  0.20  0.00  0.05  0.00  0.00  0.55  0.00
+  2 3 5 2 -1 1905. 350. 0.618  0.10  0.20  0.70  0.00  0.00  0.00  0.00  0.00
+  2 3 7 2  1 1950. 240. 0.770  0.40  0.30  0.05  0.00  0.00  0.00  0.25  0.00
+  1 1 1 2  1 1710. 100. 1.294  0.15  0.275 0.15  0.025 0.00  0.15  0.25  0.00
+  1 3 7 2  1 1970. 325. 0.600  0.05  0.00  0.05  0.10  0.00  0.10  0.70  0.00
+*DO RSDK
+#. Properties of the decay modes listed above, for Breit-Wigner normalization
+#. There should be one line for each decay mode (nDecayModes)
+#.   N      pi    epsilon  Delta   rho    Sigma    K    eta   Lambda   gamma
+     1      1        0       0      0       0      0     0      0        0
+     0      1        0       1      0       0      0     0      0        0
+     1      0        0       0      1       0      0     0      0        0
+     0      0        0       0      0       1      1     0      0        0
+     1      0        0       0      0       0      0     1      0        0
+     0      0        0       0      0       0      1     0      1        0
+     1      0        1       0      0       0      0     0      0        0
+     1      0        0       0      0       0      0     0      0        1
+*DO RSIS
+    0.000000  1.732951
+   -0.577350  0.816497
+    0.816497  0.577350
+    0.577350  0.816497
+   -0.816497  0.577350
+    0.000000 -1.095445 
+    0.000000  1.341641
+   -0.577350  0.258199
+    0.408248 -0.730297
+    0.707107  0.632456
+    0.408248  0.730297
+   -0.577350 -0.258199
+   -0.707107  0.632456
+    0.000000  1.095445
+    0.000000 -1.341641
+    1.000000  0.000000 
+    0.577350  0.000000
+    0.816497  0.000000
+    0.000000  1.000000
+*DO LUMA     #. Adjust Lund particle masses more precisely
+    11      0.510999
+    13    105.658389
+    15   1777.1
+   211    139.56995
+   111    134.9764
+  2212    938.27231
+  2112    939.56563
+*.   Fraction(a1 to charged) (K0 to Ks) (K0bar to Ks) ( K* to K0 pi-)
+*. next are br's of tau . First is electron . If not 1. they are renorm.
+*. look at documentation for decay modes definition
+*DO TAUB   #. Branching ratio data for tauola
+       0.5                  0.5         0.5      0.6667
+ 1.     0.9732  0.6217  1.4221  1.0180
+ 0.0405 0.0781  0.2414  0.0601  0.0281
+ 0.0045 0.0010  0.0062  0.0096  0.0169
+ 0.0056 0.0045  0.0219  0.0180  0.0096
+ 0.0088 0.0146
+#. Tau polarization model: 0=No polarization; 1=fixed (tau- -1, tau+ +1); 2=variable
+*DO TAUP
+   2
+#. Use new FSI model (no SOPN card -> use old model)
+*DO SOPN
+#. Pionless delta decay; probability for Delta++/Delta- and Delta+/Delta0
+#. Turned off by default
+*DO RSPL
+   0.0  0.0
+#. Elementary pion absorption cross-section parameters
+#. Cross-section per nucleon is cross_section(x) = CONST * exp(-((kinetic-MEAN)/width)**2)
+#. where width = SIGMA - (kinetic-MEAN)*SLOPE
+#. Data are given for pi+, pi0, pi-, in that order
+*DO PABS  
+#.   CONST   MEAN   SIGMA   SLOPE
+      55.0   130.    25.0    0.5
+      38.5   130.    25.0    0.5
+      55.0   130.    25.0    0.5
+#. Default parameters for the HBOOK routine HQUAD (used for smooth fit of beam spectra)
+#. Parameters (in order) are MODE, SENSIT, SMOOTH (see HBOOK documentation)
+*DO HQDP
+   3  0.05  0.5
+*FINISH
+

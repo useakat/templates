@@ -1,0 +1,8 @@
+%#BIBTEX jbibtex intro
+\documentclass[epj, nopacs]{svjour}
+\include{begin}
+\section{Introduction}
+\label{intro}
+Now that the large
+\include{biblio}
+\include{end}

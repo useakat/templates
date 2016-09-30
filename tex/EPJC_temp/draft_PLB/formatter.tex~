@@ -1,0 +1,88 @@
+\begin{frontmatter}
+
+%% Title, authors and addresses
+
+%% use the tnoteref command within \title for footnotes;
+%% use the tnotetext command for the associated footnote;
+%% use the fnref command within \author or \address for footnotes;
+%% use the fntext command for the associated footnote;
+%% use the corref command within \author for corresponding author footnotes;
+%% use the cortext command for the associated footnote;
+%% use the ead command for the email address,
+%% and the form \ead[url] for the home page:
+%%
+\preprint{KEK-TH/1581, KIAS-P/12067}
+%\title{Determination of neutrino mass hierarchy with intermediate baseline reactor experiments}
+\title{Determination of mass hierarchy with medium baseline reactor
+ neutrino experiments}
+
+\author[add1]{Shao-Feng Ge\fnref{Shao-Feng}}
+\author[add2,add5]{Kaoru Hagiwara\fnref{Kaoru}}
+\author[add3]{Naotoshi Okamura\fnref{Naotoshi}}
+\author[add4,add5]{Yoshitaro Takaesu\fnref{Yoshitaro}}
+\fntext[Shao-Feng]{gesf02@gmail.com}
+\fntext[Kaoru]{kaoru.hagiwara@kek.jp}
+\fntext[Naotoshi]{nokamura@yamanashi.ac.jp}
+\fntext[Yoshitaro]{takaesu@kias.re.kr}
+
+\address[add1]{KEK Theory Center, Tsukuba, 305-0801, Japan}
+\address[add2]{KEK Theory Center and Sokendai, Tsukuba, 305-0801, Japan}
+\address[add3]{Faculty of Engineering, University of Yamanashi, Kofu,
+ Yamanashi, 400-8511, Japan}
+\address[add4]{Department of Physics and Astronomy, Seoul National
+ University, Seoul 151-742, Korea}
+\address[add5]{School of Physics, KIAS, Seoul 130-722, Korea}
+
+\begin{abstract}
+We study the sensitivity of future medium baseline
+reactor antineutrino experiments on the neutrino mass hierarchy. By using
+ the standard $\chi^2$ analysis, we find that the sensitivity
+depends strongly on the baseline length $L$ and the energy resolution $\left(\delta E/E\right)^2 =
+\left(a/\sqrt{E/MeV}\right)^2 + b^2$, where $a$ and $b$ parameterize the statistical
+ and systematic uncertainties, respectively. The optimal length is found to be $L \sim
+ 40-55$ km, the larger resolution the shorter optimal $L$.  The running time
+ needed to determine the mass hierarchy 
+depends strongly on the energy resolution. The 3$\sigma$ determination is 
+possible after 10 years of running with $a=3\%$ and $b=0.5\%$, 
+which can be reduced to 4 years if $a=2\%$ and $b=0.5\%$, for a 5 kton
+ detector (with 12\% weight fraction of free proton) placed at $L \sim 50$ km away
+ from a $20 \,{\rm GW_{th}}$ reactor. This type of experiment can measure the relevant
+ mixing parameters accurately, achieving
+$\delta \sin^22\theta_{12} \sim 4\times 10^{-3}, \delta (m_2^2-m_1^2) \sim 0.03\times 10^{-5} {\rm eV^2},$ and
+$\delta |m_3^2 -m_1^2| \sim 0.007\times 10^{-3} {\rm eV^2}$, after 5 years.
+
+% * $\Delta \chi^2$ vs. L distribution with large $\theta_{13}$ determined by
+%  Daya Bay and RENO experiments. \\
+
+% * After $25 kT*year$ exposure, the mass hierarchy could be determined with the significance of more
+%  than $4\sigma$ using the far detector at 50 km from the reactors if the
+%  $1.5\%$ level of energy resolution will be achieved.
+
+% * neutrino mixing parameters, $\sin^2 2\theta_{12}, \Delta m^2_{21}$ and
+%  $\Delta m^2_{31}$ could be measured with their uncertainties reduced to
+%  around $20\%$ of the current uncertainties after $25kT*year$ run with a $20
+%  GW_{th}$ reactor complex. \\
+
+% (* To determine the mass hierarchy, we have to distinguish the difference
+%  between the two hierarchies in both the lower and the higher energy region.)
+
+% (* The mass hierarchy cannot be determined with $6\%$ or worse energy
+%  resolution.)\\
+
+
+\end{abstract}
+
+%\begin{keyword}
+%% keywords here, in the form: keyword \sep keyword
+
+%% MSC codes here, in the form: \MSC code \sep code
+%% or \MSC[2008] code \sep code (2000 is the default)
+
+%\end{keyword}
+
+\end{frontmatter}
+
+%%
+%% Start line numbering here if you want
+%%
+% \linenumbers

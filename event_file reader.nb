@@ -1,0 +1,155 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      4702,        146]
+NotebookOptionsPosition[      3945,        120]
+NotebookOutlinePosition[      4549,        139]
+CellTagsIndexPosition[      4506,        136]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Clear", "[", "\"\<Global`*\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.518502639009798*^9, 3.518502647557569*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "SetDirectory", "[", "\"\</Users/yoshi/Desktop/tmp2/stop\>\"", "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.518500013438139*^9, 3.518500030609417*^9}, {
+  3.5185000725330267`*^9, 3.518500073321913*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"lhe", "=", 
+   RowBox[{"Import", "[", "\"\<10_unweighted_events.lhe\>\"", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"eventpos", "=", 
+   RowBox[{
+    RowBox[{"Position", "[", 
+     RowBox[{"lhe", ",", 
+      RowBox[{"{", "\"\<<event>\>\"", "}"}]}], "]"}], "//", "Flatten"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"pos", "=", 
+   RowBox[{"eventpos", "+", "1"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"lhe2", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"lhe", "[", 
+       RowBox[{"[", "#", "]"}], "]"}], "&"}], "/@", "pos"}], "//", 
+    "Flatten"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"aaa", "=", 
+   RowBox[{"StringSplit", "/@", "lhe2"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"weight", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"Take", "[", 
+       RowBox[{"#", ",", 
+        RowBox[{"{", 
+         RowBox[{"3", ",", "3"}], "}"}]}], "]"}], "&"}], "/@", "aaa"}], "//", 
+    "Flatten"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"weight2", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"StringSplit", "[", 
+       RowBox[{"#", ",", "\"\<E\>\""}], "]"}], "&"}], "/@", "weight"}], "//", 
+    "ToExpression"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"weights", "=", 
+  RowBox[{"Cases", "[", 
+   RowBox[{"weight2", ",", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"a_", ",", "b_"}], "}"}], "\[Rule]", 
+     RowBox[{"a", " ", 
+      RowBox[{"10", "^", "b"}]}]}]}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.5184989649450808`*^9, 3.5184989675636187`*^9}, {
+   3.5185000499780817`*^9, 3.518500061569669*^9}, {3.518500178443286*^9, 
+   3.518500179369398*^9}, {3.518500545308736*^9, 3.518500620322719*^9}, {
+   3.5185025777738237`*^9, 3.5185026232116613`*^9}, {3.5185026904620953`*^9, 
+   3.518502694536108*^9}, {3.5185030124685183`*^9, 3.518503027992429*^9}, 
+   3.518503128508531*^9, {3.518503205998711*^9, 3.518503207711734*^9}, {
+   3.5185035524866343`*^9, 3.518503598095536*^9}, {3.5185036741081142`*^9, 
+   3.51850367666049*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "0.00040524`", ",", "0.00040524`", ",", "0.00040524`", ",", "0.00040524`", 
+   ",", "0.00040524`", ",", "0.00040524`", ",", "0.00040524`", ",", 
+   "0.00040524`", ",", "0.00040524`", ",", "0.00040524`"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.518502654804839*^9, 3.518502699421015*^9, {3.518503018405076*^9, 
+   3.518503029427272*^9}, 3.518503129371154*^9, {3.518503208634634*^9, 
+   3.518503229395021*^9}, {3.51850357861333*^9, 3.51850360003271*^9}, 
+   3.518503679024809*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"cross", "=", 
+  RowBox[{"Total", "[", "weights", "]"}]}]], "Input",
+ CellChangeTimes->{{3.51850358053096*^9, 3.518503609886786*^9}}],
+
+Cell[BoxData["0.0040524`"], "Output",
+ CellChangeTimes->{{3.518503586520322*^9, 3.518503610771676*^9}, 
+   3.518503682257169*^9}]
+}, Open  ]]
+},
+WindowSize->{740, 752},
+WindowMargins->{{330, Automatic}, {48, Automatic}},
+PrivateNotebookOptions->{"VersionedStylesheet"->{"Default.nb"[8.] -> False}},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 28, \
+2013)",
+StyleDefinitions->FrontEnd`FileName[{$RootDirectory, "Users", "yoshi", 
+   "Library", "Mathematica", "SystemFiles", "FrontEnd", "StyleSheets"}, 
+  "MathNote_Natural.nb", CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 139, 2, 28, "Input"],
+Cell[699, 24, 243, 6, 28, "Input"],
+Cell[CellGroupData[{
+Cell[967, 34, 2111, 59, 148, "Input"],
+Cell[3081, 95, 523, 10, 46, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3641, 110, 156, 3, 28, "Input"],
+Cell[3800, 115, 129, 2, 28, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

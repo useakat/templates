@@ -1,0 +1,38 @@
+\onecolumn
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|} \hline
+\multicolumn{5}{|c|}{ Numerical Integration } & \multicolumn{2}{c|}{ Event Generation } \\ 
+\hline Case & Estimate ( error ) & CPU time & It-1 & It-2 & Efficency & CPU time \\ \hline
+  1)  & 4.528033 ($\pm$0.002230)~$\times 10^{-2}$ & 3.43 sec & 10 & 26 & 75.8 \% & 0.40 sec \\
+\hline
+  2)  & 4.527550 ($\pm$0.002255)~$\times 10^{-2}$ & 3.59 sec & 10 & 27 & 69.4 \% & 0.41 sec \\
+\hline
+  3)  & 4.521658 ($\pm$0.006430)~$\times 10^{-2}$ & 10.67 sec & 10 & 100 & 11.6 \% & 1.88 sec
+\\ \hline \end{tabular}
+\par
+\vskip 1.0cm
+\begin{minipage}{12.0cm}
+Table~1. The results for three cases of integration parameters: case 1)
+is by the old algorithm. Cases 2) and 3) are by the
+new version with the importance and uniform samplings for the gentle
+variable, respectively. It-1 and It-2 are the numbers of iterations
+for the grid optimization and the integration steps, respectively.
+The generation efficiency is defined to be the ratio of the number of accepted events to that
+ of trials.
+The {\small CPU} time for generation is the computing time consumed to generate 10k
+events and calculate their four-momentum vectors. 
+\end{minipage}
+\end{center}
+\par
+\vskip 4.0cm
+\centerline{\Large\bf Figure Captions}
+\par\vskip 1.0cm
+\begin{center}
+\begin{minipage}{8.0cm}
+\begin{description}
+\item{Figure 1.} Main program of the test run.
+\item{Figure 2.} Function program of the test run.
+\end{description}
+\end{minipage}
+\end{center}
+\par

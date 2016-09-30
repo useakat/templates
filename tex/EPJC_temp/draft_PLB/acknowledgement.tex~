@@ -1,0 +1,15 @@
+\documentclass[final,5p,times,twocolumn]{elsarticle}
+\include{begin}
+\vspace{2em}
+\noindent {\bf Acknowledgements}
+\vspace{1em}
+
+We wish to thank Jun Cao, Jarah Evslin, Soo-Bong Kim, Serguey
+Petcov, Xin Qian, Yifang Wang and Xinmin Zhang for
+valuable discussions on reactor neutrino experiments. S.F.G. is grateful to
+the Center for High Energy Physics of Tsinghua University, where part of
+this work was done, especially Prof. Hong-Jian He for kind support. S.F.G.
+also would like to thank JSPS for granting a fellowship to work at KEK. Y.T. would like to
+thank the members of KEK for
+their warm hospitality, where a part of this work was done.
+\include{end}

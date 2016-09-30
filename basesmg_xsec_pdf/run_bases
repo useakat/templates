@@ -1,0 +1,80 @@
+#!/bin/sh -f
+    
+if [ $# -ge 1 ]    
+ then
+  tag="_$1"  
+else
+  tag="_test"
+fi    
+#./bases <<END_OF_DATA
+./bases <<END_OF_DATA 1> log_bases${tag} 2>&1
+C*************************************************
+C Input section for Spring part.
+C*************************************************
+C  HELP =  for PRINT command help
+C  GETB =  (0,other)=(Do BS,Read from FT23)
+C  PUTB =  (0,other)=(No BS,BS to FT23)
+C  DOSP =  (0,1)=(No SP,SP)
+C  PHST =  (0,1)=(No Hist,Hist)
+C  PINF =  (0,1)=(No Print,Print)
+C  PLOG =  (0,1)=(Np Print,Print) BS info
+C  HSTF = histogram file
+C  INF  = input file  for GETB .ne. 0
+C  OUTF = output file for PUTB .ne. 0
+  HELP
+  HSTF gg2g_t${tag}.tdr
+  OUTF gg2g_t${tag}.bases
+  EVTF gg2g_t${tag}.evdata
+C*************************************************
+C Bases Integration Parameters
+C*************************************************
+C  NCAL =  NCALL
+C  ITM1 =  ITMAX1
+C  ITM2 =  ITMAX2
+  NCAL 10000
+  ACC1 0.05D0
+  ACC2 0.01D0
+  ITM1 5
+  ITM2 5
+C*************************************************
+C Standard Model Parameters
+C*************************************************
+C  ALFI = 1/alpha(m_Z)
+C  ALFS = alpha_s(m_Z)
+C  AMSW = m_W
+C  AMSZ = m_Z
+C  AMSH = m_H
+C  AMST = m_t
+  ALFI 128.9D0
+  ALFS 0.1185D0
+  S2W  0.2312D0
+  AMSW 80.33D0
+  AMSZ 91.188D0
+  AMSH 120.D0
+  AMST 174.30
+C*************************************************
+C SFSF Parameters
+C*************************************************
+C  LP1 = type of beam1
+C  LP2 = type of beam2
+c     lpp  = -1 (antiproton), 0 (no pdf), 1 (proton)
+c     lpp  =  2 (proton emitting a photon without breaking)
+c     lpp  =  3 (electron emitting a photon)
+C  EB1 = energy of beam1 in GeV
+C  EB2 = energy of beam2 in GeV
+  LP1  1
+  LP2  1
+  EB1  7000.D0
+  EB2  7000.D0
+C*************************************************
+C #Events by SPRING
+C*************************************************
+C  NVSP = #events
+  NVSP  10000
+  NVPR  10
+C*************************************************
+C  Detector Simulation
+C*************************************************
+  NRUN 9995
+END
+END_OF_DATA

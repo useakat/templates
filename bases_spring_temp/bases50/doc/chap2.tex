@@ -1,0 +1,56 @@
+\vskip 1.0cm
+\def\d{{\rm d}}
+\leftline{\bf 2. Algorithm of Version 5.1}
+\bigskip
+\par
+In usual practice the function of our interest has only a limited
+number of variables that cause singular behavior. 
+We call such kind of variables {\it wild variables}, and rest  {\it gentle
+variables}, on which the function depends only weakly.  If we divide only the
+subspace spanned by these wild variables into hypercubes, the number of
+hypercubes is not too large.  Thus, by applying the {\small BASES/SPRING V1.0}
+algorithm only to this subspace and by handling the gentle variables as
+additional integral variables, we can overcome the difficulty in the event
+generation of higher dimensions.
+
+In order to see the difference between the old and the new algorithms, we
+consider the following integral of three dimensions: 
+\[
+ I = \int\nolimits_0^1 f(x,y,z)  \d x \d y \d z.
+\]
+In the old algorithm, the estimate of integral is given by
+\[
+ I \simeq \sum_{j=1}^{N_{cube}} {1\over{N_{sample}}}
+ \sum_{i=1}^{N_{sample}}{ f(x_i^j, y_i^j, z_i^j) \over p(x_i^j, y_i^j, z_i^j)},
+\]
+\noindent
+where $x_i^j$, $y_i^j$ and $z_i^j$ indicate $i$-th sample point in $j$-th
+hypercube,  $p(x_i^j, y_i^j, z_i^j)$ is the probability density at the point for
+the importance sampling, and $N_{sample}$ is the number of sample points in each
+hypercube. \par 
+On the other hand, if we take the new algorithm and suppose the variables $x$ 
+and $y$ are wild and $z$ is gentle, the estimate is given by 
+\[
+ I \simeq \sum_{j=1}^{N_{cube}} {1\over{N_{sample}}}
+ \sum_{i=1}^{N_{sample}}{ f(x_i^j, y_i^j, z_i) \over p(x_i^j, y_i^j, z_i)},
+\]
+\noindent
+where $z$ is sampled in the full range of $z$ variable.
+Since the importance sampling takes place even for the gentle variable $z$, the
+numerical integration converges fast enough.  An efficient event generation is
+guaranteed if the function 
+\[
+F^j( z ) =  \int\nolimits_{j-th hypercubes} f( x^j, y^j, z )  \d x^j \d y^j
+\]
+has similar dependences on $z$ for all j.
+
+The numbers of hypercubes are $N_{region}^3$ and $N_{region}^2$ in the old and the
+new algorithms, respectively, where $N_{region}$ is the number of regions per
+variable. Generally speaking, if $N_{dim}$ and $N_{wild}$ are the numbers of
+independent variables and the wild variables ( $N_{wild}$ $\le$ $N_{dim}$ ),
+respectively, the number of hypercubes $N_{cube}$ is given by
+\begin{eqnarray*}
+ N_{cube}    & =  {N_{region}}^{N_{dim}} &{\rm (old)}\cr
+      ~      & =  {N_{region}}^{N_{wild}} &{\rm (new).}
+\end{eqnarray*}
+In version 5.1, the maximum number of wild variables is equal to 15.

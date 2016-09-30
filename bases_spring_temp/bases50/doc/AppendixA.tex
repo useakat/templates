@@ -1,0 +1,122 @@
+\clearpage
+\leftline{\bf Appendix A }
+\par
+{\scriptsize
+\begin{verbatim}
+*  Main program for BASES/SPRING V5.1
+ 
+      IMPLICIT REAL*8 (A-H,O-Z)
+      EXTERNAL FUNC
+ 
+      COMMON /BPARM1/ XL(50),XU(50),NDIM,NWILD,
+     .                IG(50),NCALL 
+      COMMON /BPARM2/ ACC1,ACC2,ITMX1,ITMX2
+ 
+      COMMON /KINEM/  W,EM,ZM,ZGAM,CZ,CV,CA,
+     .                FACTOR,XK,COSTH
+ 
+      REAL*4 P(4)
+      DATA PI,ALP,GEVNB,GENER/
+     .      3.1415926D0, 137.036D0, 0.38927D6, 3.0/
+      DATA LU,LUX / 6, 20/
+ 
+***************************************************
+*   (1)  Initialization of  BASES/SPRING
+***************************************************
+
+      CALL BSINIT
+
+*==================================================
+*     Initialization of parameters for function
+*==================================================
+      EM     = 0.511D-3
+      ZM     = 90.0D0
+      WM     = 78.79D0
+      ZGAM   = 2.6D0
+      ALPHA  = 1.D0/ALP
+      RAD    = PI/180.D0
+      TWOPI  = 2.0D0*PI
+      SQ     = SQRT(ZM*ZM-WM*WM)
+      CZ     = ZM*ZM/(2.*WM*SQ)
+      CA     = 0.5D0*CZ
+      CV     = 2.*CA*(2.*SQ*SQ/(ZM*ZM) - 0.5D0)
+      FACTOR = GENER*CZ**2*ALPHA**3/12.0D0/GEVNB
+      COSMIN = 15.0D0
+      COSMAX = 180.D0 - COSMIN
+      W      = 105.0D0
+      XKMIN  = 1.D0/W
+*==================================================
+*     Initialization of BASES/SPRING parameters
+*==================================================
+      NDIM   = 2
+      NWILD  = 2
+      XL(1)  =  XKMIN
+      XU(1)  = 0.5D0*W
+      XL(2)  = DCOS(COSMAX*RAD)
+      XU(2)  = DCOS(COSMAX*RAD)
+      NCALL  = 3125
+      ITMX1  = 10
+      ACC1   = 0.1
+      ITMX2  = 0.05
+*==================================================
+*     Initialization of Histograms
+*==================================================
+      CALL XHINIT(1,XL(1),XU(1),40,
+     .                   'Photon Energy (GeV)')
+      CALL DHINIT(1,XL(2),XU(2),50,XL(1),XU(1),50,
+     .     ' x : cos(theta) --  y : Photon Energy')
+
+***************************************************
+*   (2)  Numerical integration
+***************************************************
+
+      CALL BASES(FUNC,ESTIM,SIGMA,CHI2,
+     .                      CTIME,IT1,IT2)
+
+      LU    = 6
+      CALL BSINFO(LU)
+      CALL BHPLOT(LU)
+
+***************************************************
+*   (3)  Event Generation 
+***************************************************
+*==================================================
+*     Initialize an additional histogram
+*==================================================
+
+      CALL XHINIT(5,0,0D0, 40.0D0, 40,
+     .            'Photon Transverse Energy (GeV)')
+
+*==================================================
+*     Event Generation by SPRING
+*==================================================
+
+      ISPRNG = 1
+      MXTRY  = 50
+      MXEVNT = 10000
+
+      DO 100 NEVENT = 1, MXEVNT
+
+         CALL SPRING( FUNC,ISPRNG,MXTRY)
+
+*       Calculation of four vectors
+
+         PHI   = TWOPI*DRN(DUMMY)
+         PXY   = XK*SQRT(1.0D0 - COSTH*COSTH)
+         P(1)  = PXY*COS(PHI)
+         P(2)  = PXY*SIN(PHI)
+         P(3)  = XK*COSTH
+         P(4)  = XK
+         WRITE(LUX) P
+
+         CALL XHFILL(5,PXY, 1.0D0)
+
+  100 CONTINUE
+
+      CALL SPINFO(LU)
+      CALL SHPLOT(LU)
+
+      STOP
+      END
+
+\end{verbatim}}

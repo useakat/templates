@@ -1,0 +1,109 @@
+%#BIBTEX jbibtex chi2
+\documentclass[final,5p,times,twocolumn]{elsarticle}
+\include{begin}
+\section{The sensitivity to the mass hierarchy}
+\label{chi2}
+After obtaining the energy distribution of reactor antineutrinos, we
+would like to estimate the sensitivity of determining the mass hierarchy
+using the standard $\cT$
+analysis~\cite{Choubey:2003qx,Batygov:2008ku,Ghoshal:2010wt,Ghoshal:2012ju,Qian:2012xh}. 
+
+To set the stage, we introduce the $\cT$ function as
+\begin{align}
+ \cT = \cT_{para} +\cT_{sys} +\cT_{stat}.
+\label{eq:chi2_func}
+\end{align}
+The first term summarizes the prior knowledge on mixing parameters. In
+reactor antineutrino experiments, these are the mixing angles, $\ssol$ and $\srct$, and the two mass-square
+differences, $\dms$ and $|\dmr|$, whose contributions look like,
+\begin{align}
+ \cT_{para} &= \left\{ \frac{ (\ssol)^{\,fit} -( \ssol )^{\,input} }{ \delta\ssol }
+ \right\}^2 \nn\\
+&+\left\{ \frac{ ( \srct )^{\,fit} -(\srct)^{\,input} }{ \delta\srct }
+ \right\}^2 \nn\\
+&+\left\{ \frac{ ( \dms )^{\,fit} -( \dms )^{\,input} }{ \delta\dms }  \right\}^2 \nn\\
+&+\left\{ \frac{ ( |\dmr| )^{\,fit} -( |\dmr| )^{\,input} }{ \delta|\dmr| } \right\}^2.
+\label{chi2para}
+\end{align}
+The input values $Y^{input}$ and their uncertainties $\delta Y$ are listed in
+Table~\ref{tb:fitting_params}.
+
+The reactor antineutrino flux, IBD cross section,
+fiducial volume and weight fraction of free proton can all be combined into a single overall factor.
+Consequently, their contributions to the $\chi^2$ function can be represented by a single term as,
+\begin{align}
+ \cT_{sys} = \left( \frac{f_{sys}^{\,fit}-f_{sys}^{\,input} }{\delta f_{sys}}  \right)^2,
+\label{chi2sys}
+\end{align} 
+ where $f^{\,input}_{sys} = 1$, and $\delta f_{sys} = 0.03$.
+\begin{table}
+\scalebox{0.9}{
+\begin{tabular}{cccccc}
+\hline\hline\addlinespace[2pt] %need \usepackage{booktabs}
+$Y$ & $\ssol$ & $\srct$ & $\dms \,{\rm eV}^2$ & $|\dmr| \,{\rm eV}^2$ & $f_{sys}$ \\[2pt]
+\hline \addlinespace[2pt]
+$Y^{input}$ & $0.857$ & $0.089$ & $7.50\times 10^{-5}$ & $2.32\times 10^{-3}$
+		 & $1$\\
+$\delta Y$ & $0.024$ & $0.005$ & $0.20\times 10^{-5}$ & $0.1\times
+		 10^{-3}$ & 0.03 \\
+\hline\hline
+\end{tabular}\\
+}
+\hspace{2em}
+\caption{The input values $Y^{input}$ and their uncertainties $\delta Y$ taken from Refs.~\cite{Beringer:1900zz,DayaBay}. The uncertainty of $\srct$ can be
+ 5\% or less after 3 years running of Daya Bay experiment~\cite{Error_dmm31}.}
+\label{tb:fitting_params}
+\end{table}
+
+The third term in (\ref{eq:chi2_func}) represents 
+the statistical fluctuation. When we introduce bining w.r.t. $E^{obs}_{vis}$, 
+it looks like
+\begin{align}
+\cT_{stat} = \sum_i \left( \frac{ N_i^{\,fit} -N_i^{NH(IH)} }{
+\sqrt{N_i^{NH(IH)}} }  \right)^2
+\label{chi2stat}
+\end{align}
+with the summation running over all the bins. 
+Here, $N_i^{NH(IH)}$ is the event number for the $i_{th}$ bin when 
+the hierarchy is NH
+(IH), while $ N_i^{fit}$ is the theoretical prediction of the event
+number either with right or wrong mass hierarchy, calculated as
+a function of the four model parameters and the normalization factor
+$f_{sys}$, which are all varied under the
+constraints of (\ref{chi2para}) and (\ref{chi2sys}). In this study we
+prepare the data $N_i^{NH(IH)}$ by using eq.(\ref{Nobs}) with the
+input values of the five parameters for each mass hierarchy. 
+
+In the limit of
+infinitely many events, the bin size can be reduced to zero, and the sum
+(\ref{chi2stat}) can be replaced by an integral,
+\begin{align}
+\cT_{stat} \rightarrow \bigintss_{E_{min}}^{E_{max}} dE^{obs}_{vis}
+\left\{ \frac{ 
+   \left( \frac{dN}{ dE^{obs}_{vis} } \right)^{\,fit} 
+  -\left( \frac{dN}{ dE^{obs}_{vis} } \right)^{ NH(IH) } 
+}
+{ 
+  \sqrt{ 
+         \left( \frac{dN}{ dE^{obs}_{vis} } \right)^{ NH(IH) } 
+  } 
+}  \right\}^2,
+\label{chi2stat2}
+\end{align}
+where $E_{min} = 1.8~\mbox{MeV}$ and $E_{max} = 8~\mbox{MeV}$ are the lower and upper limits of the
+observed energy used to evaluate the $\cT$ function, respectively.
+Although a finite bin size is required for actual experiments, we
+adopt this zero-bin-size limit as measure of the maximum sensitivity. We then define $\dcT$ as
+\begin{align}
+ \dcT = \cT -\cT_{min},
+\end{align}
+where $\chi^2_{min}$ is the minimum of $\chi^2$, which is obviously zero in our approximation of neglecting
+statistical fluctuations in data, $N_i^{NH(IH)}$. When wrong mass hierarchy is
+assumed in the fit, the minimum of $\Delta\chi^2$, $(\Delta\chi^2)_{min}$, will deviate from zero, and
+the wrong mass hierarchy can be rejected with significance
+$\sqrt{(\Delta\chi^2)_{min}}\footnote{Recent study~\cite{Qian:2012zn} argues that the
+sensitivity estimation based on Gussian distribution can be
+overestimated, but we will not pursue this possibility in this study.}$.
+\include{biblio}
+\include{end}
+% LocalWords:  binning

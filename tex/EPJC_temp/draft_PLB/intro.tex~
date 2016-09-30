@@ -1,0 +1,51 @@
+%#BIBTEX jbibtex intro
+\documentclass[final,5p,times,twocolumn]{elsarticle}
+\include{begin}
+\section{Introduction}
+\label{intro}
+Now that a large $\theta_{13}$ has been measured at Daya Bay~\cite{DayaBay} and
+RENO~\cite{Ahn:2012nd} experiments accurately, neutrino physics enters a
+new era. One of the next challenges is determination of the mass
+hierarchy. 
+%The next challenges are the determination of the mass
+%hierarchy and the CP phase in the Maki-Nakagawa-Sakata (MNS)
+%matrix~\cite{Maki:1962mu}.
+% The determination of the mass hierarchy leads
+%to deeper understanding of the lepton flavour mixing~\cite{Mohapatra:2006gs} and provides
+%important basis for astrophysics~\cite{astro}. 
+Many ideas have been proposed, such as long baseline
+accelerator based neutrino oscillation~\cite{SuperBeam,Beijing,T2KK}, atmospheric neutrino~\cite{AtmosphericNeutrino}, supernova
+neutrino~\cite{SuperNova}, neutrino-less double-beta
+decay~\cite{DoubleBeta} and medium baseline reactor antineutrino experiments~\cite{Petcov:2001sy,Choubey:2003qx,Learned:2006wy,Zhan:2008id,Batygov:2008ku,Zhan:2009rs,Ghoshal:2010wt}.
+
+Among them, the medium baseline reactor antineutrino experiment has 
+stimulated various re-evaluations of its physics potential and sensitivity
+recently. 
+Some works utilize the Fourier transform
+technique~\cite{Ciuffoli:2012iz,Ciuffoli:2012bs,Qian:2012xh}, first
+discussed in
+Refs.~\cite{Learned:2006wy,Batygov:2008ku,Zhan:2008id}, to
+distinguish the mass hierarchy. The main advantage of this technique is
+that the mass hierarchy can be determined without precise knowledge of
+reactor antineutrino's spectrum, the absolute value of the large mass-squared difference $|\Delta m_{31}^2|$, 
+and the energy scale of the detector. Although interesting and attractive, 
+this technique is somewhat subtle to incorporate the uncertainties of
+the mixing parameters and to estimate its sensitivity to
+the mass hierarchy. On the other hand, some works adopt the $\chi^2$
+analysis~\cite{Ghoshal:2010wt,Ghoshal:2012ju,Qian:2012xh} and new
+measure based on Bayesian approach\cite{Qian:2012zn} instead. These
+methods utilize all avaible information from experiment, and it is
+straightforward to incorporate the uncertainties to evaluate the
+sensitivity, providing robust and complementary
+results to the Fourier technique. 
+
+In this paper, we analyze the 
+sensitivity of medium baseline reactor antineutrino
+experiment to the mass hierarchy for baseline length of $10$--$100$ km and
+energy resolution $(\delta E/E)^2 =
+\left(a/\sqrt{E/{\rm MeV}}\right)^2 +b^2$ in the range $2\% < a < 6\%$
+and $b < 1\%$ with
+the standard $\cT$ analysis. The optimal baseline length and the expected
+statistical uncertainties of neutrino parameters, $\ssol, \srct, \dms$ and $\dmr$, are also estimated.
+\include{biblio}
+\include{end}

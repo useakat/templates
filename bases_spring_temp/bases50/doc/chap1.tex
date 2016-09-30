@@ -1,0 +1,88 @@
+%
+\newpage
+\noindent
+{\bf ~~~LONG WRITE-UP}
+\bigskip
+\par
+The Monte Carlo integration and event generation package {\small BASES/ SPRING V1.0}
+$\lbrack 1 \rbrack$ has been upgraded so as to generate events with 50 independent
+variables, and  to integrate functions with  an
+alternating sign. 
+Its ability to integrate real functions with indefinite sign is
+ found to be useful in the numerical evaluation of interference effects among
+ various amplitudes.
+Besides these changes, its program structure has been completely reformed.  
+\par \vskip 1.0cm
+\leftline{\bf 1. Introduction }
+\bigskip
+\par
+The numerical integration and event generation package {\small BASES/SPRING
+ V1.0}  has been applied to many elementary processes $\lbrack
+2 \rbrack$.
+In recent years very high energy $e^+e^-$ colliders, {\small JLC ( KEK )}, {\small NLC 
+( SLAC )}, and {\small CLIC ( CERN )}, are being studied as future plans.
+At the energies of these machines, the number of final state particles in
+some elementary processes is so many that we cannot apply the version {\small V1.0} 
+directly because of its limited number of dimensions ( ten at maximum ).
+Extension of the number of dimensions is easy for the integration package {\small
+BASES}, but it is not for the event generation package {\small SPRING}. 
+Before
+discussing this point, it is useful to describe the algorithm of the version
+{\small  V1.0} briefly.
+
+{\small BASES} integrates a function by means of the importance and stratified 
+sampling method. 
+\par\noindent
+In order to realize the importance sampling each variable axis is divided into
+$N_{region}$ {\it regions}, each of which is subdivided into $m$ {\it subregions}.
+In total each variable axis has $N_g$ ( = $N_{region}$ $\times$ $m$ ) subregions. 
+The numbers $N_{region}$ and $m$ are determined from the dimension of integral $N_{dim}$
+automatically by {\small BASES}.
+The full integral volume is covered by a {\it grid} of ${N_g}^{N_{dim}}$
+subregions. 
+We call a subspace of the
+integral volume a {\it hypercube} which is spanned by the regions of each variable axis.
+\par
+In each hypercube sample points of a definite number $N_{sample}$ are taken and
+the integral and its variance are evaluated.
+The estimate of integral and its variance are calculated by summing up results of all
+hypercubes. 
+We call this process an {\it iteration}.
+A cumulative estimate and its error are calculated from the results of all
+iterations statistically.
+\par
+Execusion of {\small BASES} consists of the grid optimization and the integration
+steps.
+\par\noindent
+At the first iteration of the former step the grid is uniformly defined for each
+variable axis.   After each iteration the grid is adjusted so as to make the sizes of
+subregions the narrower at the parts with the larger function value and the wider at
+the parts with the smaller one. In this way a suited grid to the integrand is
+obtained.  
+\par\noindent
+In the integration step, the probability to select each hypercube and
+the maximum value of the function in it are calculated as well as the estimate of
+integral with the frozen grid determined in the former step.
+\par\noindent
+In {\small SPRING}, a hypercube is sampled according to its probability,
+calculated by {\small BASES}, and a point in the hypercube is selected by
+sample-and-reject method for which the maximum value of the function is used.
+If the grid is sufficiently optimized,  a high efficiency of generating
+a set of values of the independent variables (i.e.~event generation) can be
+achieved even by such a simple method.
+\par
+The difficulty in the straightforward extension of the number of dimensions in {\small
+BASES / SPRING V1.0} can be easily seen by considering a 25 dimensional case
+(i.e.~25 independent variables). 
+Even though we suppose to have only two regions for each variable
+axis, there are $N_{cube}$ = $2^{25}$ hypercubes in total. 
+The calculation of such
+a huge number $N_{cube}$ of probabilities requires much {\small CPU} time and their
+storage space is also too large. 
+It seems to be unrealistic.
+\par
+By assumming, however, an additional condition to the integrand,
+this difficulty can be avoided. 
+The algorithm of the new version {\small BASES/SPRING
+V5.1} is described in the next section, and its program structure and usage are
+shown in section 3. In section 4 we will discuss its test run.

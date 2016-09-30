@@ -1,0 +1,153 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      4538,        143]
+NotebookOptionsPosition[      4009,        123]
+NotebookOutlinePosition[      4532,        141]
+CellTagsIndexPosition[      4489,        138]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"<<", "\"\<Helicityamp`\>\""}]], "Input",
+ CellChangeTimes->{{3.5177943498157253`*^9, 3.5177943601247*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Momentum calculation", "Section",
+ CellChangeTimes->{{3.51779456735398*^9, 3.517794576624014*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"particle1", "=", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "0"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"particle2", "=", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "0"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"particle3", "=", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", "me"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"particle4", "=", 
+   RowBox[{"{", 
+    RowBox[{"2", ",", "0"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"KinVar", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     SqrtBox["s"], ",", "\[Theta]", ",", "0"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mass", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"particle1", "[", 
+      RowBox[{"[", "2", "]"}], "]"}], ",", 
+     RowBox[{"particle2", "[", 
+      RowBox[{"[", "2", "]"}], "]"}], ",", 
+     RowBox[{"particle3", "[", 
+      RowBox[{"[", "2", "]"}], "]"}], ",", 
+     RowBox[{"particle4", "[", 
+      RowBox[{"[", "2", "]"}], "]"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"cond", "=", 
+    RowBox[{"InitVar", "[", 
+     RowBox[{"KinVar", ",", "mass"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"Helicity", " ", 
+     RowBox[{"configurations", ".", " ", "The"}], " ", "arguments", " ", 
+     "are", " ", "the", " ", "number", " ", "of", " ", "helicity", " ", 
+     "states", " ", "of", " ", "particle1"}], ",", "particle2", ",", " ", 
+    RowBox[{"particle3", " ", "and", " ", 
+     RowBox[{"particle4", ".", " ", 
+      RowBox[{"Scalar", ":", " ", "1"}]}]}], ",", " ", 
+    RowBox[{"Spinor", ":", " ", "2"}], ",", 
+    RowBox[{"Vector", " ", 
+     RowBox[{"voson", ":", " ", "3"}]}], ",", " ", 
+    RowBox[{"VectorSpinor", ":", " ", "4"}], ",", " ", 
+    RowBox[{"Spin", "-", 
+     RowBox[{"2", " ", 
+      RowBox[{"Tensor", ":", " ", "5"}]}]}]}], "  ", "*)"}], 
+  " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"hel", "=", 
+    RowBox[{"Hel4", "[", 
+     RowBox[{
+      RowBox[{"particle1", "[", 
+       RowBox[{"[", "1", "]"}], "]"}], ",", 
+      RowBox[{"particle2", "[", 
+       RowBox[{"[", "1", "]"}], "]"}], ",", 
+      RowBox[{"particle3", "[", 
+       RowBox[{"[", "1", "]"}], "]"}], ",", 
+      RowBox[{"particle4", "[", 
+       RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"Calculations", " ", "of", " ", "momenta"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"p", "=", 
+   RowBox[{
+    RowBox[{"mom22", "[", 
+     RowBox[{
+      RowBox[{"KinVar", "[", 
+       RowBox[{"[", "1", "]"}], "]"}], ",", "mass", ",", 
+      RowBox[{"KinVar", "[", 
+       RowBox[{"[", "2", "]"}], "]"}], ",", 
+      RowBox[{"KinVar", "[", 
+       RowBox[{"[", "3", "]"}], "]"}]}], "]"}], "//", 
+    RowBox[{
+     RowBox[{"Simplify", "[", 
+      RowBox[{"#", ",", "cond"}], "]"}], "&"}]}]}], ";"}]}], "Input",
+ CellChangeTimes->{
+  3.517794459648078*^9, {3.5177945179128647`*^9, 3.5177945211716833`*^9}, {
+   3.517794562322791*^9, 3.517794563089444*^9}}]
+}, Open  ]]
+},
+WindowSize->{740, 752},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 6, \
+2010)",
+StyleDefinitions->FrontEnd`FileName[{$RootDirectory, "Users", "yoshi", 
+   "Library", "Mathematica", "SystemFiles", "FrontEnd", "StyleSheets"}, 
+  "MathNote_Natural.nb", CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 130, 2, 39, "Input"],
+Cell[CellGroupData[{
+Cell[712, 26, 104, 1, 72, "Section"],
+Cell[819, 29, 3174, 91, 336, "Input"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

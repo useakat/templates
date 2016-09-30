@@ -1,0 +1,104 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      3315,         95]
+NotebookOptionsPosition[      2951,         78]
+NotebookOutlinePosition[      3306,         94]
+CellTagsIndexPosition[      3263,         91]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"Clear", "[", "\"\<General`*\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.5153311961520033`*^9, 3.5153312100591784`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "Put", " ", "FeynRules", " ", "folder", " ", "wherever", " ", "you", " ", 
+    "want"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"$FeynRulesPath", "=", 
+     RowBox[{
+     "SetDirectory", "[", 
+      "\"\</Users/yoshi/Dropbox/Study_D/mathematica/FeynRules\>\"", "]"}]}], 
+    ";"}], "\[IndentingNewLine]", 
+   RowBox[{"<<", "FeynRules`"}]}]}]], "Input",
+ CellChangeTimes->{{3.515331216217327*^9, 3.5153312912253313`*^9}, {
+  3.515588223551406*^9, 3.515588256414488*^9}, {3.516031111133855*^9, 
+  3.516031129928843*^9}, {3.516072826151475*^9, 3.516072827039695*^9}, {
+  3.5163102727521048`*^9, 3.516310297791121*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SetDirectory", "[", 
+   RowBox[{"$FeynRulesPath", "<>", "\"\</Models/MSSM\>\""}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"LoadModel", "[", "\"\<mssm_yoshi.fr\>\"", "]"}]}], "Input",
+ CellChangeTimes->{{3.51607281461658*^9, 3.516072818472436*^9}, {
+  3.5160741716029577`*^9, 3.516074172445606*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "Output", " ", "LaTeX", " ", "files", " ", "for", " ", "the", " ", 
+     "Feynman", " ", 
+     RowBox[{"Rules", " ", "!"}], " ", "It", " ", "does", " ", "not", " ", 
+     "work", " ", "if", " ", "you", " ", "input", " ", "only", " ", "1", " ", 
+     "component", " ", "in", " ", "the", " ", "list"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{"vert1", ",", "vert2"}], "}"}]}], " ", "*)"}], " ", 
+  "\[IndentingNewLine]", 
+  RowBox[{"WriteLaTeXOutput", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"vert1", ",", "vert2"}], "}"}], ",", 
+    RowBox[{"Overwrite", "\[Rule]", "True"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.51608431742187*^9, 3.5160843391963253`*^9}, {
+  3.516084887318404*^9, 3.516084891833091*^9}, {3.5160850562371387`*^9, 
+  3.5160850587846622`*^9}, {3.516085132308304*^9, 3.5160851326805077`*^9}, {
+  3.5160852565574083`*^9, 3.516085257288155*^9}, {3.516085326628907*^9, 
+  3.516085344628663*^9}, {3.516115935382265*^9, 3.516115939594799*^9}, {
+  3.516118471679131*^9, 3.516118487026271*^9}, {3.516118830549087*^9, 
+  3.5161188380451527`*^9}, {3.516310989295001*^9, 3.516311118421917*^9}}]
+},
+WindowSize->{740, 752},
+WindowMargins->{{75, Automatic}, {Automatic, 0}},
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 6, \
+2010)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 144, 2, 27, "Input"],
+Cell[704, 24, 704, 17, 58, "Input"],
+Cell[1411, 43, 344, 7, 43, "Input"],
+Cell[1758, 52, 1189, 24, 58, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

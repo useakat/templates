@@ -1,0 +1,541 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 6.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     19997,        532]
+NotebookOptionsPosition[     17150,        436]
+NotebookOutlinePosition[     17605,        454]
+CellTagsIndexPosition[     17562,        451]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Quit", "[", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.528014141456297*^9, 3.528014144534005*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Setup", "Section"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"$OldDir", "=", 
+   RowBox[{"NotebookDirectory", "[", "]"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"$FeynRulesPath", "=", 
+   RowBox[{
+   "SetDirectory", "[", 
+    "\"\</Users/yoshi/Dropbox/Study_D/packages/FeynRules_v2.0\>\"", "]"}]}], 
+  ";"}], "\n", 
+ RowBox[{"<<", "FeynRules`"}], "\n", 
+ RowBox[{
+  RowBox[{"SetDirectory", "[", "$OldDir", "]"}], ";"}]}], "Input",
+ CellChangeTimes->{
+  3.5280141769357557`*^9, {3.5280144920219517`*^9, 3.5280144949431753`*^9}, {
+   3.528014583687619*^9, 3.528014586263144*^9}, {3.528014754014719*^9, 
+   3.5280147612646847`*^9}, {3.616211104396408*^9, 3.6162111060631237`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ FormBox["\<\" - FeynRules - \"\>", TraditionalForm]], "Print",
+ CellChangeTimes->{{3.5280141811401873`*^9, 3.528014192055504*^9}, 
+   3.5280142624156933`*^9, 3.5280143216809263`*^9, 3.5280145993447227`*^9, 
+   3.528014651709977*^9, {3.52801478114283*^9, 3.528014807730775*^9}, 
+   3.528015754405151*^9, 3.616211111638*^9}],
+
+Cell[BoxData[
+ FormBox[
+  InterpretationBox[
+   RowBox[{"\<\"Version: \"\>", "\[InvisibleSpace]", "\<\"2.0.26\"\>", 
+    "\[InvisibleSpace]", 
+    RowBox[{"\<\" (\"\>", " ", "\<\"08 July 2014\"\>"}], 
+    "\[InvisibleSpace]", "\<\").\"\>"}],
+   SequenceForm["Version: ", "2.0.26", " (" "08 July 2014", ")."],
+   Editable->False], TraditionalForm]], "Print",
+ CellChangeTimes->{{3.5280141811401873`*^9, 3.528014192055504*^9}, 
+   3.5280142624156933`*^9, 3.5280143216809263`*^9, 3.5280145993447227`*^9, 
+   3.528014651709977*^9, {3.52801478114283*^9, 3.528014807730775*^9}, 
+   3.528015754405151*^9, 3.616211111639415*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"Authors: A. Alloul, N. Christensen, C. Degrande, C. Duhr, B. \
+Fuks\"\>", TraditionalForm]], "Print",
+ CellChangeTimes->{{3.5280141811401873`*^9, 3.528014192055504*^9}, 
+   3.5280142624156933`*^9, 3.5280143216809263`*^9, 3.5280145993447227`*^9, 
+   3.528014651709977*^9, {3.52801478114283*^9, 3.528014807730775*^9}, 
+   3.528015754405151*^9, 3.616211111641047*^9}],
+
+Cell[BoxData[
+ FormBox["\<\" \"\>", TraditionalForm]], "Print",
+ CellChangeTimes->{{3.5280141811401873`*^9, 3.528014192055504*^9}, 
+   3.5280142624156933`*^9, 3.5280143216809263`*^9, 3.5280145993447227`*^9, 
+   3.528014651709977*^9, {3.52801478114283*^9, 3.528014807730775*^9}, 
+   3.528015754405151*^9, 3.616211111642592*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"Please cite:\"\>", TraditionalForm]], "Print",
+ CellChangeTimes->{{3.5280141811401873`*^9, 3.528014192055504*^9}, 
+   3.5280142624156933`*^9, 3.5280143216809263`*^9, 3.5280145993447227`*^9, 
+   3.528014651709977*^9, {3.52801478114283*^9, 3.528014807730775*^9}, 
+   3.528015754405151*^9, 3.616211111645411*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"    - arXiv:1310.1921;\"\>", TraditionalForm]], "Print",
+ CellChangeTimes->{{3.5280141811401873`*^9, 3.528014192055504*^9}, 
+   3.5280142624156933`*^9, 3.5280143216809263`*^9, 3.5280145993447227`*^9, 
+   3.528014651709977*^9, {3.52801478114283*^9, 3.528014807730775*^9}, 
+   3.528015754405151*^9, 3.6162111116482763`*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"    - Comput.Phys.Commun.180:1614-1641,2009 \
+(arXiv:0806.4194).\"\>", TraditionalForm]], "Print",
+ CellChangeTimes->{{3.5280141811401873`*^9, 3.528014192055504*^9}, 
+   3.5280142624156933`*^9, 3.5280143216809263`*^9, 3.5280145993447227`*^9, 
+   3.528014651709977*^9, {3.52801478114283*^9, 3.528014807730775*^9}, 
+   3.528015754405151*^9, 3.616211111650979*^9}],
+
+Cell[BoxData[
+ FormBox["\<\" \"\>", TraditionalForm]], "Print",
+ CellChangeTimes->{{3.5280141811401873`*^9, 3.528014192055504*^9}, 
+   3.5280142624156933`*^9, 3.5280143216809263`*^9, 3.5280145993447227`*^9, 
+   3.528014651709977*^9, {3.52801478114283*^9, 3.528014807730775*^9}, 
+   3.528015754405151*^9, 3.616211111652841*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"http://feynrules.phys.ucl.ac.be\"\>", TraditionalForm]], "Print",\
+
+ CellChangeTimes->{{3.5280141811401873`*^9, 3.528014192055504*^9}, 
+   3.5280142624156933`*^9, 3.5280143216809263`*^9, 3.5280145993447227`*^9, 
+   3.528014651709977*^9, {3.52801478114283*^9, 3.528014807730775*^9}, 
+   3.528015754405151*^9, 3.616211111654645*^9}],
+
+Cell[BoxData[
+ FormBox["\<\" \"\>", TraditionalForm]], "Print",
+ CellChangeTimes->{{3.5280141811401873`*^9, 3.528014192055504*^9}, 
+   3.5280142624156933`*^9, 3.5280143216809263`*^9, 3.5280145993447227`*^9, 
+   3.528014651709977*^9, {3.52801478114283*^9, 3.528014807730775*^9}, 
+   3.528015754405151*^9, 3.616211111656358*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"The FeynRules palette can be opened using the command \
+FRPalette[].\"\>", TraditionalForm]], "Print",
+ CellChangeTimes->{{3.5280141811401873`*^9, 3.528014192055504*^9}, 
+   3.5280142624156933`*^9, 3.5280143216809263`*^9, 3.5280145993447227`*^9, 
+   3.528014651709977*^9, {3.52801478114283*^9, 3.528014807730775*^9}, 
+   3.528015754405151*^9, 3.6162111116583643`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"SetDirectory", "[", 
+   RowBox[{"$OldDir", "<>", "\"\</delgld\>\""}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"LoadModel", "[", 
+  RowBox[{"\"\<mssm.fr\>\"", ",", "\"\<goldstino_del.fr\>\""}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.528014122488268*^9, 3.528014122507407*^9}, {
+  3.528014222485684*^9, 3.528014223293254*^9}, {3.5280142873856087`*^9, 
+  3.528014291935432*^9}, {3.528014341411878*^9, 3.528014342558013*^9}, {
+  3.528014604344174*^9, 3.5280146056448174`*^9}, {3.5280146407421293`*^9, 
+  3.528014699178247*^9}, {3.528014784363843*^9, 3.528014788862081*^9}}],
+
+Cell[BoxData["\<\"Merging model-files...\"\>"], "Print",
+ CellChangeTimes->{
+  3.52801419939856*^9, 3.5280142664469433`*^9, 3.528014325482171*^9, 
+   3.5280146250707703`*^9, 3.528014655688938*^9, 3.528014703976057*^9, {
+   3.5280147904186163`*^9, 3.528014810718791*^9}, 3.528015757376031*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"MergeModels", "::", "Params"}], "MessageName"], ":", 
+  " ", "\<\"Warning: Doubly defined parameter classes.\"\>"}]], "Message", \
+"MSG",
+ CellChangeTimes->{
+  3.528014197308025*^9, 3.528014266578985*^9, 3.5280143255931063`*^9, 
+   3.528014625012732*^9, 3.528014655604258*^9, 3.528014703970256*^9, {
+   3.5280147905100927`*^9, 3.528014810897153*^9}, 3.528015757604998*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"This model implementation was created by\"\>"], "Print",
+ CellChangeTimes->{
+  3.52801419939856*^9, 3.5280142664469433`*^9, 3.528014325482171*^9, 
+   3.5280146250707703`*^9, 3.528014655688938*^9, 3.528014703976057*^9, {
+   3.5280147904186163`*^9, 3.528014810718791*^9}, 3.528015757608087*^9}],
+
+Cell[BoxData["\<\"Yoshitaro Takesu, Kentarou Mawatari\"\>"], "Print",
+ CellChangeTimes->{
+  3.52801419939856*^9, 3.5280142664469433`*^9, 3.528014325482171*^9, 
+   3.5280146250707703`*^9, 3.528014655688938*^9, 3.528014703976057*^9, {
+   3.5280147904186163`*^9, 3.528014810718791*^9}, 3.5280157576110477`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Model Version: \"\>", "\[InvisibleSpace]", "\<\"0.0.1\"\>"}],
+  SequenceForm["Model Version: ", "0.0.1"],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.52801419939856*^9, 3.5280142664469433`*^9, 3.528014325482171*^9, 
+   3.5280146250707703`*^9, 3.528014655688938*^9, 3.528014703976057*^9, {
+   3.5280147904186163`*^9, 3.528014810718791*^9}, 3.5280157576166687`*^9}],
+
+Cell[BoxData["\<\"Please cite\"\>"], "Print",
+ CellChangeTimes->{
+  3.52801419939856*^9, 3.5280142664469433`*^9, 3.528014325482171*^9, 
+   3.5280146250707703`*^9, 3.528014655688938*^9, 3.528014703976057*^9, {
+   3.5280147904186163`*^9, 3.528014810718791*^9}, 3.528015757622225*^9}],
+
+Cell[BoxData["\<\"K. Mawatari, Y. Takaesu, arXiv:1101.1289 [hep-ph]\"\>"], \
+"Print",
+ CellChangeTimes->{
+  3.52801419939856*^9, 3.5280142664469433`*^9, 3.528014325482171*^9, 
+   3.5280146250707703`*^9, 3.528014655688938*^9, 3.528014703976057*^9, {
+   3.5280147904186163`*^9, 3.528014810718791*^9}, 3.528015757627913*^9}],
+
+Cell[BoxData["\<\"http://madgraph.kek.jp/KEK/\"\>"], "Print",
+ CellChangeTimes->{
+  3.52801419939856*^9, 3.5280142664469433`*^9, 3.528014325482171*^9, 
+   3.5280146250707703`*^9, 3.528014655688938*^9, 3.528014703976057*^9, {
+   3.5280147904186163`*^9, 3.528014810718791*^9}, 3.528015757633584*^9}],
+
+Cell[BoxData["\<\"For more information, type ModelInformation[].\"\>"], \
+"Print",
+ CellChangeTimes->{
+  3.52801419939856*^9, 3.5280142664469433`*^9, 3.528014325482171*^9, 
+   3.5280146250707703`*^9, 3.528014655688938*^9, 3.528014703976057*^9, {
+   3.5280147904186163`*^9, 3.528014810718791*^9}, 3.5280157576392717`*^9}],
+
+Cell[BoxData["\<\"\"\>"], "Print",
+ CellChangeTimes->{
+  3.52801419939856*^9, 3.5280142664469433`*^9, 3.528014325482171*^9, 
+   3.5280146250707703`*^9, 3.528014655688938*^9, 3.528014703976057*^9, {
+   3.5280147904186163`*^9, 3.528014810718791*^9}, 3.528015757645053*^9}],
+
+Cell[BoxData["\<\"   - Loading particle classes.\"\>"], "Print",
+ CellChangeTimes->{
+  3.52801419939856*^9, 3.5280142664469433`*^9, 3.528014325482171*^9, 
+   3.5280146250707703`*^9, 3.528014655688938*^9, 3.528014703976057*^9, {
+   3.5280147904186163`*^9, 3.528014810718791*^9}, 3.528015757650778*^9}],
+
+Cell[BoxData["\<\"   - Loading gauge group classes.\"\>"], "Print",
+ CellChangeTimes->{
+  3.52801419939856*^9, 3.5280142664469433`*^9, 3.528014325482171*^9, 
+   3.5280146250707703`*^9, 3.528014655688938*^9, 3.528014703976057*^9, {
+   3.5280147904186163`*^9, 3.528014810718791*^9}, 3.528015758617692*^9}],
+
+Cell[BoxData["\<\"   - Loading parameter classes.\"\>"], "Print",
+ CellChangeTimes->{
+  3.52801419939856*^9, 3.5280142664469433`*^9, 3.528014325482171*^9, 
+   3.5280146250707703`*^9, 3.528014655688938*^9, 3.528014703976057*^9, {
+   3.5280147904186163`*^9, 3.528014810718791*^9}, 3.5280157586813173`*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"\\nModel \"\>", "\[InvisibleSpace]", "\<\"goldstino_del\"\>", 
+   "\[InvisibleSpace]", "\<\" loaded.\"\>"}],
+  SequenceForm["\nModel ", "goldstino_del", " loaded."],
+  Editable->False]], "Print",
+ CellChangeTimes->{
+  3.52801419939856*^9, 3.5280142664469433`*^9, 3.528014325482171*^9, 
+   3.5280146250707703`*^9, 3.528014655688938*^9, 3.528014703976057*^9, {
+   3.5280147904186163`*^9, 3.528014810718791*^9}, 3.5280157743724937`*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Lagrangian computation and update of the parameters", "Section",
+ CellChangeTimes->{{3.4912194701600723`*^9, 3.4912194715325117`*^9}, {
+   3.50686100488665*^9, 3.506861008141419*^9}, {3.506866546045188*^9, 
+   3.50686654675209*^9}, 3.510511732200982*^9, {3.528014109427609*^9, 
+   3.528014119828553*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"$CalcLag", "=", "False"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"If", "[", 
+   RowBox[{"$CalcLag", ",", 
+    RowBox[{
+     RowBox[{"lagr", "=", "Lag"}], ";", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Definition", "[", "lagr", "]"}], ">>", "lagrangian.dat"}]}], 
+    ",", 
+    RowBox[{"<<", "lagrangian.dat"}]}], "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.616211188015502*^9, 3.6162111886310253`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"L", ":=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"1", "/", "2"}], ")"}], " ", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"I", " ", 
+       RowBox[{"gldbar", ".", 
+        RowBox[{"Ga", "[", "mu", "]"}], ".", 
+        RowBox[{"del", "[", 
+         RowBox[{"gld", ",", "mu"}], "]"}]}]}], "-", 
+      RowBox[{"Mgld", "*", 
+       RowBox[{"gldbar", ".", "gld"}]}]}], ")"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.52801620218581*^9, 3.528016211880863*^9}, {
+  3.6162111701162443`*^9, 3.616211174166901*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Generating MC model files with optimized restrictions", "Section",
+ CellChangeTimes->{{3.51051202409053*^9, 3.5105120509193287`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["Optimization", "Subsubsection",
+ CellChangeTimes->{{3.508650844785081*^9, 3.508650846244998*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"WriteRestrictionFile", "[", "]"}], ";", " ", 
+  RowBox[{"LoadRestriction", "[", "\"\<ZeroValues.rst\>\"", "]"}], ";", " ", 
+  RowBox[{"DeleteFile", "[", "\"\<ZeroValues.rst\>\"", "]"}], ";"}]], "Input",\
+
+ CellChangeTimes->{{3.5080579535629387`*^9, 3.508057961830206*^9}, {
+  3.508058109308621*^9, 3.508058122229617*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Model restriction written on \"\>", 
+   "\[InvisibleSpace]", "\<\"ZeroValues.rst\"\>"}],
+  SequenceForm["Model restriction written on ", "ZeroValues.rst"],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.528015790767645*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Loading restrictions from \"\>", 
+   "\[InvisibleSpace]", "\<\"ZeroValues.rst\"\>", 
+   "\[InvisibleSpace]", "\<\" : \"\>", "\[InvisibleSpace]", 
+   DynamicBox[ToBoxes[PRIVATE`FR$restrictionCounter, StandardForm],
+    ImageSizeCache->{209., {2., 9.}}], "\[InvisibleSpace]", "\<\" / \"\>", 
+   "\[InvisibleSpace]", "602"}],
+  SequenceForm["Loading restrictions from ", "ZeroValues.rst", " : ", 
+   Dynamic[PRIVATE`FR$restrictionCounter], " / ", 602],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.528015790819018*^9}],
+
+Cell[BoxData["\<\"Restrictions loaded.\"\>"], "Print",
+ CellChangeTimes->{3.528015938692277*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["UFO interface", "Subsubsection",
+ CellChangeTimes->{{3.508650849632307*^9, 3.508650853575732*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"WriteUFO", "[", "L", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.5073089286898727`*^9, 3.507308937458375*^9}, {
+  3.507311910076086*^9, 3.507311939653351*^9}, {3.507398897853717*^9, 
+  3.507398901626676*^9}, {3.507399273736373*^9, 3.507399274557005*^9}, {
+  3.510512090662549*^9, 3.510512091990087*^9}, {3.528016045483756*^9, 
+  3.528016068657538*^9}, {3.528016101657178*^9, 3.528016102006752*^9}, {
+  3.6162112181637487`*^9, 3.616211229262392*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\" --- Universal FeynRules Output (UFO) v 0.1 ---\"\>"], \
+"Print",
+ CellChangeTimes->{{3.528016078984338*^9, 3.528016103235394*^9}}],
+
+Cell[BoxData["\<\"Starting Feynman rule calculation.\"\>"], "Print",
+ CellChangeTimes->{{3.528016078984338*^9, 3.528016108183198*^9}}],
+
+Cell[BoxData["\<\"Excluding quartic scalar couplings.\"\>"], "Print",
+ CellChangeTimes->{3.528016078984338*^9, 3.52801611620078*^9}],
+
+Cell[BoxData["\<\"Collecting the different structures that enter the \
+vertex...\"\>"], "Print",
+ CellChangeTimes->{3.528016078984338*^9, 3.528016134034177*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"\<\"Found \"\>", "\[InvisibleSpace]", "\<\"47\"\>", 
+   "\[InvisibleSpace]", "\<\" possible non zero vertices.\"\>"}],
+  SequenceForm["Found ", "47", " possible non zero vertices."],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.528016078984338*^9, 3.528016134506682*^9}],
+
+Cell[BoxData["\<\"Start calculating vertices...\"\>"], "Print",
+ CellChangeTimes->{3.528016078984338*^9, 3.528016134510023*^9}],
+
+Cell[BoxData[
+ ProgressIndicatorBox[Dynamic[PRIVATE`progress$5928]]], "Print",
+ CellChangeTimes->{3.528016078984338*^9, 3.528016134512031*^9}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"47", "\[InvisibleSpace]", "\<\" vertices obtained.\"\>"}],
+  SequenceForm[47, " vertices obtained."],
+  Editable->False]], "Print",
+ CellChangeTimes->{3.528016078984338*^9, 3.528016141626593*^9}],
+
+Cell[BoxData["\<\"   - Saved vertices in InterfaceRun[ 1 ].\"\>"], "Print",
+ CellChangeTimes->{3.528016078984338*^9, 3.528016434628393*^9}],
+
+Cell[BoxData["\<\"Preparing Python output.\"\>"], "Print",
+ CellChangeTimes->{3.528016078984338*^9, 3.528016434838951*^9}],
+
+Cell[BoxData["\<\"    - Splitting vertices into building blocks.\"\>"], \
+"Print",
+ CellChangeTimes->{3.528016078984338*^9, 3.528016435562807*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Feynman rules calculation", "Section",
+ CellChangeTimes->{{3.508650859336681*^9, 3.5086508623247147`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"rules", "=", 
+  RowBox[{"FeynmanRules", "[", "L", "]"}]}]], "Input",
+ CellChangeTimes->{{3.508061383518343*^9, 3.508061413431903*^9}, {
+   3.510571497855986*^9, 3.510571568813633*^9}, {3.510572173986182*^9, 
+   3.5105721743854856`*^9}, 3.510572210161304*^9, {3.510572541184834*^9, 
+   3.510572566899229*^9}, {3.616211233967836*^9, 3.6162112398639812`*^9}}]
+}, Open  ]]
+},
+WindowSize->{707, 790},
+WindowMargins->{{115, Automatic}, {Automatic, 0}},
+PrivateNotebookOptions->{"VersionedStylesheet"->{"Default.nb"[8.] -> False}},
+ShowSelection->True,
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 28, \
+2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 136, 3, 28, "Input"],
+Cell[CellGroupData[{
+Cell[706, 27, 24, 0, 80, "Section"],
+Cell[CellGroupData[{
+Cell[755, 31, 648, 16, 97, "Input"],
+Cell[CellGroupData[{
+Cell[1428, 51, 337, 5, 20, "Print"],
+Cell[1768, 58, 620, 12, 20, "Print"],
+Cell[2391, 72, 392, 6, 20, "Print"],
+Cell[2786, 80, 326, 5, 20, "Print"],
+Cell[3115, 87, 337, 5, 20, "Print"],
+Cell[3455, 94, 349, 5, 20, "Print"],
+Cell[3807, 101, 389, 6, 20, "Print"],
+Cell[4199, 109, 326, 5, 20, "Print"],
+Cell[4528, 116, 358, 6, 20, "Print"],
+Cell[4889, 124, 326, 5, 20, "Print"],
+Cell[5218, 131, 395, 6, 20, "Print"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5662, 143, 619, 12, 46, "Input"],
+Cell[6284, 157, 292, 4, 22, "Print"],
+Cell[6579, 163, 420, 9, 24, "Message"],
+Cell[CellGroupData[{
+Cell[7024, 176, 310, 4, 22, "Print"],
+Cell[7337, 182, 307, 4, 21, "Print"],
+Cell[7647, 188, 422, 8, 21, "Print"],
+Cell[8072, 198, 281, 4, 21, "Print"],
+Cell[8356, 204, 321, 5, 22, "Print"],
+Cell[8680, 211, 297, 4, 22, "Print"],
+Cell[8980, 217, 320, 5, 22, "Print"],
+Cell[9303, 224, 270, 4, 21, "Print"],
+Cell[9576, 230, 300, 4, 22, "Print"],
+Cell[9879, 236, 303, 4, 22, "Print"],
+Cell[10185, 242, 303, 4, 22, "Print"],
+Cell[10491, 248, 482, 9, 38, "Print"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11034, 264, 310, 4, 80, "Section"],
+Cell[11347, 270, 465, 12, 63, "Input"],
+Cell[11815, 284, 550, 16, 28, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12402, 305, 139, 1, 80, "Section"],
+Cell[CellGroupData[{
+Cell[12566, 310, 103, 1, 35, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[12694, 315, 356, 7, 46, "Input"],
+Cell[CellGroupData[{
+Cell[13075, 326, 276, 6, 21, "Print"],
+Cell[13354, 334, 570, 11, 22, "Print"],
+Cell[13927, 347, 96, 1, 21, "Print"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14084, 355, 104, 1, 35, "Subsubsection"],
+Cell[CellGroupData[{
+Cell[14213, 360, 486, 8, 28, "Input"],
+Cell[CellGroupData[{
+Cell[14724, 372, 149, 2, 22, "Print"],
+Cell[14876, 376, 134, 1, 22, "Print"],
+Cell[15013, 379, 132, 1, 22, "Print"],
+Cell[15148, 382, 160, 2, 22, "Print"],
+Cell[15311, 386, 321, 6, 22, "Print"],
+Cell[15635, 394, 127, 1, 22, "Print"],
+Cell[15765, 397, 142, 2, 26, "Print"],
+Cell[15910, 401, 240, 5, 21, "Print"],
+Cell[16153, 408, 139, 1, 21, "Print"],
+Cell[16295, 411, 122, 1, 22, "Print"],
+Cell[16420, 414, 146, 2, 22, "Print"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16639, 424, 112, 1, 80, "Section"],
+Cell[16754, 427, 380, 6, 28, "Input"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

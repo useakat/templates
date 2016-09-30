@@ -1,0 +1,50 @@
+%#BIBTEX jbibtex a1main_epjc
+%%%%%%%%%%%%%%%%%%%%%%% file template.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is a template file for The European Physical Journal
+%
+% Copy it to a new file with a new name and use it as the basis
+% for your article
+%
+%%%%%%%%%%%%%%%%%%%%%%%% Springer-Verlag %%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\begin{filecontents}{leer.eps}
+%!PS-Adobe-2.0 EPSF-2.0
+%%CreationDate: Mon Jul 13 16:51:17 1992
+%%DocumentFonts: (atend)
+%%Pages: 0 1
+%%BoundingBox: 72 31 601 342
+%%EndComments
+
+gsave
+72 31 moveto
+72 342 lineto
+601 342 lineto
+601 31 lineto
+72 31 lineto
+showpage
+grestore
+%%Trailer
+%%DocumentFonts: Helvetica
+\end{filecontents}
+%
+\documentclass[epj, nopacs]{svjour}
+% Remove option referee for final version
+%
+\input{begin}
+\renewcommand{\include}[1]{}
+\renewcommand\documentclass[2][]{}
+\input{formatter}
+\setcounter{footnote}{0}
+\input{intro}
+\input{section}
+\input{results}
+\input{conclusion}
+
+\input{acknowledgement}
+%\input{appendix}
+
+\bibliographystyle{bib/model1a-num-names}
+\bibliography{bib/neutrino,bib/neutrino_c}
+\input{end}
+

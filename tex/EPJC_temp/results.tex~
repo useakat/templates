@@ -1,0 +1,300 @@
+%#BIBTEX jbibtex results
+\documentclass[final,5p,times,twocolumn]{elsarticle}
+\include{begin}
+\section{Results}
+\label{results}
+In this section we discuss results of our analysis. All our results are obtained by assuming 20 ${\rm GW_{th}}$ total
+thermal power of the reactor complex, a far detector of 5 kt fiducial
+volume with 12\%
+free-proton fraction (in weight) and 5 year
+exposure time. 
+
+First we show the expected energy distributions of the reactor neutrinos in Fig.~\ref{fig:EventDist_combine_0}.  
+\begin{figure}[htpb]
+\resizebox{0.48\textwidth}{!}{
+%\includegraphics{figures/EventDist_combine_0.eps}
+\includegraphics{figures/EventDist_combine_0_2.eps}
+}
+\caption{The energy distribution of the reactor neutrino events after
+ \exposure\, exposure at the baseline length $L=30,40,50$
+ and 60 km, from the top to the bottom. The blue curves are for NH,
+ while the red ones are for IH. The red arrows show the energy at which
+ the mass hierarchy difference vanishes.}
+\label{fig:EventDist_combine_0}
+\end{figure}
+There are four sets of curves for different baseline lengths, 30, 40, 50
+and 60 km, from the top panel to the bottom panels. In each panel, the blue and red curves show the distributions for NH and IH,
+respectively. The red arrow in each
+panel shows the neutrino energy at which the mass hierarchy dipendent
+term in eq.~(\ref{pee2}) vanishes, at the $n=1$ point in
+eq.~(\ref{condition2}). The reactor neutrino events are expected to
+populate in the energy range between 1.8 MeV and
+8 MeV. We note here that the relative phase between the NH and IH
+oscillations is reversed across the arrowed degeneracy point, as most clearly seen in
+the $L = 60$ km case. 
+%This reversal plays a crucial role in the mass hierarchy determination
+%as we see in the Fig.~\ref{fig:EventDistmin_fit2nh_combine_30} and Fig.~\ref{fig:EventDistmin_fit2nh_combine_50}.
+
+\begin{figure}[htpb]
+\resizebox{0.48\textwidth}{!}{
+%\includegraphics{figures/EventDistmin_fit2nh_combine_30.eps}
+\includegraphics{figures/EventDistmin_fit2nh_combine_30_6_0.eps}
+}
+\caption{The energy distribution of the reactor neutrinos
+ at the baseline length of $L = 30$ km with \exposure\, exposure. 
+{\bf Upper}: The exact $E_{\nu}$ measurement is assumed. The dashed blue and dashed red curves are
+ for NH and IH,
+ respectively. The solid curve shows the distribution with the best-fit
+ parameters to the NH data with the IH assumption. The red arrow shows
+ the energy at which the
+ mass hierarchy difference vanishes.
+{\bf Lower}: $6/\sqrt{E_{vis}}\,\%$ energy resolution case.}
+\label{fig:EventDistmin_fit2nh_combine_30}
+\end{figure}
+
+\begin{figure}[htpb]
+\resizebox{0.48\textwidth}{!}{
+%\includegraphics{figures/EventDistmin_fit2nh_combine_50.eps}
+\includegraphics{figures/EventDistmin_fit2nh_combine_50_6_0.eps}
+}
+\caption{The same figure as
+ Fig.~\ref{fig:EventDistmin_fit2nh_combine_30} but the baseline length
+ of 50 km}
+\label{fig:EventDistmin_fit2nh_combine_50}
+\end{figure}
+Fig.~\ref{fig:EventDistmin_fit2nh_combine_30}
+and Fig.~\ref{fig:EventDistmin_fit2nh_combine_50} show energy
+distributions for $L = 30$ and 50 km, respectively, 
+in which the exact $E_{\nu}$ measurement is assumed for the upper panel,
+just as in Fig.~\ref{fig:EventDist_combine_0}, whereas in the lower
+panel the energy
+resolution of $a = 6\%$ with $b = 0$ in eq.~(\ref{eq:Eres}) is assumed. The dashed blue curve corresponds to
+the NH case, and the dashed red curve to the IH case,
+while the solid curve is obtained using the parameter values fitted to
+the NH data with the ``wrong'' IH assumption. At $L = 30$ km, the solid curve
+almost coincides with the dashed blue one even with the exact energy
+measurement, implying that it is almost impossible to distinguish
+the mass hierarchy by experiments at $L =  30$ km. This is because the
+small phase shift between the NH and IH predictions can be absorbed by a
+small shift in $|\dmr|$ by a fraction of its present uncertainty, as
+listed in Table~\ref{tb:fitting_params}. The situation only worsens by
+introducing finite energy resolution.
+% This is
+% simply due to the fact that the mass hierarchy difference in the energy
+% distribution can be absorved by the shift of $\dmr$ within
+% its uncertainty since the relative phase between NH and IH oscillation
+% almost the same in the relevant energy range of this experiment at $L
+% omme=30$ km. 
+
+The situation changes when the second peak of the mass hierarchy
+dependent term, the $n=2$ point in eq.~(\ref{condition1}), comes into the energy range. The mass hierarchy differnece can no longer be
+absorved by a shift in $\dmr$ since the relative phase
+between the NH and IH oscillation changes across the degeneracy point,
+resulting in the distinct difference between the dashed blue curve ( for
+the NH data) and the solid curve (the best-fit under the IH
+assumption) in the upper panel of
+Fig.~\ref{fig:EventDistmin_fit2nh_combine_50} when the neutrino energy
+is exactly measured. However, once the finite energy resolution is
+introduced, the phase difference in the lower energy side of the
+degeneracy point is significantly smeared out since the NH and IH oscillations have
+short wavelength at the low energy, and the remaining difference in the
+higher energy side can again be absorbed by a small shift in $|\dmr|$,
+resulting in an excellent fit (solid curve) to the NH data (blue
+dashed curve) in the lower panel of
+Fig.~\ref{fig:EventDistmin_fit2nh_combine_50}, shown for
+$6\%/\sqrt{E/{\rm MeV}}$
+energy resolution.
+
+% To asses the rejecting power for the wrong mass hierarchy assumption more
+% quantitatively, we show the $\dcT$ distribution as a function of the baseline
+% length $L$ in Fig.~\ref{fig:dchi2_combine}. 
+In order to quantify the mass hierarchy resolving power of the reactor
+neutrino experiments, we show in Fig.~\ref{fig:dchi2_combine} the
+$(\Delta\chi^2)_{min}$ value as a function of the baseline length $L$,
+for several energy resolutions, $a = 2,3,4,5$ and $6\%$ (with $b=0$) in
+eq.(\ref{eq:Eres}), from the top to the bottom.
+ \begin{figure}[htpb]
+ \resizebox{0.48\textwidth}{!}{
+% \includegraphics{figures/dchi2_qeq:Eres4.eps}
+% \includegraphics{figures/dchi2_combine2.eps}
+ \includegraphics{figures/dchi2_combine.eps}
+ }
+ \caption{$(\dcT)_{min}$ for mass hierarchy discrimination is shown as a function of the baseline
+  length $L$, when the energy resolution is varied in
+  eq.~(\ref{eq:Eres}) with $b=0$ and $a=2$ to 6\%, from the top to the
+  bottom. The results for \exposure\, exposure are shown by solid curves for NH, and by dashed curves for IH. The cross symbols
+  show the optimal locations of the detector that maximize $(\dcT)_{min}$.}
+ \label{fig:dchi2_combine}
+ \end{figure}
+Solid curves are for NH, while dashed curves are for IH. The results
+clearly show that the mass hierarchy can be determined by those
+experiments only if the energy resolution of the detector is
+$3\%/\sqrt{E/{\rm MeV}}$ or better, and that the baseline length should be in the
+range between 40 km and 60 km. Our findings agree with those of
+Refs.~\cite{Learned:2006wy,Batygov:2008ku,Zhan:2008id,Zhan:2009rs,Ghoshal:2010wt,Ciuffoli:2012iz,Ciuffoli:2012bs,Qian:2012xh}
+which are obtained by the Fourier analysis, as well as those of Refs.~\cite{Petcov:2001sy,Choubey:2003qx,Batygov:2008ku,Ghoshal:2010wt,Qian:2012xh,Ghoshal:2012ju}
+that adopt the $\chi^2$ analysis similar to ours.
+
+% The solid lines are obtained
+% by fitting to the NH data with the IH assumption, while the dashed lines
+% are obtained by fitting to the IH data with the NH assumption. The
+% green, blue, brown, purple and red curves show the $\dcT$ for $a = 2, 3, 4, 5$
+% and $6\%$ energy resolution with $b = 0\%$, where $a$ and $b$ are the
+% modeling parmeter for the
+% statistical and systematic error of the energy resolution, respectively, see eq.\ref{eq:Eres}. This $(\dcT)_{min}$ is the maximum value as
+% discussed in Sec.\ref{chi2}, taking no binning limit; $(\dcT)_{min}$
+% converges well to the maximum value for the bin size of $\sim 0.005
+% \sqrt{E_{vis}(MeV)}$ or less. In the figure $\dcT$ for 4-6\% resolution
+% remains at small value, less than 1.5, over the whole baseline
+% range as discussed above for the 6\% resolution case. On the other hand, $(\dcT)_{min}$ distribution for 2 and 3\% has its peak
+% around $L = 50$ km, reaching $(\dcT)_{min} \sim 12$ and $4$,
+% respectively. This result that the detector energy resolution is
+% needed to be at least less than 3\% for determining mass hierarchy agrees with what argued in the Ref.~\cite{Zhan:2008id,Zhan:2009rs} with the Fourier technique and other
+% references~\cite{Qian:2012xh,Learned:2006wy} although they somewhat emphasize on the
+% case of around 60 km baseline length. It also should be noted that the
+% optimal baseline length $L$ shifts to shorter value as the energy resolution
+% becomes larger, especially for more than 3\% resolution. This can be
+% understood as follows. The finite energy resolution smears the neutrino spectrum
+% more severely for longer $L$ because the wave length of the
+% atmospheric neutrino oscillation is shorter for longer $L$ as seen in eq.~(\ref{pee1}). Therefore, the
+% $(\dcT)_{min}$ is more reduced for longer $L$ after the smearing, and
+% at some resolution the $(\dcT)_{min}$ of longer $L$ becomes smaller
+% than that of shorter $L$, shifting the optimal $L$. For more than 3\%
+% resolution, the peak of the $(\dcT)_{min}$ becomes not so dominant, resulting in
+% the rapid shift of the optimal $L$ from 50 km.
+
+The decrease of the $(\dcT)_{min}$ for the baseline length $L < 40$ km is due to a shift in $|\dmr|$ and
+clearly seen in Fig.~\ref{fig:params}. 
+\begin{figure}[htpb]
+\resizebox{0.48\textwidth}{!}{
+%\includegraphics{figures/params.eps}
+%\includegraphics{figures/params_b0.eps}
+\includegraphics{figures/params.eps}
+}
+\caption{The best-fit parameter values for $\ssol ,$ $\srct,$ $\dms,$ $|\dmr|$ and
+ $f_{sys}$ as functions of the baseline length $L$, when the energy
+ resolution is varied in eq.~(\ref{eq:Eres}) with $b=0$ and $a=2,3$ and
+ 6\%. The results for \exposure\, exposure are shown by solid curves for NH, and by dashed curves
+ for IH.}
+\label{fig:params}
+\end{figure}
+There we plot the pull factor of the five fit
+parameters, $\ssol$, $\srct$, $\dms$, $|\dmr|$ and $f_{sys}$, as
+functions of the baseline length $L$. The pull factor of a parameter $Y$
+is defined as $ \left(Y^{\,fit} -Y^{\,input}\right)/\delta Y$
+with the same notation as in Sec.\ref{chi2}, and its squared contributes to the $\cT$ function eq.(\ref{eq:chi2_func}). The convention of the plots
+is the same as in Fig.~\ref{fig:dchi2_combine}, where
+$(\Delta\chi^2)_{min}$ stays almost zero at all $L$ for $a = 6\%$. In
+Fig.~\ref{fig:params}, the fitted parameter values with the wrong
+hierarchy assumption are shown by red curves for the $a = 6\%$ case. It
+is clear that the excellent fits giving $(\Delta\chi^2)_{min} \sim 0$
+are obtained simply by a small shift in $|\dmr|$ with a negative (NH)
+or positive (IH) pull factor of 0.5 or less. The other parameters do not contribute
+significantly. 
+%$\srct$ seems to contribute well since its pull factor deviates from zero as much as $|\dmr|$ around $L =
+%50$ km, but we checked that its contribution to reduce the $(\dcT)_{min}$ is almost
+% negligible compared to $|\dmr|$. 
+At large baseline lengths, $L > 80$ km, none of the model parameters
+gains a significant pull factor. The small $(\Delta\chi^2)_{min}$ in the
+longer $L$ region is mainly due to low statistics.
+
+Next we discuss the effects of the systematic
+error part of the energy resolution, $b$, in
+eq.(\ref{eq:Eres}). Fig.~\ref{fig:dchi2_2qEresnl2} shows the $(\dcT)_{min}$
+value as a function of the baseline length $L$ for different $b$ values.
+ \begin{figure}[htpb]
+ \resizebox{0.48\textwidth}{!}{
+% \includegraphics{figures/dchi2_2qEresnl3.eps}
+% \includegraphics{figures/dchi2_3qEresnl4.eps}
+ \includegraphics{figures/dchi2_combine_Eresnl_3.eps}
+ }
+ \caption{$(\dcT)_{min}$ for mass hierarchy discrimination is shown as a
+  function of the baseline length $L$, when the energy resolution is
+  varied in eq.~(\ref{eq:Eres}) with $a = 3\%$ and $b = 0, 0,5, 0.75$ and
+  $1\%$, from the top to the bottom. The results for \exposure\, exposure
+  are shown by solid curves for NH and
+  by dashed curves for IH. The cross symbols
+  show the optimal locations of the detector that maximize $(\dcT)_{min}$.}
+ \label{fig:dchi2_2qEresnl2}
+ \end{figure}
+ The results for $b = 0, 0.5, 0.75$ and $1\%$ are shown from the top to
+ the bottom with all $a = 3\%$. The effect of the systematic error is
+significant as discussed in Ref.~\cite{Qian:2012xh},
+reducing the peak value of the $(\dcT)_{min}$ from 4.5~($b=0$) to
+ 4~($b=0.5\%$), 3.5~(0.75\%) and 3~(1\%) for the NH case. 
+%by a factor of up to 1.5; thus the mass hierarchy can be
+% determined with 3-sigma significance only after 11-18 years running of the
+% experiment for $a=3\%$ case. 
+The location of the optimal $L$ (as shown by the cross symbol) decreases
+from 52 km for $(a,b) = (3,0)\%$ to 47 km for $(a,b) = (3,1)\%$. Fig.~\ref{fig:dchi2_3qEresnl} shows the same figure but for
+$b=2\%$.            
+ \begin{figure}[htpb]
+ \resizebox{0.48\textwidth}{!}{
+% \includegraphics{figures/dchi2_2qEresnl4.eps}
+ \includegraphics{figures/dchi2_combine_Eresnl_2.eps}
+ }
+ \caption{The same as Fig.\ref{fig:dchi2_2qEresnl2} but for the energy
+  resolution of eq.~(\ref{eq:Eres}) with $a = 2\%$ and $b = 0, 0.5, 0.75$
+  and $1\%$ from the top to the bottom.}
+ \label{fig:dchi2_3qEresnl}
+ \end{figure}
+ In this case the $(\dcT)_{min}$ reduced from 13.3~($b = 0$) to
+ 11.8~($b=0.5\%$), 10.3~($b=0.75\%$) and 8.5~($b=1\%$). 
+
+The neutrino parameters can be measured accurately with this
+experiment, and we show the expected statistical errors of the parameters, $\ssol, \srct, \dms$ and $|\dmr|$, in
+Fig.~\ref{fig:param_errors}. 
+\begin{figure}[htpb]
+\resizebox{0.48\textwidth}{!}{
+%\includegraphics{figures/param_errors_b0.5.eps}
+\includegraphics{figures/param_errors2.eps}
+}
+\caption{The statistical errors of the neutrino model parameters measured
+ by this experiment as functions of the distance from the
+ reactor $L$, after \exposure\, exposure. The results for both hierarchy (NH by solid and IH by dashed
+ curves) and for the energy resolution of eq.(\ref{eq:Eres}) with $(a,b)=(3,0.5),(3,1)$ and
+ $(6,1)\%$ are shown.}
+\label{fig:param_errors}
+\end{figure}
+% These
+% errors are rather insensitive to the energy resolution as can be
+% observed from the degeneracy even between $(a,b)=(3,0.5)\%$ and $(6,1)\%$ cases, with
+% an exception of the $|\dmr|$ error for which the error grows at large
+% $L$ for the $(6,1)\%$ case. 
+We find
+\begin{align}
+ \delta\ssol \sim& 4\times 10^{-3}, \nn\\
+\delta \dms \sim& 3\times 10^{-7} {\rm eV^2}, \nn\\
+\delta |\dmr| \sim& 7\times 10^{-6} {\rm eV^2},
+ \label{eq:param_errors}
+\end{align}
+with the energy resolution of $(a, b) = (3,0.5)\%$ at around $L = 50$
+km. Those errors are almost independent of the mass hierarchy and of
+the energy resolution, with
+ an exception of the $|\dmr|$ error for which the larger resolution
+ results in the larger error: $|\dmr|\sim 8\times 10^{-6} {\rm eV}^2$ for the resolution of
+ $(3,1)\%$ and $1.8\times 10^{-5}$ for $(6,1)\%$. The uncertainties of $\ssol$ and $\dms$
+ show the rapid reduction after $L = 20$ km and stabilize at $L > 40$
+ km. This is because the normalization and shape of the slowly varying
+ oscillation pattern in Fig.~\ref{fig:EventDist_combine_0} determine $\ssol$ and $\dms$, respectively,
+ almost independent of the energy resolution. On the other hand, $\srct$
+ and $|\dmr|$ are measured most accurately at around $L\sim 1$ km,
+ which motivated the first round of the reactor neutrino oscillation
+ experiments such as Daya Bay~\cite{An:2012eh}, RENO~\cite{Ahn:2012nd} and
+ Double Chooz~\cite{Abe:2011fz}. The error of $\srct$ quickly grows to
+ the Daya Bay expectation of 5\%, assumed in this analysis, at $L>30$
+ km.
+
+Somewhat surprisingly, the error of $|\dmr|$ remains small at the level
+of $1\times 10^{-6} {\rm eV}^2$  up to $L\sim 60$ km when the energy
+resolution is $3\%/\sqrt{E/{\rm MeV}}$ or better. We find that this is because the
+rapid oscillation pattern due to $|\dmr|$ can be resolved even after the
+smearing in the observed energy, as can be seen in
+Fig.~\ref{fig:EventDistmin_fit2nh_combine_50}, where the lower plots are
+obtained after the Gaussian smearing with the energy resolution of
+$6\%/\sqrt{E/{\rm MeV}}$. With higher energy resolution, more oscillation patterns
+are recognized, and the high accuracy of the $|\dmr|$ measurement is
+achieved. It is worth noticing that $7\times 10^{-6} {\rm eV}^2$ quoted
+in eq.~(\ref{eq:param_errors}) corresponds to a 0.3\% measurement of $|\dmr|$. 
+\include{biblio}
+\include{end}

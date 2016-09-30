@@ -1,0 +1,5 @@
+[localhost]
+127.0.0.1
+
+hodejs_version: v0.12.5
+nodebrew_path: ~/.nodebrew/current/bin

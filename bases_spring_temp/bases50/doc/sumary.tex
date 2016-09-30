@@ -1,0 +1,98 @@
+
+%%%%%%%%%%%%%%%%%%%
+{\footnotesize
+%%%%%%%%%%%%%%%%%%%
+\noindent
+{\it Title of program}: BASES/SPRING V5.1
+\par
+\smallskip
+\noindent
+{\it Program obtainable from}:~CPC Program Library, Queen's University
+of Belfast, N.Ire\-land ( see application form in this issue )
+\par
+\smallskip
+\noindent
+{\it Computer for which the program is designed and others on which it is 
+operable}:~HP750, FACOM, HITAC, IBM, VAX and others with a FORTRAN77 compiler.
+\par
+\smallskip
+\noindent
+{\it Computer}: HP750, FACOM-M780; ~{\it Installation}: National Laboratory for
+High Energy Physics (KEK), Tsuku\-ba, Ibaraki, Japan
+\par
+\smallskip
+\noindent
+{\it Operating system}:~UNIX, OSIV/F4 MSP
+\par
+\smallskip
+\noindent
+{\it Programming language used}: FORTRAN77
+\par
+\smallskip
+\noindent
+{\it High speed storage required}: 392 Kwords 
+\par
+\smallskip
+\noindent
+{\it No.~of bits in a word}: 32
+\par
+\smallskip
+\noindent
+{\it Peripherals used}: disc file and printer for output
+\par
+\smallskip
+\noindent
+{\it No.~of cards in combined program and test deck}: 2750
+\par
+\smallskip
+\noindent
+{\it Card image code}: ASCII
+\par
+\smallskip
+\noindent
+{\it Key words}: Multi-dimensional integration, Monte Carlo simulation,
+ event generation and four momentum vector generation.
+\par
+\smallskip
+\noindent
+{\it Nature of physical problem}
+\par
+\noindent
+The previous version of the numerical integration and event generation package
+BASES/SPRING has been useful to obtain  total cross sections and to generate 
+events of elementary processes in high energy physics. It is applicable to
+processes with up to ten independent variables. 
+In order to study, for example, $e^+e^-$ physics at much higher
+energies, we often need more than ten independent variables to
+describe  processes of our interest. 
+As far as  the numerical integration by BASES is concerned, it is
+easy to extend the dimension of integral. 
+However, the event generation requires a huge memory space with the previous 
+generation algorithm of SPRING. \par
+\smallskip
+\noindent
+{\it Method of solution}
+\par
+\noindent
+BASES/SPRING is suited for the integration and generation of a very
+singular function.
+The number of those independent variables which give the function a
+singular behavior is usually small.
+Then, if we divide the subspace spanned by these singular variables into
+hypercubes, the number of hypercubes becomes not too large.
+Applying the previous BASES / SPRING algorithm only to this subspace and
+handling the other variables as additional integral variables, we could
+extend the dimension of integral and event generation up to 50 variables.
+\par
+\smallskip
+\noindent
+{\it Typical running time}
+\par
+\noindent
+The running time is essebtially determined by the complexity of the function
+program which gives the differential cross section of an elementary process.
+If we take the process ${e^+e^-}$ $\rightarrow$ ${\nu \bar{\nu} \gamma }$
+as an example, the two dimensional integration and the generation of 10000
+events require 4.4 seconds total on a FACOM M780
+computer.
+}

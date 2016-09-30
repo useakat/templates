@@ -1,0 +1,16 @@
+*DO BEGI
+*DO TEST
+    12  1000.  6  0.  0.
+*DO DETE
+    'HCU'
+#.*DO SECS
+#.*DO YEAR
+*DO NEVT
+  100 
+*DO TRAC
+   'ne.n1000.pi0.kin'
+*DO HIST
+   'ne.n1000.pi0.hnk'
+*DO RAND
+   1234567
+*DO FINISH

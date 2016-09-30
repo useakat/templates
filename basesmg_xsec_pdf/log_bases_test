@@ -1,0 +1,1210 @@
+
+ ===============================================
+ | HELAS COUPSM called with option 1:          |
+ | user inputs 3 selected basic SM parameters, |
+ | all others calculated at tree level.        |
+ ===============================================
+
+ Inputs are:
+   M_Z      =  91.1880 GeV
+   1/alpha  = 132.5070
+   G_Fermi  =   1.16639E-05
+
+ top mass at Higgs mass = 170.96088 GeV
+ bot mass at Higgs mass =   2.96917 GeV
+ tau mass at Higgs mass =   1.05944 GeV
+
+ *** HELAS Standard Model parameters ***
+
+ 1/alpha = 132.51  from input/MS-bar relations
+ 1/alpha = 132.51  from 1-loop running at Q = M_Z
+
+ alpha_s = 0.1712  from input
+ alpha_s = 0.1185  from 1-loop running at Q = M_Z
+
+ sin^2(theta_W) =  0.2222
+
+ Z mass  =   91.188 GeV        Z width  =  2.5329 GeV
+ W mass  =   80.419 GeV        W width  =  2.1223 GeV
+ H mass  =  120.000 GeV        H width  =     nan GeV
+
+ top    mass  =  174.300 GeV        top    width  =  1.3075 GeV
+ bottom mass  =    5.279 GeV        bottom width  =  0.0000 GeV
+ charm  mass  =    0.000 GeV        charm  width  =  0.0000 GeV
+ tau    mass  =    1.777 GeV        tau    width  =  0.0000 GeV
+ all other quark and lepton masses set to zero
+
+ Boson couplings:
+
+ gw    =   0.653232911  from input/MS-bar relations
+ gw    =   0.653232911  from 1-loop running at Q = M_Z
+
+ gwwa  =     0.30795
+ gwwz  =     0.57609
+ gwwh  =    52.53234     0.00000
+ gzzh  =    67.54369     0.00000
+ ghhh  =  -175.45395     0.00000
+
+ gwwhh =     0.21336     0.00000
+ gzzhh =     0.27432     0.00000
+ ghhhh =    -0.71259     0.00000
+
+ FFV couplings:
+
+ ggq(L)   =  -1.4667610   0.0000000    ggq(R)   =  -1.4667610   0.0000000
+
+ gal(L)   =   0.3079538   0.0000000    gal(R)   =   0.3079538   0.0000000
+ gau(L)   =  -0.2053025   0.0000000    gau(R)   =  -0.2053025   0.0000000
+ gad(L)   =   0.1026513   0.0000000    gad(R)   =   0.1026513   0.0000000
+
+ gwf(L)   =  -0.4619054   0.0000000    gwf(R)   =   0.0000000   0.0000000
+
+ gzn(L)   =  -0.3703540   0.0000000    gzn(R)   =   0.0000000   0.0000000
+ gzl(L)   =   0.2057342   0.0000000    gzl(R)   =  -0.1646198   0.0000000
+ gzu(L)   =  -0.2606075   0.0000000    gzu(R)   =   0.1097465   0.0000000
+ gzd(L)   =   0.3154808   0.0000000    gzd(R)   =  -0.0548733   0.0000000
+
+ FFH couplings:
+
+ gHtop(L) =  -0.6943463,  0.0000000    gHtop(R) =  -0.6943463,  0.0000000
+ gHbot(L) =  -0.0120591,  0.0000000    gHbot(R) =  -0.0120591,  0.0000000
+ gHtau(L) =  -0.0043028,  0.0000000    gHtau(R) =  -0.0043028,  0.0000000
+
+ Z,W partial widths and effective BRs:
+
+ width Z->nn  = 0.1659 GeV,   BR(Z->nn)  = 0.1965
+ width Z->ll  = 0.0840 GeV,   BR(Z->ll)  = 0.0663
+ width Z->TT  = 0.0838 GeV,   BR(Z->TT)  = 0.0331
+ width Z->uu  = 0.3059 GeV,   BR(Z->uu)  = 0.1208
+ width Z->dd  = 0.3923 GeV,   BR(Z->dd)  = 0.3098
+ width Z->cc  = 0.3059 GeV,   BR(Z->cc)  = 0.1208
+ width Z->bb  = 0.3870 GeV,   BR(Z->bb)  = 0.1528
+
+ width W->nl  = 0.2276 GeV,   BR(W->nl)  = 0.2144
+ width W->nl  = 0.2276 GeV,   BR(W->nT)  = 0.1071
+ width W->ud  = 0.7199 GeV,   BR(W->ud)  = 0.3392
+ width W->cs  = 0.7199 GeV,   BR(W->cs)  = 0.3392
+
+ HDECAY output for Higgs sector:
+
+ Higgs total width =        nan GeV
+
+ BR (H -> bb~  ) =      nan
+ BR (H -> taus ) =      nan
+ BR (H -> muons) =      nan
+ BR (H -> ss~  ) =      nan
+ BR (H -> cc~  ) =      nan
+ BR (H -> tt~  ) =      nan
+ BR (H -> gg   ) =      nan
+ BR (H -> AA   ) =      nan
+ BR (H -> ZA   ) =      nan
+ BR (H -> W+W- ) =      nan
+ BR (H -> ZZ   ) =      nan
+
+
+     ===============================
+       Parameters for Bases-Spring
+     ===============================
+
+          BSOUTF = gg2g_t_test.bases
+          BSHSTF = gg2g_t_test.tdr
+          Ncall  =      10000
+          ITMX1  =          5
+          ITMX2  =          5
+          Acc1   =     0.0500
+          Acc2   =     0.0100
+
+     =============================
+       Parameters for Generation
+     =============================
+
+          Ecm0          =  14000.000
+          Sigma(Beam)   =     0.0070
+          Run#          =       9995
+          Beam type 1   =          1
+          Beam type 2   =          1
+          Beam energy 1 =   7000.000
+          Beam energy 2 =   7000.000
+ OKKKKKKKKKKKKKKKKKKKKKKKKKK?
+
+     =============================
+       Standard Model Parameters  
+     =============================
+
+        << Inputs >>
+
+           alpha^-1         inf
+           alphas_s     0.00000
+           sin th_W^2   0.00000
+           M_Z           91.188
+           M_W           80.330
+           m_H          120.000
+           m_t          174.300
+
+        << Decay Widths >>
+
+           Z^0 decay width              nan
+
+              Br(nu-nu^bar)[%]         nan
+              Br(l-l^bar)  [%]         nan
+              Br(u-u^bar)  [%]         nan
+              Br(d-d^bar)  [%]         nan
+
+           W decay width                nan
+
+              Br(nu-l^bar)[%]          nan
+              Br(q-q'^bar)[%]          nan
+
+           H^0 decay width              nan
+
+              Br(tau)[%]               nan
+              Br(c)  [%]               nan
+              Br(b)  [%]               nan
+              Br(t)  [%]               nan
+              Br(W)  [%]               nan
+              Br(Z)  [%]               nan
+
+           t decay width                nan
+
+
+1
+ 
+                                                       Date: 10/12/19  19:33
+        **********************************************************
+        *                                                        *
+        *     BBBBBBB     AAAA     SSSSSS   EEEEEE   SSSSSS      *
+        *     BB    BB   AA  AA   SS    SS  EE      SS    SS     *
+        *     BB    BB  AA    AA  SS        EE      SS           *
+        *     BBBBBBB   AAAAAAAA   SSSSSS   EEEEEE   SSSSSS      *
+        *     BB    BB  AA    AA        SS  EE            SS     *
+        *     BB    BB  AA    AA  SS    SS  EE      SS    SS     *
+        *     BBBB BB   AA    AA   SSSSSS   EEEEEE   SSSSSS      *
+        *                                                        *
+        *                   BASES Version 5.1                    *
+        *           coded by S.Kawabata KEK, March 1994          *
+        **********************************************************
+
+
+     <<   Parameters for BASES    >>
+
+      (1) Dimensions of integration etc.
+          # of dimensions :    Ndim    =        4   ( 50 at max.)
+          # of Wilds      :    Nwild   =        4   ( 15 at max.)
+          # of sample points : Ncall   =     8192(real)    10000(given)
+          # of subregions    : Ng      =       48 / variable
+          # of regions       : Nregion =        8 / variable
+          # of Hypercubes    : Ncube   =     4096
+
+      (2) About the integration variables
+          ------+---------------+---------------+-------+-------
+              i       XL(i)           XU(i)       IG(i)   Wild
+          ------+---------------+---------------+-------+-------
+              1    0.000000E+00    1.000000E+00     1      yes
+              2    0.000000E+00    1.000000E+00     1      yes
+              3    0.000000E+00    1.000000E+00     1      yes
+              4    0.000000E+00    1.000000E+00     1      yes
+          ------+---------------+---------------+-------+-------
+
+      (3) Parameters for the grid optimization step
+          Max.# of iterations: ITMX1 =        5
+          Expected accuracy  : Acc1  =   0.0500 %
+
+      (4) Parameters for the integration step
+          Max.# of iterations: ITMX2 =        5
+          Expected accuracy  : Acc2  =   0.0100 %
+
+
+     <<   Computing Time Information   >>
+
+               (1) For BASES              H: M:  Sec
+                   Overhead           :   0: 0: 0.02
+                   Grid Optim. Step   :   0: 0: 1.28
+                   Integration Step   :   0: 0: 1.24
+                   Go time for all    :   0: 0: 2.55
+
+               (2) Expected event generation time
+                   Expected time for 1000 events :      0.04 Sec
+
+1
+ 
+                                                       Date: 10/12/19  19:33
+               Convergency Behavior for the Grid Optimization Step
+ ------------------------------------------------------------------------------
+ <- Result of  each iteration ->  <-     Cumulative Result     -> < CPU  time >
+  IT Eff R_Neg   Estimate  Acc %  Estimate(+- Error )order  Acc % ( H: M: Sec )
+ ------------------------------------------------------------------------------
+   1  57  0.00  2.945E+11  6.444  2.945398(+-0.189795)E 11  6.444   0: 0: 0.25
+   2  57  0.00  3.256E+11  2.248  3.216129(+-0.068304)E 11  2.124   0: 0: 0.51
+   3  56  0.00  3.227E+11  1.356  3.223518(+-0.036834)E 11  1.143   0: 0: 0.77
+   4  56  0.00  3.176E+11  1.285  3.202358(+-0.027348)E 11  0.854   0: 0: 1.02
+   5  56  0.00  3.227E+11  1.284  3.209892(+-0.022824)E 11  0.711   0: 0: 1.28
+ ------------------------------------------------------------------------------
+
+1
+ 
+                                                       Date: 10/12/19  19:33
+               Convergency Behavior for the Integration Step      
+ ------------------------------------------------------------------------------
+ <- Result of  each iteration ->  <-     Cumulative Result     -> < CPU  time >
+  IT Eff R_Neg   Estimate  Acc %  Estimate(+- Error )order  Acc % ( H: M: Sec )
+ ------------------------------------------------------------------------------
+   1  55  0.00  3.204E+11  1.428  3.204164(+-0.045756)E 11  1.428   0: 0: 1.53
+   2  54  0.00  3.147E+11  1.342  3.173355(+-0.031032)E 11  0.978   0: 0: 1.77
+   3  55  0.00  3.243E+11  1.271  3.198641(+-0.024789)E 11  0.775   0: 0: 2.03
+   4  55  0.00  3.097E+11  1.264  3.169658(+-0.020946)E 11  0.661   0: 0: 2.28
+   5  55  0.00  3.145E+11  1.261  3.164193(+-0.018521)E 11  0.585   0: 0: 2.53
+ ------------------------------------------------------------------------------
+
+1
+
+
+     *********  Contents of the histogram Header *********
+
+ (1) Actual Buffer size     =   4215 Words
+ (2) Contents of Histograms 
+     Max. No. of Histograms =     50
+     Number   of Histograms =     15
+    ID     X_min        X_max    X_bin Hash Hst#
+    13   0.0000E+00   1.0000E+03   50  1  2    3
+  1001   0.0000E+00   1.0000E+00   50  1  2   12
+    14   0.0000E+00   1.0000E+02   50  2  2    4
+  1002   0.0000E+00   1.0000E+00   50  2  2   13
+    15  -1.0000E+00   1.0000E+00   50  3  2    5
+  1003   0.0000E+00   1.0000E+00   50  3  2   14
+  1004   0.0000E+00   1.0000E+00   50  4  1   15
+   111   0.0000E+00   4.0000E+00    4  8  1   11
+    21  -5.0000E+00   5.0000E+00   50  9  1    6
+    22   0.0000E+00   6.2832E+00   50 10  1    7
+    23   0.0000E+00   1.0000E+03   50 11  1    8
+    11  -5.0000E+00   5.0000E+00   50 12  2    1
+    24   0.0000E+00   1.0000E+02   50 12  2    9
+    12   0.0000E+00   6.2832E+00   50 13  2    2
+    25  -1.0000E+00   1.0000E+00   50 13  2   10
+ (3) Contents of Scatter Plots
+     Max. No. of Scat_Plots =     50
+     Number   of Scat_Plots =      0
+
+1
+ Histogram (ID = 11 ) for d sigma / d eta_a1                                              
+                              Linear Scale indicated by "*"
+     x      d(Sigma)/dx     0.0E+00      2.5E+10      5.0E+10     7.5E+10      
+ +-------+------------------+------------+------------+-----------+-----------+
+ I  E  0 I 0.000        E  0I                                                 I
+ I-5.000 I 0.000+-0.000 E  0I                                                 I
+ I-4.800 I 0.000+-0.000 E  0I                                                 I
+ I-4.600 I 0.000+-0.000 E  0I                                                 I
+ I-4.400 I 0.000+-0.000 E  0I                                                 I
+ I-4.200 I 0.000+-0.000 E  0I                                                 I
+ I-4.000 I 0.000+-0.000 E  0I                                                 I
+ I-3.800 I 0.000+-0.000 E  0I                                                 I
+ I-3.600 I 0.000+-0.000 E  0I                                                 I
+ I-3.400 I 0.000+-0.000 E  0I                                                 I
+ I-3.200 I 0.000+-0.000 E  0I                                                 I
+ I-3.000 I 0.000+-0.000 E  0I                                                 I
+ I-2.800 I 0.000+-0.000 E  0I                                                 I
+ I-2.600 I 2.474+-0.238 E 10I*************OOOOOOOOO                           I
+ I-2.400 I 4.732+-0.235 E 10I************************OOOOOOOOOOOOOO           I
+ I-2.200 I 5.101+-0.215 E 10I**************************OOOOOOOOOOOOOO         I
+ I-2.000 I 5.547+-0.198 E 10I****************************OOOOOOOOOOOOOO       I
+ I-1.800 I 6.088+-0.179 E 10I*******************************OOOOOOOOOOOOO     I
+ I-1.600 I 5.836+-0.180 E 10I******************************OOOOOOOOOOOOO      I
+ I-1.400 I 5.996+-0.168 E 10I******************************OOOOOOOOOOOOOO     I
+ I-1.200 I 7.019+-0.194 E 10I************************************OOOOOOOOOOOO I
+ I-1.000 I 7.060+-0.189 E 10I************************************OOOOOOOOOOOO I
+ I-0.800 I 7.184+-0.178 E 10I************************************OOOOOOOOOOOO I
+ I-0.600 I 7.506+-0.185 E 10I**************************************OOOOOOOOOOOI
+ I-0.400 I 7.186+-0.180 E 10I************************************OOOOOOOOOOOO I
+ I-0.200 I 7.095+-0.180 E 10I************************************OOOOOOOOOOOO I
+ I 0.000 I 7.439+-0.188 E 10I**************************************OOOOOOOOOOOI
+ I 0.200 I 7.373+-0.194 E 10I*************************************OOOOOOOOOOOOI
+ I 0.400 I 7.301+-0.171 E 10I*************************************OOOOOOOOOOO I
+ I 0.600 I 7.207+-0.190 E 10I*************************************OOOOOOOOOOO I
+ I 0.800 I 6.677+-0.179 E 10I**********************************OOOOOOOOOOOO   I
+ I 1.000 I 6.915+-0.189 E 10I***********************************OOOOOOOOOOOO  I
+ I 1.200 I 6.256+-0.189 E 10I********************************OOOOOOOOOOOOO    I
+ I 1.400 I 6.059+-0.188 E 10I*******************************OOOOOOOOOOOOO     I
+ I 1.600 I 6.044+-0.192 E 10I*******************************OOOOOOOOOOOOO     I
+ I 1.800 I 5.815+-0.212 E 10I******************************OOOOOOOOOOOOO      I
+ I 2.000 I 5.251+-0.187 E 10I***************************OOOOOOOOOOOOOO        I
+ I 2.200 I 4.760+-0.208 E 10I************************OOOOOOOOOOOOOO           I
+ I 2.400 I 2.442+-0.208 E 10I*************OOOOOOOOO                           I
+ I 2.600 I 0.000+-0.000 E  0I                                                 I
+ I 2.800 I 0.000+-0.000 E  0I                                                 I
+ I 3.000 I 0.000+-0.000 E  0I                                                 I
+ I 3.200 I 0.000+-0.000 E  0I                                                 I
+ I 3.400 I 0.000+-0.000 E  0I                                                 I
+ I 3.600 I 0.000+-0.000 E  0I                                                 I
+ I 3.800 I 0.000+-0.000 E  0I                                                 I
+ I 4.000 I 0.000+-0.000 E  0I                                                 I
+ I 4.200 I 0.000+-0.000 E  0I                                                 I
+ I 4.400 I 0.000+-0.000 E  0I                                                 I
+ I 4.600 I 0.000+-0.000 E  0I                                                 I
+ I 4.800 I 0.000+-0.000 E  0I                                                 I
+ I  E  0 I 0.000        E  0I                                                 I
+ +-------+------------------+-------------------------------------------------+
+     x      d(Sigma)/dx     1.0E+10                                            
+                              Logarithmic Scale indicated by "O"
+
+1
+ Histogram (ID = 12 ) for d sigma / d phi_a1                                              
+                              Linear Scale indicated by "*"
+     x      d(Sigma)/dx     0.0E+00      1.8E+10     3.5E+10      5.3E+10      
+ +-------+------------------+------------+-----------+------------+-----------+
+ I  E  0 I 0.000        E  0I                                                 I
+ I 0.000 I 5.468+-0.247 E 10I****************************************OOOOOOO  I
+ I 0.126 I 4.768+-0.258 E 10I***********************************OOOOOOOO      I
+ I 0.251 I 4.719+-0.199 E 10I**********************************OOOOOOOOO      I
+ I 0.377 I 4.491+-0.204 E 10I*********************************OOOOOOOO        I
+ I 0.503 I 4.924+-0.207 E 10I************************************OOOOOOOO     I
+ I 0.628 I 5.095+-0.211 E 10I*************************************OOOOOOOO    I
+ I 0.754 I 4.602+-0.213 E 10I*********************************OOOOOOOOO       I
+ I 0.880 I 5.004+-0.221 E 10I************************************OOOOOOOO     I
+ I 1.005 I 5.451+-0.254 E 10I***************************************OOOOOOOO  I
+ I 1.131 I 5.024+-0.212 E 10I************************************OOOOOOOO     I
+ I 1.257 I 4.881+-0.211 E 10I***********************************OOOOOOOOO     I
+ I 1.382 I 4.753+-0.199 E 10I**********************************OOOOOOOOO      I
+ I 1.508 I 5.168+-0.229 E 10I*************************************OOOOOOOO    I
+ I 1.634 I 5.137+-0.217 E 10I*************************************OOOOOOOO    I
+ I 1.759 I 4.995+-0.210 E 10I************************************OOOOOOOO     I
+ I 1.885 I 4.967+-0.199 E 10I************************************OOOOOOOO     I
+ I 2.011 I 5.548+-0.314 E 10I****************************************OOOOOOO  I
+ I 2.136 I 5.544+-0.299 E 10I****************************************OOOOOOO  I
+ I 2.262 I 5.075+-0.210 E 10I*************************************OOOOOOOO    I
+ I 2.388 I 5.155+-0.231 E 10I*************************************OOOOOOOO    I
+ I 2.513 I 5.151+-0.241 E 10I*************************************OOOOOOOO    I
+ I 2.639 I 5.267+-0.242 E 10I**************************************OOOOOOOO   I
+ I 2.765 I 4.695+-0.208 E 10I**********************************OOOOOOOO       I
+ I 2.890 I 4.799+-0.220 E 10I***********************************OOOOOOOO      I
+ I 3.016 I 5.528+-0.313 E 10I****************************************OOOOOOO  I
+ I 3.142 I 5.001+-0.215 E 10I************************************OOOOOOOO     I
+ I 3.267 I 5.345+-0.249 E 10I***************************************OOOOOOO   I
+ I 3.393 I 4.705+-0.203 E 10I**********************************OOOOOOOOO      I
+ I 3.519 I 5.450+-0.227 E 10I***************************************OOOOOOOO  I
+ I 3.644 I 4.737+-0.209 E 10I**********************************OOOOOOOOO      I
+ I 3.770 I 4.727+-0.211 E 10I**********************************OOOOOOOOO      I
+ I 3.896 I 5.122+-0.232 E 10I*************************************OOOOOOOO    I
+ I 4.021 I 4.997+-0.229 E 10I************************************OOOOOOOO     I
+ I 4.147 I 4.929+-0.213 E 10I************************************OOOOOOOO     I
+ I 4.273 I 5.258+-0.229 E 10I**************************************OOOOOOOO   I
+ I 4.398 I 4.770+-0.208 E 10I***********************************OOOOOOOO      I
+ I 4.524 I 5.002+-0.225 E 10I************************************OOOOOOOO     I
+ I 4.650 I 4.942+-0.219 E 10I************************************OOOOOOOO     I
+ I 4.775 I 5.089+-0.251 E 10I*************************************OOOOOOOO    I
+ I 4.901 I 5.439+-0.241 E 10I***************************************OOOOOOO   I
+ I 5.027 I 4.828+-0.211 E 10I***********************************OOOOOOOO      I
+ I 5.152 I 4.751+-0.207 E 10I**********************************OOOOOOOOO      I
+ I 5.278 I 5.445+-0.244 E 10I***************************************OOOOOOO   I
+ I 5.404 I 5.199+-0.224 E 10I**************************************OOOOOOO    I
+ I 5.529 I 5.027+-0.226 E 10I************************************OOOOOOOO     I
+ I 5.655 I 4.949+-0.205 E 10I************************************OOOOOOOO     I
+ I 5.781 I 4.728+-0.244 E 10I**********************************OOOOOOOOO      I
+ I 5.906 I 4.953+-0.249 E 10I************************************OOOOOOOO     I
+ I 6.032 I 4.666+-0.220 E 10I**********************************OOOOOOOO       I
+ I 6.158 I 5.776+-0.386 E 10I******************************************OOOOOO I
+ I  E  0 I 0.000        E  0I                                                 I
+ +-------+------------------+-------------------------------------------------+
+     x      d(Sigma)/dx     1.0E+10                                            
+                              Logarithmic Scale indicated by "O"
+
+1
+ Histogram (ID = 13 ) for d sigma / d pt_a1                                               
+                              Linear Scale indicated by "*"
+     x      d(Sigma)/dx     0.0E+00      4.5E+09      9.0E+09     1.3E+10      
+ +-------+------------------+------------+------------+-----------+-----------+
+ I  E  3 I 0.000        E  0I                                                 I
+ I 0.000 I 0.000+-0.000 E  0I                                                 I
+ I 0.020 I 1.430+-0.008 E 10I****************************************OOOOOO   I
+ I 0.040 I 1.160+-0.012 E  9I****OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO        I
+ I 0.060 I 2.493+-0.105 E  8I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO            I
+ I 0.080 I 7.414+-0.332 E  7I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO              I
+ I 0.100 I 2.712+-0.151 E  7I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO                I
+ I 0.120 I 1.320+-0.127 E  7I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOO                  I
+ I 0.140 I 5.398+-0.627 E  6I*OOOOOOOOOOOOOOOOOOOOOOOOOOOO                    I
+ I 0.160 I 3.162+-0.477 E  6I*OOOOOOOOOOOOOOOOOOOOOOOOOOO                     I
+ I 0.180 I 2.056+-0.147 E  6I*OOOOOOOOOOOOOOOOOOOOOOOOOO                      I
+ I 0.200 I 8.806+-0.609 E  5I*OOOOOOOOOOOOOOOOOOOOOOOO                        I
+ I 0.220 I 8.909+-0.600 E  5I*OOOOOOOOOOOOOOOOOOOOOOOO                        I
+ I 0.240 I 3.200+-0.425 E  5I*OOOOOOOOOOOOOOOOOOOOOO                          I
+ I 0.260 I 2.458+-0.409 E  5I*OOOOOOOOOOOOOOOOOOOOO                           I
+ I 0.280 I 1.392+-0.188 E  5I*OOOOOOOOOOOOOOOOOOOO                            I
+ I 0.300 I 1.586+-0.188 E  5I*OOOOOOOOOOOOOOOOOOOOO                           I
+ I 0.320 I 1.671+-0.167 E  5I*OOOOOOOOOOOOOOOOOOOOO                           I
+ I 0.340 I 1.092+-0.127 E  5I*OOOOOOOOOOOOOOOOOOOO                            I
+ I 0.360 I 6.234+-0.819 E  4I*OOOOOOOOOOOOOOOOOO                              I
+ I 0.380 I 3.265+-0.730 E  4I*OOOOOOOOOOOOOOOOO                               I
+ I 0.400 I 4.181+-0.740 E  4I*OOOOOOOOOOOOOOOOOO                              I
+ I 0.420 I 2.640+-0.469 E  4I*OOOOOOOOOOOOOOOOO                               I
+ I 0.440 I 3.335+-0.380 E  4I*OOOOOOOOOOOOOOOOO                               I
+ I 0.460 I 2.321+-0.402 E  4I*OOOOOOOOOOOOOOOO                                I
+ I 0.480 I 1.108+-0.210 E  4I*OOOOOOOOOOOOOOO                                 I
+ I 0.500 I 5.934+-1.607 E  3I*OOOOOOOOOOOOO                                   I
+ I 0.520 I 7.844+-2.214 E  3I*OOOOOOOOOOOOOO                                  I
+ I 0.540 I 5.872+-1.760 E  3I*OOOOOOOOOOOOO                                   I
+ I 0.560 I 1.392+-0.863 E  3I*OOOOOOOOOO                                      I
+ I 0.580 I 3.409+-1.308 E  3I*OOOOOOOOOOOO                                    I
+ I 0.600 I 7.213+-3.224 E  2I*OOOOOOOOO                                       I
+ I 0.620 I 2.428+-0.863 E  3I*OOOOOOOOOOO                                     I
+ I 0.640 I 2.186+-0.597 E  3I*OOOOOOOOOOO                                     I
+ I 0.660 I 2.675+-2.105 E  2I*OOOOOOO                                         I
+ I 0.680 I 2.379+-0.681 E  3I*OOOOOOOOOOO                                     I
+ I 0.700 I 1.593+-0.465 E  3I*OOOOOOOOOOO                                     I
+ I 0.720 I 5.043+-1.651 E  2I*OOOOOOOO                                        I
+ I 0.740 I 1.195+-0.347 E  3I*OOOOOOOOOO                                      I
+ I 0.760 I 1.015+-0.254 E  3I*OOOOOOOOOO                                      I
+ I 0.780 I 6.266+-3.179 E  2I*OOOOOOOO                                        I
+ I 0.800 I 6.893+-2.609 E  2I*OOOOOOOOO                                       I
+ I 0.820 I 4.983+-1.730 E  2I*OOOOOOOO                                        I
+ I 0.840 I 2.006+-1.419 E  2I*OOOOOO                                          I
+ I 0.860 I 1.512+-1.491 E  2I*OOOOO                                           I
+ I 0.880 I 2.068+-0.761 E  2I*OOOOOO                                          I
+ I 0.900 I 2.197+-1.093 E  2I*OOOOOO                                          I
+ I 0.920 I 3.230+-0.811 E  1I*OO                                              I
+ I 0.940 I 2.769+-1.035 E  2I*OOOOOOO                                         I
+ I 0.960 I 4.072+-3.872 E  1I*OOO                                             I
+ I 0.980 I 8.502+-3.571 E  1I*OOOO                                            I
+ I  E  3 I 1.386        E  4I*OOOOOOOOOOOOOOO                                 I
+ +-------+------------------+---------+----------+---------+---------+--------+
+     x      d(Sigma)/dx     1.0E+01   1.0E+03    1.0E+05   1.0E+07   1.0E+09   
+                              Logarithmic Scale indicated by "O"
+
+1
+ Histogram (ID = 14 ) for d sigma / d pt_a1                                               
+                              Linear Scale indicated by "*"
+     x      d(Sigma)/dx     0.0E+00      1.2E+10      2.5E+10     3.7E+10      
+ +-------+------------------+------------+------------+-----------+-----------+
+ I  E  2 I 0.000        E  0I                                                 I
+ I 0.000 I 0.000+-0.000 E  0I                                                 I
+ I 0.020 I 0.000+-0.000 E  0I                                                 I
+ I 0.040 I 0.000+-0.000 E  0I                                                 I
+ I 0.060 I 0.000+-0.000 E  0I                                                 I
+ I 0.080 I 0.000+-0.000 E  0I                                                 I
+ I 0.100 I 0.000+-0.000 E  0I                                                 I
+ I 0.120 I 0.000+-0.000 E  0I                                                 I
+ I 0.140 I 0.000+-0.000 E  0I                                                 I
+ I 0.160 I 0.000+-0.000 E  0I                                                 I
+ I 0.180 I 0.000+-0.000 E  0I                                                 I
+ I 0.200 I 4.145+-0.037 E 10I******************************************OOOO   I
+ I 0.220 I 2.981+-0.037 E 10I******************************OOOOOOOOOOOOOO     I
+ I 0.240 I 1.997+-0.021 E 10I********************OOOOOOOOOOOOOOOOOOOOOO       I
+ I 0.260 I 1.483+-0.021 E 10I***************OOOOOOOOOOOOOOOOOOOOOOOOO         I
+ I 0.280 I 1.025+-0.013 E 10I***********OOOOOOOOOOOOOOOOOOOOOOOOOOO           I
+ I 0.300 I 8.200+-0.115 E  9I*********OOOOOOOOOOOOOOOOOOOOOOOOOOOO            I
+ I 0.320 I 6.472+-0.111 E  9I*******OOOOOOOOOOOOOOOOOOOOOOOOOOOOO             I
+ I 0.340 I 4.752+-0.103 E  9I*****OOOOOOOOOOOOOOOOOOOOOOOOOOOOO               I
+ I 0.360 I 3.987+-0.096 E  9I****OOOOOOOOOOOOOOOOOOOOOOOOOOOOO                I
+ I 0.380 I 3.257+-0.068 E  9I****OOOOOOOOOOOOOOOOOOOOOOOOOOOO                 I
+ I 0.400 I 2.242+-0.044 E  9I***OOOOOOOOOOOOOOOOOOOOOOOOOOO                   I
+ I 0.420 I 1.993+-0.052 E  9I**OOOOOOOOOOOOOOOOOOOOOOOOOOO                    I
+ I 0.440 I 1.586+-0.035 E  9I**OOOOOOOOOOOOOOOOOOOOOOOOOO                     I
+ I 0.460 I 1.350+-0.046 E  9I**OOOOOOOOOOOOOOOOOOOOOOOOO                      I
+ I 0.480 I 1.059+-0.030 E  9I**OOOOOOOOOOOOOOOOOOOOOOOO                       I
+ I 0.500 I 8.633+-0.278 E  8I*OOOOOOOOOOOOOOOOOOOOOOOO                        I
+ I 0.520 I 7.804+-0.320 E  8I*OOOOOOOOOOOOOOOOOOOOOOO                         I
+ I 0.540 I 6.871+-0.259 E  8I*OOOOOOOOOOOOOOOOOOOOOO                          I
+ I 0.560 I 5.854+-0.227 E  8I*OOOOOOOOOOOOOOOOOOOOOO                          I
+ I 0.580 I 4.545+-0.199 E  8I*OOOOOOOOOOOOOOOOOOOO                            I
+ I 0.600 I 3.667+-0.166 E  8I*OOOOOOOOOOOOOOOOOOO                             I
+ I 0.620 I 4.464+-0.575 E  8I*OOOOOOOOOOOOOOOOOOOO                            I
+ I 0.640 I 3.046+-0.174 E  8I*OOOOOOOOOOOOOOOOOO                              I
+ I 0.660 I 3.093+-0.577 E  8I*OOOOOOOOOOOOOOOOOO                              I
+ I 0.680 I 2.077+-0.112 E  8I*OOOOOOOOOOOOOOOO                                I
+ I 0.700 I 2.086+-0.440 E  8I*OOOOOOOOOOOOOOOO                                I
+ I 0.720 I 1.568+-0.092 E  8I*OOOOOOOOOOOOOO                                  I
+ I 0.740 I 1.673+-0.252 E  8I*OOOOOOOOOOOOOOO                                 I
+ I 0.760 I 1.520+-0.105 E  8I*OOOOOOOOOOOOOO                                  I
+ I 0.780 I 1.737+-0.287 E  8I*OOOOOOOOOOOOOOO                                 I
+ I 0.800 I 1.370+-0.242 E  8I*OOOOOOOOOOOOOO                                  I
+ I 0.820 I 1.031+-0.141 E  8I*OOOOOOOOOOOO                                    I
+ I 0.840 I 9.008+-0.681 E  7I*OOOOOOOOOOO                                     I
+ I 0.860 I 5.921+-0.434 E  7I*OOOOOOOOO                                       I
+ I 0.880 I 6.976+-0.505 E  7I*OOOOOOOOOO                                      I
+ I 0.900 I 6.333+-0.547 E  7I*OOOOOOOOOO                                      I
+ I 0.920 I 5.578+-0.418 E  7I*OOOOOOOOO                                       I
+ I 0.940 I 6.508+-0.898 E  7I*OOOOOOOOOO                                      I
+ I 0.960 I 5.532+-0.361 E  7I*OOOOOOOOO                                       I
+ I 0.980 I 4.263+-0.961 E  7I*OOOOOOO                                         I
+ I  E  2 I 1.082        E  9I**OOOOOOOOOOOOOOOOOOOOOOOO                       I
+ +-------+------------------+------------+------------+-----------+-----------+
+     x      d(Sigma)/dx     1.0E+07      1.0E+08      1.0E+09     1.0E+10      
+                              Logarithmic Scale indicated by "O"
+
+1
+ Histogram (ID = 15 ) for d sigma / d pt_cos1                                             
+                              Linear Scale indicated by "*"
+     x      d(Sigma)/dx     0.0E+00      2.2E+11      4.5E+11     6.7E+11      
+ +-------+------------------+------------+------------+-----------+-----------+
+ I  E  0 I 0.000        E  0I                                                 I
+ I-1.000 I 6.916+-0.207 E 11I***************************************OOOOOOO   I
+ I-0.960 I 5.194+-0.125 E 11I*****************************OOOOOOOOOOOOOO      I
+ I-0.920 I 3.126+-0.094 E 11I******************OOOOOOOOOOOOOOOOOOOO           I
+ I-0.880 I 2.326+-0.074 E 11I*************OOOOOOOOOOOOOOOOOOOOOO              I
+ I-0.840 I 2.156+-0.072 E 11I************OOOOOOOOOOOOOOOOOOOOOO               I
+ I-0.800 I 1.749+-0.070 E 11I**********OOOOOOOOOOOOOOOOOOOOOO                 I
+ I-0.760 I 1.705+-0.064 E 11I**********OOOOOOOOOOOOOOOOOOOOO                  I
+ I-0.720 I 1.178+-0.057 E 11I*******OOOOOOOOOOOOOOOOOOOO                      I
+ I-0.680 I 1.320+-0.053 E 11I********OOOOOOOOOOOOOOOOOOOOO                    I
+ I-0.640 I 1.147+-0.052 E 11I*******OOOOOOOOOOOOOOOOOOOO                      I
+ I-0.600 I 1.090+-0.049 E 11I*******OOOOOOOOOOOOOOOOOOO                       I
+ I-0.560 I 9.642+-0.475 E 10I******OOOOOOOOOOOOOOOOOOO                        I
+ I-0.520 I 1.024+-0.050 E 11I******OOOOOOOOOOOOOOOOOOOO                       I
+ I-0.480 I 8.852+-0.416 E 10I*****OOOOOOOOOOOOOOOOOOO                         I
+ I-0.440 I 1.008+-0.046 E 11I******OOOOOOOOOOOOOOOOOOOO                       I
+ I-0.400 I 8.990+-0.487 E 10I*****OOOOOOOOOOOOOOOOOOO                         I
+ I-0.360 I 8.369+-0.440 E 10I*****OOOOOOOOOOOOOOOOOOO                         I
+ I-0.320 I 7.773+-0.445 E 10I*****OOOOOOOOOOOOOOOOOO                          I
+ I-0.280 I 7.899+-0.397 E 10I*****OOOOOOOOOOOOOOOOOO                          I
+ I-0.240 I 7.339+-0.396 E 10I*****OOOOOOOOOOOOOOOOO                           I
+ I-0.200 I 6.173+-0.358 E 10I****OOOOOOOOOOOOOOOO                             I
+ I-0.160 I 7.596+-0.414 E 10I*****OOOOOOOOOOOOOOOOOO                          I
+ I-0.120 I 7.151+-0.431 E 10I****OOOOOOOOOOOOOOOOOO                           I
+ I-0.080 I 7.318+-0.362 E 10I*****OOOOOOOOOOOOOOOOO                           I
+ I-0.040 I 7.618+-0.452 E 10I*****OOOOOOOOOOOOOOOOOO                          I
+ I 0.000 I 6.800+-0.415 E 10I****OOOOOOOOOOOOOOOOO                            I
+ I 0.040 I 7.289+-0.392 E 10I*****OOOOOOOOOOOOOOOOO                           I
+ I 0.080 I 7.039+-0.419 E 10I****OOOOOOOOOOOOOOOOOO                           I
+ I 0.120 I 8.378+-0.431 E 10I*****OOOOOOOOOOOOOOOOOOO                         I
+ I 0.160 I 8.126+-0.457 E 10I*****OOOOOOOOOOOOOOOOOO                          I
+ I 0.200 I 7.659+-0.399 E 10I*****OOOOOOOOOOOOOOOOOO                          I
+ I 0.240 I 7.369+-0.435 E 10I*****OOOOOOOOOOOOOOOOO                           I
+ I 0.280 I 7.967+-0.432 E 10I*****OOOOOOOOOOOOOOOOOO                          I
+ I 0.320 I 9.278+-0.532 E 10I******OOOOOOOOOOOOOOOOOOO                        I
+ I 0.360 I 8.511+-0.459 E 10I*****OOOOOOOOOOOOOOOOOOO                         I
+ I 0.400 I 9.825+-0.462 E 10I******OOOOOOOOOOOOOOOOOOO                        I
+ I 0.440 I 9.587+-0.438 E 10I******OOOOOOOOOOOOOOOOOOO                        I
+ I 0.480 I 8.703+-0.397 E 10I*****OOOOOOOOOOOOOOOOOOO                         I
+ I 0.520 I 9.760+-0.489 E 10I******OOOOOOOOOOOOOOOOOOO                        I
+ I 0.560 I 1.208+-0.057 E 11I*******OOOOOOOOOOOOOOOOOOOOO                     I
+ I 0.600 I 1.135+-0.049 E 11I*******OOOOOOOOOOOOOOOOOOOO                      I
+ I 0.640 I 1.191+-0.056 E 11I*******OOOOOOOOOOOOOOOOOOOO                      I
+ I 0.680 I 1.184+-0.047 E 11I*******OOOOOOOOOOOOOOOOOOOO                      I
+ I 0.720 I 1.620+-0.066 E 11I*********OOOOOOOOOOOOOOOOOOOOOO                  I
+ I 0.760 I 1.742+-0.064 E 11I**********OOOOOOOOOOOOOOOOOOOOOO                 I
+ I 0.800 I 2.059+-0.076 E 11I************OOOOOOOOOOOOOOOOOOOOO                I
+ I 0.840 I 2.486+-0.086 E 11I**************OOOOOOOOOOOOOOOOOOOOO              I
+ I 0.880 I 3.225+-0.096 E 11I******************OOOOOOOOOOOOOOOOOOOO           I
+ I 0.920 I 5.256+-0.134 E 11I******************************OOOOOOOOOOOOOO     I
+ I 0.960 I 7.035+-0.184 E 11I****************************************OOOOOOO  I
+ I  E  0 I 0.000        E  0I                                                 I
+ +-------+------------------+-------------------------+-----------------------+
+     x      d(Sigma)/dx     1.0E+10                   1.0E+11                  
+                              Logarithmic Scale indicated by "O"
+
+1
+ Histogram (ID = 21 ) for d sigma / d eta_a2                                              
+                              Linear Scale indicated by "*"
+     x      d(Sigma)/dx     0.0E+00      2.5E+10      5.0E+10     7.5E+10      
+ +-------+------------------+------------+------------+-----------+-----------+
+ I  E  0 I 0.000        E  0I                                                 I
+ I-5.000 I 0.000+-0.000 E  0I                                                 I
+ I-4.800 I 0.000+-0.000 E  0I                                                 I
+ I-4.600 I 0.000+-0.000 E  0I                                                 I
+ I-4.400 I 0.000+-0.000 E  0I                                                 I
+ I-4.200 I 0.000+-0.000 E  0I                                                 I
+ I-4.000 I 0.000+-0.000 E  0I                                                 I
+ I-3.800 I 0.000+-0.000 E  0I                                                 I
+ I-3.600 I 0.000+-0.000 E  0I                                                 I
+ I-3.400 I 0.000+-0.000 E  0I                                                 I
+ I-3.200 I 0.000+-0.000 E  0I                                                 I
+ I-3.000 I 0.000+-0.000 E  0I                                                 I
+ I-2.800 I 0.000+-0.000 E  0I                                                 I
+ I-2.600 I 2.427+-0.151 E 10I*************OOOOOOOOO                           I
+ I-2.400 I 4.641+-0.197 E 10I************************OOOOOOOOOOOOOO           I
+ I-2.200 I 5.849+-0.266 E 10I******************************OOOOOOOOOOOOO      I
+ I-2.000 I 5.695+-0.233 E 10I*****************************OOOOOOOOOOOOO       I
+ I-1.800 I 5.728+-0.188 E 10I*****************************OOOOOOOOOOOOOO      I
+ I-1.600 I 6.075+-0.177 E 10I*******************************OOOOOOOOOOOOO     I
+ I-1.400 I 6.470+-0.189 E 10I*********************************OOOOOOOOOOOOO   I
+ I-1.200 I 6.497+-0.173 E 10I*********************************OOOOOOOOOOOOO   I
+ I-1.000 I 6.880+-0.177 E 10I***********************************OOOOOOOOOOOO  I
+ I-0.800 I 6.873+-0.177 E 10I***********************************OOOOOOOOOOOO  I
+ I-0.600 I 6.938+-0.172 E 10I***********************************OOOOOOOOOOOO  I
+ I-0.400 I 7.548+-0.185 E 10I**************************************OOOOOOOOOOOI
+ I-0.200 I 7.787+-0.193 E 10I***************************************OOOOOOOOOOO
+ I 0.000 I 7.394+-0.190 E 10I*************************************OOOOOOOOOOOOI
+ I 0.200 I 7.516+-0.192 E 10I**************************************OOOOOOOOOOOI
+ I 0.400 I 7.210+-0.189 E 10I*************************************OOOOOOOOOOO I
+ I 0.600 I 6.733+-0.172 E 10I**********************************OOOOOOOOOOOOO  I
+ I 0.800 I 6.809+-0.173 E 10I***********************************OOOOOOOOOOOO  I
+ I 1.000 I 7.215+-0.193 E 10I*************************************OOOOOOOOOOO I
+ I 1.200 I 6.233+-0.177 E 10I********************************OOOOOOOOOOOOO    I
+ I 1.400 I 5.885+-0.189 E 10I******************************OOOOOOOOOOOOO      I
+ I 1.600 I 6.108+-0.202 E 10I*******************************OOOOOOOOOOOOO     I
+ I 1.800 I 5.713+-0.185 E 10I*****************************OOOOOOOOOOOOOO      I
+ I 2.000 I 5.377+-0.285 E 10I***************************OOOOOOOOOOOOOO        I
+ I 2.200 I 4.320+-0.183 E 10I**********************OOOOOOOOOOOOOO             I
+ I 2.400 I 2.444+-0.180 E 10I*************OOOOOOOOO                           I
+ I 2.600 I 0.000+-0.000 E  0I                                                 I
+ I 2.800 I 0.000+-0.000 E  0I                                                 I
+ I 3.000 I 0.000+-0.000 E  0I                                                 I
+ I 3.200 I 0.000+-0.000 E  0I                                                 I
+ I 3.400 I 0.000+-0.000 E  0I                                                 I
+ I 3.600 I 0.000+-0.000 E  0I                                                 I
+ I 3.800 I 0.000+-0.000 E  0I                                                 I
+ I 4.000 I 0.000+-0.000 E  0I                                                 I
+ I 4.200 I 0.000+-0.000 E  0I                                                 I
+ I 4.400 I 0.000+-0.000 E  0I                                                 I
+ I 4.600 I 0.000+-0.000 E  0I                                                 I
+ I 4.800 I 0.000+-0.000 E  0I                                                 I
+ I  E  0 I 0.000        E  0I                                                 I
+ +-------+------------------+-------------------------------------------------+
+     x      d(Sigma)/dx     1.0E+10                                            
+                              Logarithmic Scale indicated by "O"
+
+1
+ Histogram (ID = 22 ) for d sigma / d phi_a2                                              
+                              Linear Scale indicated by "*"
+     x      d(Sigma)/dx     0.0E+00      1.8E+10     3.5E+10      5.3E+10      
+ +-------+------------------+------------+-----------+------------+-----------+
+ I  E  0 I 0.000        E  0I                                                 I
+ I 0.000 I 5.001+-0.215 E 10I************************************OOOOOOOO     I
+ I 0.126 I 5.345+-0.249 E 10I***************************************OOOOOOO   I
+ I 0.251 I 4.705+-0.203 E 10I**********************************OOOOOOOOO      I
+ I 0.377 I 5.450+-0.227 E 10I***************************************OOOOOOOO  I
+ I 0.503 I 4.737+-0.209 E 10I**********************************OOOOOOOOO      I
+ I 0.628 I 4.727+-0.211 E 10I**********************************OOOOOOOOO      I
+ I 0.754 I 5.122+-0.232 E 10I*************************************OOOOOOOO    I
+ I 0.880 I 4.997+-0.229 E 10I************************************OOOOOOOO     I
+ I 1.005 I 4.929+-0.213 E 10I************************************OOOOOOOO     I
+ I 1.131 I 5.258+-0.229 E 10I**************************************OOOOOOOO   I
+ I 1.257 I 4.770+-0.208 E 10I***********************************OOOOOOOO      I
+ I 1.382 I 5.002+-0.225 E 10I************************************OOOOOOOO     I
+ I 1.508 I 4.942+-0.219 E 10I************************************OOOOOOOO     I
+ I 1.634 I 5.089+-0.251 E 10I*************************************OOOOOOOO    I
+ I 1.759 I 5.439+-0.241 E 10I***************************************OOOOOOO   I
+ I 1.885 I 4.828+-0.211 E 10I***********************************OOOOOOOO      I
+ I 2.011 I 4.751+-0.207 E 10I**********************************OOOOOOOOO      I
+ I 2.136 I 5.445+-0.244 E 10I***************************************OOOOOOO   I
+ I 2.262 I 5.199+-0.224 E 10I**************************************OOOOOOO    I
+ I 2.388 I 5.027+-0.226 E 10I************************************OOOOOOOO     I
+ I 2.513 I 4.949+-0.205 E 10I************************************OOOOOOOO     I
+ I 2.639 I 4.728+-0.244 E 10I**********************************OOOOOOOOO      I
+ I 2.765 I 4.953+-0.249 E 10I************************************OOOOOOOO     I
+ I 2.890 I 4.666+-0.220 E 10I**********************************OOOOOOOO       I
+ I 3.016 I 5.776+-0.386 E 10I******************************************OOOOOO I
+ I 3.142 I 5.468+-0.247 E 10I****************************************OOOOOOO  I
+ I 3.267 I 4.768+-0.258 E 10I***********************************OOOOOOOO      I
+ I 3.393 I 4.719+-0.199 E 10I**********************************OOOOOOOOO      I
+ I 3.519 I 4.491+-0.204 E 10I*********************************OOOOOOOO        I
+ I 3.644 I 4.924+-0.207 E 10I************************************OOOOOOOO     I
+ I 3.770 I 5.095+-0.211 E 10I*************************************OOOOOOOO    I
+ I 3.896 I 4.602+-0.213 E 10I*********************************OOOOOOOOO       I
+ I 4.021 I 5.004+-0.221 E 10I************************************OOOOOOOO     I
+ I 4.147 I 5.451+-0.254 E 10I***************************************OOOOOOOO  I
+ I 4.273 I 5.024+-0.212 E 10I************************************OOOOOOOO     I
+ I 4.398 I 4.881+-0.211 E 10I***********************************OOOOOOOOO     I
+ I 4.524 I 4.753+-0.199 E 10I**********************************OOOOOOOOO      I
+ I 4.650 I 5.168+-0.229 E 10I*************************************OOOOOOOO    I
+ I 4.775 I 5.137+-0.217 E 10I*************************************OOOOOOOO    I
+ I 4.901 I 4.995+-0.210 E 10I************************************OOOOOOOO     I
+ I 5.027 I 4.967+-0.199 E 10I************************************OOOOOOOO     I
+ I 5.152 I 5.548+-0.314 E 10I****************************************OOOOOOO  I
+ I 5.278 I 5.544+-0.299 E 10I****************************************OOOOOOO  I
+ I 5.404 I 5.075+-0.210 E 10I*************************************OOOOOOOO    I
+ I 5.529 I 5.155+-0.231 E 10I*************************************OOOOOOOO    I
+ I 5.655 I 5.151+-0.241 E 10I*************************************OOOOOOOO    I
+ I 5.781 I 5.267+-0.242 E 10I**************************************OOOOOOOO   I
+ I 5.906 I 4.695+-0.208 E 10I**********************************OOOOOOOO       I
+ I 6.032 I 4.799+-0.220 E 10I***********************************OOOOOOOO      I
+ I 6.158 I 5.528+-0.313 E 10I****************************************OOOOOOO  I
+ I  E  0 I 0.000        E  0I                                                 I
+ +-------+------------------+-------------------------------------------------+
+     x      d(Sigma)/dx     1.0E+10                                            
+                              Logarithmic Scale indicated by "O"
+
+1
+ Histogram (ID = 23 ) for d sigma / d pt_a2                                               
+                              Linear Scale indicated by "*"
+     x      d(Sigma)/dx     0.0E+00      4.5E+09      9.0E+09     1.3E+10      
+ +-------+------------------+------------+------------+-----------+-----------+
+ I  E  3 I 0.000        E  0I                                                 I
+ I 0.000 I 0.000+-0.000 E  0I                                                 I
+ I 0.020 I 1.430+-0.008 E 10I****************************************OOOOOO   I
+ I 0.040 I 1.160+-0.012 E  9I****OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO        I
+ I 0.060 I 2.493+-0.105 E  8I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO            I
+ I 0.080 I 7.414+-0.332 E  7I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO              I
+ I 0.100 I 2.712+-0.151 E  7I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO                I
+ I 0.120 I 1.320+-0.127 E  7I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOO                  I
+ I 0.140 I 5.398+-0.627 E  6I*OOOOOOOOOOOOOOOOOOOOOOOOOOOO                    I
+ I 0.160 I 3.162+-0.477 E  6I*OOOOOOOOOOOOOOOOOOOOOOOOOOO                     I
+ I 0.180 I 2.056+-0.147 E  6I*OOOOOOOOOOOOOOOOOOOOOOOOOO                      I
+ I 0.200 I 8.806+-0.609 E  5I*OOOOOOOOOOOOOOOOOOOOOOOO                        I
+ I 0.220 I 8.909+-0.600 E  5I*OOOOOOOOOOOOOOOOOOOOOOOO                        I
+ I 0.240 I 3.200+-0.425 E  5I*OOOOOOOOOOOOOOOOOOOOOO                          I
+ I 0.260 I 2.458+-0.409 E  5I*OOOOOOOOOOOOOOOOOOOOO                           I
+ I 0.280 I 1.392+-0.188 E  5I*OOOOOOOOOOOOOOOOOOOO                            I
+ I 0.300 I 1.586+-0.188 E  5I*OOOOOOOOOOOOOOOOOOOOO                           I
+ I 0.320 I 1.671+-0.167 E  5I*OOOOOOOOOOOOOOOOOOOOO                           I
+ I 0.340 I 1.092+-0.127 E  5I*OOOOOOOOOOOOOOOOOOOO                            I
+ I 0.360 I 6.234+-0.819 E  4I*OOOOOOOOOOOOOOOOOO                              I
+ I 0.380 I 3.265+-0.730 E  4I*OOOOOOOOOOOOOOOOO                               I
+ I 0.400 I 4.181+-0.740 E  4I*OOOOOOOOOOOOOOOOOO                              I
+ I 0.420 I 2.640+-0.469 E  4I*OOOOOOOOOOOOOOOOO                               I
+ I 0.440 I 3.335+-0.380 E  4I*OOOOOOOOOOOOOOOOO                               I
+ I 0.460 I 2.321+-0.402 E  4I*OOOOOOOOOOOOOOOO                                I
+ I 0.480 I 1.108+-0.210 E  4I*OOOOOOOOOOOOOOO                                 I
+ I 0.500 I 5.934+-1.607 E  3I*OOOOOOOOOOOOO                                   I
+ I 0.520 I 7.844+-2.214 E  3I*OOOOOOOOOOOOOO                                  I
+ I 0.540 I 5.872+-1.760 E  3I*OOOOOOOOOOOOO                                   I
+ I 0.560 I 1.392+-0.863 E  3I*OOOOOOOOOO                                      I
+ I 0.580 I 3.409+-1.308 E  3I*OOOOOOOOOOOO                                    I
+ I 0.600 I 7.213+-3.224 E  2I*OOOOOOOOO                                       I
+ I 0.620 I 2.428+-0.863 E  3I*OOOOOOOOOOO                                     I
+ I 0.640 I 2.186+-0.597 E  3I*OOOOOOOOOOO                                     I
+ I 0.660 I 2.675+-2.105 E  2I*OOOOOOO                                         I
+ I 0.680 I 2.379+-0.681 E  3I*OOOOOOOOOOO                                     I
+ I 0.700 I 1.593+-0.465 E  3I*OOOOOOOOOOO                                     I
+ I 0.720 I 5.043+-1.651 E  2I*OOOOOOOO                                        I
+ I 0.740 I 1.195+-0.347 E  3I*OOOOOOOOOO                                      I
+ I 0.760 I 1.015+-0.254 E  3I*OOOOOOOOOO                                      I
+ I 0.780 I 6.266+-3.179 E  2I*OOOOOOOO                                        I
+ I 0.800 I 6.893+-2.609 E  2I*OOOOOOOOO                                       I
+ I 0.820 I 4.983+-1.730 E  2I*OOOOOOOO                                        I
+ I 0.840 I 2.006+-1.419 E  2I*OOOOOO                                          I
+ I 0.860 I 1.512+-1.491 E  2I*OOOOO                                           I
+ I 0.880 I 2.068+-0.761 E  2I*OOOOOO                                          I
+ I 0.900 I 2.197+-1.093 E  2I*OOOOOO                                          I
+ I 0.920 I 3.230+-0.811 E  1I*OO                                              I
+ I 0.940 I 2.769+-1.035 E  2I*OOOOOOO                                         I
+ I 0.960 I 4.072+-3.872 E  1I*OOO                                             I
+ I 0.980 I 8.502+-3.571 E  1I*OOOO                                            I
+ I  E  3 I 1.386        E  4I*OOOOOOOOOOOOOOO                                 I
+ +-------+------------------+---------+----------+---------+---------+--------+
+     x      d(Sigma)/dx     1.0E+01   1.0E+03    1.0E+05   1.0E+07   1.0E+09   
+                              Logarithmic Scale indicated by "O"
+
+1
+ Histogram (ID = 24 ) for d sigma / d pt_a2                                               
+                              Linear Scale indicated by "*"
+     x      d(Sigma)/dx     0.0E+00      1.2E+10      2.5E+10     3.7E+10      
+ +-------+------------------+------------+------------+-----------+-----------+
+ I  E  2 I 0.000        E  0I                                                 I
+ I 0.000 I 0.000+-0.000 E  0I                                                 I
+ I 0.020 I 0.000+-0.000 E  0I                                                 I
+ I 0.040 I 0.000+-0.000 E  0I                                                 I
+ I 0.060 I 0.000+-0.000 E  0I                                                 I
+ I 0.080 I 0.000+-0.000 E  0I                                                 I
+ I 0.100 I 0.000+-0.000 E  0I                                                 I
+ I 0.120 I 0.000+-0.000 E  0I                                                 I
+ I 0.140 I 0.000+-0.000 E  0I                                                 I
+ I 0.160 I 0.000+-0.000 E  0I                                                 I
+ I 0.180 I 0.000+-0.000 E  0I                                                 I
+ I 0.200 I 4.145+-0.037 E 10I******************************************OOOO   I
+ I 0.220 I 2.981+-0.037 E 10I******************************OOOOOOOOOOOOOO     I
+ I 0.240 I 1.997+-0.021 E 10I********************OOOOOOOOOOOOOOOOOOOOOO       I
+ I 0.260 I 1.483+-0.021 E 10I***************OOOOOOOOOOOOOOOOOOOOOOOOO         I
+ I 0.280 I 1.025+-0.013 E 10I***********OOOOOOOOOOOOOOOOOOOOOOOOOOO           I
+ I 0.300 I 8.200+-0.115 E  9I*********OOOOOOOOOOOOOOOOOOOOOOOOOOOO            I
+ I 0.320 I 6.472+-0.111 E  9I*******OOOOOOOOOOOOOOOOOOOOOOOOOOOOO             I
+ I 0.340 I 4.752+-0.103 E  9I*****OOOOOOOOOOOOOOOOOOOOOOOOOOOOO               I
+ I 0.360 I 3.987+-0.096 E  9I****OOOOOOOOOOOOOOOOOOOOOOOOOOOOO                I
+ I 0.380 I 3.257+-0.068 E  9I****OOOOOOOOOOOOOOOOOOOOOOOOOOOO                 I
+ I 0.400 I 2.242+-0.044 E  9I***OOOOOOOOOOOOOOOOOOOOOOOOOOO                   I
+ I 0.420 I 1.993+-0.052 E  9I**OOOOOOOOOOOOOOOOOOOOOOOOOOO                    I
+ I 0.440 I 1.586+-0.035 E  9I**OOOOOOOOOOOOOOOOOOOOOOOOOO                     I
+ I 0.460 I 1.350+-0.046 E  9I**OOOOOOOOOOOOOOOOOOOOOOOOO                      I
+ I 0.480 I 1.059+-0.030 E  9I**OOOOOOOOOOOOOOOOOOOOOOOO                       I
+ I 0.500 I 8.633+-0.278 E  8I*OOOOOOOOOOOOOOOOOOOOOOOO                        I
+ I 0.520 I 7.804+-0.320 E  8I*OOOOOOOOOOOOOOOOOOOOOOO                         I
+ I 0.540 I 6.871+-0.259 E  8I*OOOOOOOOOOOOOOOOOOOOOO                          I
+ I 0.560 I 5.854+-0.227 E  8I*OOOOOOOOOOOOOOOOOOOOOO                          I
+ I 0.580 I 4.545+-0.199 E  8I*OOOOOOOOOOOOOOOOOOOO                            I
+ I 0.600 I 3.667+-0.166 E  8I*OOOOOOOOOOOOOOOOOOO                             I
+ I 0.620 I 4.464+-0.575 E  8I*OOOOOOOOOOOOOOOOOOOO                            I
+ I 0.640 I 3.046+-0.174 E  8I*OOOOOOOOOOOOOOOOOO                              I
+ I 0.660 I 3.093+-0.577 E  8I*OOOOOOOOOOOOOOOOOO                              I
+ I 0.680 I 2.077+-0.112 E  8I*OOOOOOOOOOOOOOOO                                I
+ I 0.700 I 2.086+-0.440 E  8I*OOOOOOOOOOOOOOOO                                I
+ I 0.720 I 1.568+-0.092 E  8I*OOOOOOOOOOOOOO                                  I
+ I 0.740 I 1.673+-0.252 E  8I*OOOOOOOOOOOOOOO                                 I
+ I 0.760 I 1.520+-0.105 E  8I*OOOOOOOOOOOOOO                                  I
+ I 0.780 I 1.737+-0.287 E  8I*OOOOOOOOOOOOOOO                                 I
+ I 0.800 I 1.370+-0.242 E  8I*OOOOOOOOOOOOOO                                  I
+ I 0.820 I 1.031+-0.141 E  8I*OOOOOOOOOOOO                                    I
+ I 0.840 I 9.008+-0.681 E  7I*OOOOOOOOOOO                                     I
+ I 0.860 I 5.921+-0.434 E  7I*OOOOOOOOO                                       I
+ I 0.880 I 6.976+-0.505 E  7I*OOOOOOOOOO                                      I
+ I 0.900 I 6.333+-0.547 E  7I*OOOOOOOOOO                                      I
+ I 0.920 I 5.578+-0.418 E  7I*OOOOOOOOO                                       I
+ I 0.940 I 6.508+-0.898 E  7I*OOOOOOOOOO                                      I
+ I 0.960 I 5.532+-0.361 E  7I*OOOOOOOOO                                       I
+ I 0.980 I 4.263+-0.961 E  7I*OOOOOOO                                         I
+ I  E  2 I 1.082        E  9I**OOOOOOOOOOOOOOOOOOOOOOOO                       I
+ +-------+------------------+------------+------------+-----------+-----------+
+     x      d(Sigma)/dx     1.0E+07      1.0E+08      1.0E+09     1.0E+10      
+                              Logarithmic Scale indicated by "O"
+
+1
+ Histogram (ID = 25 ) for d sigma / d pt_cos2                                             
+                              Linear Scale indicated by "*"
+     x      d(Sigma)/dx     0.0E+00      2.2E+11      4.5E+11     6.7E+11      
+ +-------+------------------+------------+------------+-----------+-----------+
+ I  E  0 I 0.000        E  0I                                                 I
+ I-1.000 I 7.266+-0.198 E 11I*****************************************OOOOOO  I
+ I-0.960 I 5.049+-0.130 E 11I*****************************OOOOOOOOOOOOOO      I
+ I-0.920 I 3.404+-0.097 E 11I*******************OOOOOOOOOOOOOOOOOOOO          I
+ I-0.880 I 2.395+-0.078 E 11I**************OOOOOOOOOOOOOOOOOOOOO              I
+ I-0.840 I 1.874+-0.064 E 11I***********OOOOOOOOOOOOOOOOOOOOO                 I
+ I-0.800 I 1.762+-0.065 E 11I**********OOOOOOOOOOOOOOOOOOOOOO                 I
+ I-0.760 I 1.526+-0.058 E 11I*********OOOOOOOOOOOOOOOOOOOOO                   I
+ I-0.720 I 1.353+-0.056 E 11I********OOOOOOOOOOOOOOOOOOOOO                    I
+ I-0.680 I 1.201+-0.050 E 11I*******OOOOOOOOOOOOOOOOOOOO                      I
+ I-0.640 I 1.202+-0.053 E 11I*******OOOOOOOOOOOOOOOOOOOO                      I
+ I-0.600 I 9.719+-0.485 E 10I******OOOOOOOOOOOOOOOOOOO                        I
+ I-0.560 I 1.003+-0.046 E 11I******OOOOOOOOOOOOOOOOOOOO                       I
+ I-0.520 I 8.399+-0.418 E 10I*****OOOOOOOOOOOOOOOOOOO                         I
+ I-0.480 I 9.049+-0.426 E 10I******OOOOOOOOOOOOOOOOOO                         I
+ I-0.440 I 8.568+-0.449 E 10I*****OOOOOOOOOOOOOOOOOOO                         I
+ I-0.400 I 8.256+-0.450 E 10I*****OOOOOOOOOOOOOOOOOO                          I
+ I-0.360 I 8.290+-0.431 E 10I*****OOOOOOOOOOOOOOOOOO                          I
+ I-0.320 I 7.964+-0.439 E 10I*****OOOOOOOOOOOOOOOOOO                          I
+ I-0.280 I 9.072+-0.453 E 10I******OOOOOOOOOOOOOOOOOO                         I
+ I-0.240 I 8.048+-0.396 E 10I*****OOOOOOOOOOOOOOOOOO                          I
+ I-0.200 I 8.560+-0.428 E 10I*****OOOOOOOOOOOOOOOOOOO                         I
+ I-0.160 I 7.634+-0.451 E 10I*****OOOOOOOOOOOOOOOOOO                          I
+ I-0.120 I 7.924+-0.428 E 10I*****OOOOOOOOOOOOOOOOOO                          I
+ I-0.080 I 7.135+-0.431 E 10I****OOOOOOOOOOOOOOOOOO                           I
+ I-0.040 I 8.073+-0.439 E 10I*****OOOOOOOOOOOOOOOOOO                          I
+ I 0.000 I 8.407+-0.453 E 10I*****OOOOOOOOOOOOOOOOOOO                         I
+ I 0.040 I 7.652+-0.443 E 10I*****OOOOOOOOOOOOOOOOOO                          I
+ I 0.080 I 7.873+-0.456 E 10I*****OOOOOOOOOOOOOOOOOO                          I
+ I 0.120 I 6.500+-0.399 E 10I****OOOOOOOOOOOOOOOOO                            I
+ I 0.160 I 6.829+-0.364 E 10I****OOOOOOOOOOOOOOOOO                            I
+ I 0.200 I 7.084+-0.423 E 10I****OOOOOOOOOOOOOOOOOO                           I
+ I 0.240 I 7.926+-0.423 E 10I*****OOOOOOOOOOOOOOOOOO                          I
+ I 0.280 I 8.624+-0.464 E 10I*****OOOOOOOOOOOOOOOOOOO                         I
+ I 0.320 I 8.488+-0.446 E 10I*****OOOOOOOOOOOOOOOOOOO                         I
+ I 0.360 I 8.650+-0.482 E 10I*****OOOOOOOOOOOOOOOOOOO                         I
+ I 0.400 I 9.201+-0.450 E 10I******OOOOOOOOOOOOOOOOOOO                        I
+ I 0.440 I 8.552+-0.482 E 10I*****OOOOOOOOOOOOOOOOOOO                         I
+ I 0.480 I 1.108+-0.051 E 11I*******OOOOOOOOOOOOOOOOOOOO                      I
+ I 0.520 I 8.924+-0.467 E 10I*****OOOOOOOOOOOOOOOOOOO                         I
+ I 0.560 I 1.039+-0.048 E 11I******OOOOOOOOOOOOOOOOOOOO                       I
+ I 0.600 I 1.157+-0.052 E 11I*******OOOOOOOOOOOOOOOOOOOO                      I
+ I 0.640 I 1.175+-0.050 E 11I*******OOOOOOOOOOOOOOOOOOOO                      I
+ I 0.680 I 1.197+-0.051 E 11I*******OOOOOOOOOOOOOOOOOOOO                      I
+ I 0.720 I 1.648+-0.060 E 11I**********OOOOOOOOOOOOOOOOOOOOO                  I
+ I 0.760 I 1.752+-0.065 E 11I**********OOOOOOOOOOOOOOOOOOOOOO                 I
+ I 0.800 I 2.268+-0.078 E 11I*************OOOOOOOOOOOOOOOOOOOOO               I
+ I 0.840 I 2.431+-0.078 E 11I**************OOOOOOOOOOOOOOOOOOOOO              I
+ I 0.880 I 3.094+-0.096 E 11I******************OOOOOOOOOOOOOOOOOOOO           I
+ I 0.920 I 5.410+-0.132 E 11I*******************************OOOOOOOOOOOOO     I
+ I 0.960 I 6.728+-0.198 E 11I**************************************OOOOOOOO   I
+ I  E  0 I 0.000        E  0I                                                 I
+ +-------+------------------+-------------------------+-----------------------+
+     x      d(Sigma)/dx     1.0E+10                   1.0E+11                  
+                              Logarithmic Scale indicated by "O"
+
+1
+ Histogram (ID =111 ) for helicity(ee)                                                    
+                              Linear Scale indicated by "*"
+     x      d(Sigma)/dx     0.0E+00      1.0E+11      2.0E+11     3.0E+11      
+ +-------+------------------+------------+------------+-----------+-----------+
+ I  E  0 I 0.000        E  0I                                                 I
+ I 0.000 I 0.000+-0.000 E  0I                                                 I
+ I 1.000 I 3.167+-0.021 E 11I****************************************OOOOOO   I
+ I 2.000 I 0.000+-0.000 E  0I                                                 I
+ I 3.000 I 0.000+-0.000 E  0I                                                 I
+ I  E  0 I 0.000        E  0I                                                 I
+ +-------+------------------+-------------------------------------------------+
+     x      d(Sigma)/dx     1.0E+11                                            
+                              Logarithmic Scale indicated by "O"
+
+1
+ Histogram (ID =*** ) for x( 1) ; 0.000000E+00 - 0.100000E+01                             
+                              Linear Scale indicated by "*"
+     x      d(Sigma)/dx     0.0E+00      6.2E+11      1.2E+12     1.9E+12      
+ +-------+------------------+------------+------------+-----------+-----------+
+ I  E  0 I 0.000        E  0I                                                 I
+ I 0.000 I 1.295+-0.022 E 12I**************************OOOOOOOOOOOOOOOOOOOOOO I
+ I 0.020 I 1.921+-0.021 E 12I***************************************OOOOOOOOOOI
+ I 0.040 I 1.977+-0.020 E 12I****************************************OOOOOOOOOI
+ I 0.060 I 1.866+-0.022 E 12I**************************************OOOOOOOOOOOI
+ I 0.080 I 1.585+-0.022 E 12I********************************OOOOOOOOOOOOOOOO I
+ I 0.100 I 1.487+-0.025 E 12I******************************OOOOOOOOOOOOOOOOOO I
+ I 0.120 I 1.247+-0.026 E 12I*************************OOOOOOOOOOOOOOOOOOOOOOO I
+ I 0.140 I 9.674+-0.248 E 11I********************OOOOOOOOOOOOOOOOOOOOOOOOOOOO I
+ I 0.160 I 8.131+-0.248 E 11I*****************OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO I
+ I 0.180 I 7.451+-0.263 E 11I***************OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO I
+ I 0.200 I 5.139+-0.209 E 11I***********OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO  I
+ I 0.220 I 4.408+-0.213 E 11I*********OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO  I
+ I 0.240 I 3.078+-0.184 E 11I*******OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO  I
+ I 0.260 I 2.083+-0.217 E 11I*****OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO   I
+ I 0.280 I 1.653+-0.215 E 11I****OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO   I
+ I 0.300 I 1.097+-0.231 E 11I***OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO   I
+ I 0.320 I 8.507+-1.697 E 10I**OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO    I
+ I 0.340 I 3.409+-0.589 E 10I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO     I
+ I 0.360 I 3.177+-0.665 E 10I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO     I
+ I 0.380 I 1.224+-0.654 E 10I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO      I
+ I 0.400 I 5.533+-1.819 E  9I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO       I
+ I 0.420 I 7.804+-2.446 E  9I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO      I
+ I 0.440 I 4.214+-1.987 E  9I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO       I
+ I 0.460 I 3.087+-1.577 E  9I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO       I
+ I 0.480 I 1.474+-0.866 E  9I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO        I
+ I 0.500 I 6.876+-3.119 E  8I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO         I
+ I 0.520 I 3.591+-0.808 E  8I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO          I
+ I 0.540 I 4.533+-1.378 E  8I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO         I
+ I 0.560 I 2.856+-1.458 E  8I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO          I
+ I 0.580 I 1.508+-0.521 E  8I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO           I
+ I 0.600 I 1.184+-0.849 E  8I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO           I
+ I 0.620 I 4.633+-1.304 E  7I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO            I
+ I 0.640 I 2.101+-0.727 E  7I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO             I
+ I 0.660 I 1.128+-0.547 E  7I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO             I
+ I 0.680 I 8.798+-3.293 E  6I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO              I
+ I 0.700 I 7.766+-5.272 E  6I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO              I
+ I 0.720 I 2.455+-1.351 E  6I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO               I
+ I 0.740 I 7.161+-3.105 E  5I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO                I
+ I 0.760 I 2.308+-0.843 E  5I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOO                  I
+ I 0.780 I 1.451+-0.699 E  5I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOO                  I
+ I 0.800 I 2.499+-0.817 E  4I*OOOOOOOOOOOOOOOOOOOOOOOOOOOO                    I
+ I 0.820 I 6.364+-2.697 E  3I*OOOOOOOOOOOOOOOOOOOOOOOOOOO                     I
+ I 0.840 I 8.622+-5.647 E  3I*OOOOOOOOOOOOOOOOOOOOOOOOOOO                     I
+ I 0.860 I 4.940+-2.107 E  2I*OOOOOOOOOOOOOOOOOOOOOOOO                        I
+ I 0.880 I 1.531+-0.652 E  2I*OOOOOOOOOOOOOOOOOOOOOO                          I
+ I 0.900 I 1.226+-0.457 E  1I*OOOOOOOOOOOOOOOOOOOO                            I
+ I 0.920 I 9.199+-3.131 E -1I*OOOOOOOOOOOOOOOOO                               I
+ I 0.940 I 1.971+-0.882 E -2I*OOOOOOOOOOOOO                                   I
+ I 0.960 I 1.071+-0.723 E -4I*OOOOOOO                                         I
+ I 0.980 I 2.498+-1.776 E -7IO                                                I
+ I  E  0 I 0.000        E  0I                                                 I
+ +-------+------------------+------------+-----------+------------+-----------+
+     x      d(Sigma)/dx     1.0E-07      1.0E-02     1.0E+03      1.0E+08      
+                              Logarithmic Scale indicated by "O"
+
+1
+ Histogram (ID =*** ) for x( 2) ; 0.000000E+00 - 0.100000E+01                             
+                              Linear Scale indicated by "*"
+     x      d(Sigma)/dx     0.0E+00      1.7E+11      3.5E+11     5.2E+11      
+ +-------+------------------+------------+------------+-----------+-----------+
+ I  E  0 I 0.000        E  0I                                                 I
+ I 0.000 I 5.578+-4.053 E  9I*OOOOOOOOOOOO                                    I
+ I 0.020 I 3.627+-0.646 E 10I***OOOOOOOOOOOOOOOOOOOOOOO                       I
+ I 0.040 I 6.934+-0.927 E 10I*****OOOOOOOOOOOOOOOOOOOOOOOOOO                  I
+ I 0.060 I 8.174+-1.125 E 10I******OOOOOOOOOOOOOOOOOOOOOOOOOO                 I
+ I 0.080 I 1.021+-0.086 E 11I********OOOOOOOOOOOOOOOOOOOOOOOOOO               I
+ I 0.100 I 1.466+-0.105 E 11I***********OOOOOOOOOOOOOOOOOOOOOOOOOO            I
+ I 0.120 I 1.455+-0.093 E 11I***********OOOOOOOOOOOOOOOOOOOOOOOOOO            I
+ I 0.140 I 1.914+-0.108 E 11I**************OOOOOOOOOOOOOOOOOOOOOOOOO          I
+ I 0.160 I 2.117+-0.120 E 11I****************OOOOOOOOOOOOOOOOOOOOOOO          I
+ I 0.180 I 2.138+-0.110 E 11I****************OOOOOOOOOOOOOOOOOOOOOOO          I
+ I 0.200 I 2.786+-0.118 E 11I********************OOOOOOOOOOOOOOOOOOOOO        I
+ I 0.220 I 2.574+-0.108 E 11I*******************OOOOOOOOOOOOOOOOOOOOOO        I
+ I 0.240 I 3.360+-0.119 E 11I*************************OOOOOOOOOOOOOOOOOO      I
+ I 0.260 I 3.375+-0.128 E 11I*************************OOOOOOOOOOOOOOOOOO      I
+ I 0.280 I 3.756+-0.143 E 11I***************************OOOOOOOOOOOOOOOO      I
+ I 0.300 I 4.479+-0.167 E 11I********************************OOOOOOOOOOOOO    I
+ I 0.320 I 4.698+-0.167 E 11I**********************************OOOOOOOOOOO    I
+ I 0.340 I 4.830+-0.168 E 11I***********************************OOOOOOOOOO    I
+ I 0.360 I 4.627+-0.172 E 11I**********************************OOOOOOOOOOO    I
+ I 0.380 I 5.258+-0.169 E 11I**************************************OOOOOOOO   I
+ I 0.400 I 5.169+-0.176 E 11I*************************************OOOOOOOOO   I
+ I 0.420 I 5.362+-0.193 E 11I***************************************OOOOOOO   I
+ I 0.440 I 5.641+-0.189 E 11I*****************************************OOOOO   I
+ I 0.460 I 5.695+-0.274 E 11I*****************************************OOOOO   I
+ I 0.480 I 5.706+-0.214 E 11I*****************************************OOOOO   I
+ I 0.500 I 5.324+-0.194 E 11I***************************************OOOOOOO   I
+ I 0.520 I 5.615+-0.250 E 11I*****************************************OOOOO   I
+ I 0.540 I 5.431+-0.215 E 11I***************************************OOOOOOO   I
+ I 0.560 I 5.198+-0.174 E 11I**************************************OOOOOOOO   I
+ I 0.580 I 5.511+-0.175 E 11I****************************************OOOOOO   I
+ I 0.600 I 4.835+-0.172 E 11I***********************************OOOOOOOOOO    I
+ I 0.620 I 4.957+-0.165 E 11I************************************OOOOOOOOO    I
+ I 0.640 I 4.828+-0.166 E 11I***********************************OOOOOOOOOO    I
+ I 0.660 I 4.272+-0.151 E 11I*******************************OOOOOOOOOOOOO     I
+ I 0.680 I 4.372+-0.150 E 11I********************************OOOOOOOOOOOOO    I
+ I 0.700 I 3.975+-0.147 E 11I*****************************OOOOOOOOOOOOOOO     I
+ I 0.720 I 3.729+-0.154 E 11I***************************OOOOOOOOOOOOOOOO      I
+ I 0.740 I 3.285+-0.137 E 11I************************OOOOOOOOOOOOOOOOOO       I
+ I 0.760 I 3.176+-0.130 E 11I***********************OOOOOOOOOOOOOOOOOOO       I
+ I 0.780 I 2.898+-0.125 E 11I*********************OOOOOOOOOOOOOOOOOOOOO       I
+ I 0.800 I 2.529+-0.120 E 11I*******************OOOOOOOOOOOOOOOOOOOOOO        I
+ I 0.820 I 1.830+-0.108 E 11I**************OOOOOOOOOOOOOOOOOOOOOOOO           I
+ I 0.840 I 1.867+-0.103 E 11I**************OOOOOOOOOOOOOOOOOOOOOOOO           I
+ I 0.860 I 1.446+-0.094 E 11I***********OOOOOOOOOOOOOOOOOOOOOOOOOO            I
+ I 0.880 I 1.247+-0.096 E 11I*********OOOOOOOOOOOOOOOOOOOOOOOOOO              I
+ I 0.900 I 1.045+-0.096 E 11I********OOOOOOOOOOOOOOOOOOOOOOOOOO               I
+ I 0.920 I 8.555+-0.852 E 10I*******OOOOOOOOOOOOOOOOOOOOOOOOOO                I
+ I 0.940 I 4.461+-0.721 E 10I****OOOOOOOOOOOOOOOOOOOOOOOO                     I
+ I 0.960 I 2.699+-0.634 E 10I**OOOOOOOOOOOOOOOOOOOOOO                         I
+ I 0.980 I 6.672+-2.022 E  9I*OOOOOOOOOOOOO                                   I
+ I  E  0 I 0.000        E  0I                                                 I
+ +-------+------------------+----------------+----------------+---------------+
+     x      d(Sigma)/dx     1.0E+09          1.0E+10          1.0E+11          
+                              Logarithmic Scale indicated by "O"
+
+1
+ Histogram (ID =*** ) for x( 3) ; 0.000000E+00 - 0.100000E+01                             
+                              Linear Scale indicated by "*"
+     x      d(Sigma)/dx     0.0E+00      6.2E+11      1.2E+12     1.9E+12      
+ +-------+------------------+------------+------------+-----------+-----------+
+ I  E  0 I 0.000        E  0I                                                 I
+ I 0.000 I 1.935+-0.043 E 12I***************************************OOOOOOOO  I
+ I 0.020 I 1.604+-0.026 E 12I*********************************OOOOOOOOOOOOOO  I
+ I 0.040 I 1.221+-0.023 E 12I*************************OOOOOOOOOOOOOOOOOOOOO   I
+ I 0.060 I 9.464+-0.194 E 11I*******************OOOOOOOOOOOOOOOOOOOOOOOOOO    I
+ I 0.080 I 8.480+-0.213 E 11I*****************OOOOOOOOOOOOOOOOOOOOOOOOOOOO    I
+ I 0.100 I 7.560+-0.217 E 11I****************OOOOOOOOOOOOOOOOOOOOOOOOOOOOO    I
+ I 0.120 I 6.425+-0.199 E 11I*************OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO    I
+ I 0.140 I 6.089+-0.188 E 11I*************OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO     I
+ I 0.160 I 5.574+-0.174 E 11I************OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO     I
+ I 0.180 I 4.749+-0.155 E 11I**********OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO     I
+ I 0.200 I 4.566+-0.142 E 11I**********OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO     I
+ I 0.220 I 4.450+-0.151 E 11I*********OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO     I
+ I 0.240 I 4.045+-0.139 E 11I*********OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO     I
+ I 0.260 I 4.006+-0.128 E 11I*********OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO     I
+ I 0.280 I 3.619+-0.123 E 11I********OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO      I
+ I 0.300 I 3.429+-0.122 E 11I*******OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO      I
+ I 0.320 I 3.435+-0.118 E 11I*******OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO      I
+ I 0.340 I 2.987+-0.110 E 11I******OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO      I
+ I 0.360 I 2.851+-0.110 E 11I******OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO      I
+ I 0.380 I 2.743+-0.112 E 11I******OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO      I
+ I 0.400 I 2.315+-0.098 E 11I*****OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO       I
+ I 0.420 I 2.493+-0.101 E 11I*****OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO       I
+ I 0.440 I 2.209+-0.096 E 11I*****OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO       I
+ I 0.460 I 1.997+-0.100 E 11I****OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO       I
+ I 0.480 I 1.930+-0.094 E 11I****OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO       I
+ I 0.500 I 1.691+-0.093 E 11I****OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO       I
+ I 0.520 I 1.801+-0.099 E 11I****OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO       I
+ I 0.540 I 1.461+-0.090 E 11I***OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO        I
+ I 0.560 I 1.514+-0.086 E 11I****OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO        I
+ I 0.580 I 1.067+-0.075 E 11I***OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO        I
+ I 0.600 I 8.790+-0.655 E 10I**OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO         I
+ I 0.620 I 1.080+-0.073 E 11I***OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO        I
+ I 0.640 I 9.840+-0.801 E 10I**OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO         I
+ I 0.660 I 7.036+-0.599 E 10I**OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO         I
+ I 0.680 I 5.592+-0.634 E 10I**OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO          I
+ I 0.700 I 9.815+-0.797 E 10I**OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO         I
+ I 0.720 I 5.571+-0.657 E 10I**OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO          I
+ I 0.740 I 4.868+-0.571 E 10I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO          I
+ I 0.760 I 2.717+-0.611 E 10I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO           I
+ I 0.780 I 2.900+-0.444 E 10I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO           I
+ I 0.800 I 2.819+-0.477 E 10I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO           I
+ I 0.820 I 2.940+-0.672 E 10I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO           I
+ I 0.840 I 8.295+-4.176 E  9I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO              I
+ I 0.860 I 0.000+-0.000 E  0I                                                 I
+ I 0.880 I 2.229+-1.306 E 10I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO            I
+ I 0.900 I 1.387+-1.387 E 10I*OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO             I
+ I 0.920 I 5.256+-5.256 E  6I*OOOOOOOOOOOOOOOOOO                              I
+ I 0.940 I 5.620+-5.620 E  3I*OOO                                             I
+ I 0.960 I 0.000+-0.000 E  0I                                                 I
+ I 0.980 I 0.000+-0.000 E  0I                                                 I
+ I  E  0 I 0.000        E  0I                                                 I
+ +-------+------------------+----------+---------+---------+---------+--------+
+     x      d(Sigma)/dx     1.0E+03    1.0E+05   1.0E+07   1.0E+09   1.0E+11   
+                              Logarithmic Scale indicated by "O"
+
+1
+ Histogram (ID =*** ) for x( 4) ; 0.000000E+00 - 0.100000E+01                             
+                              Linear Scale indicated by "*"
+     x      d(Sigma)/dx     0.0E+00      1.1E+11      2.2E+11     3.4E+11      
+ +-------+------------------+------------+------------+-----------+-----------+
+ I  E  0 I 0.000        E  0I                                                 I
+ I 0.000 I 3.436+-0.155 E 11I***************************************OOOOOO    I
+ I 0.020 I 2.996+-0.162 E 11I**********************************OOOOOO         I
+ I 0.040 I 2.965+-0.125 E 11I*********************************OOOOOOO         I
+ I 0.060 I 2.822+-0.128 E 11I********************************OOOOOO           I
+ I 0.080 I 3.094+-0.130 E 11I***********************************OOOOOO        I
+ I 0.100 I 3.201+-0.133 E 11I************************************OOOOOOO      I
+ I 0.120 I 2.891+-0.134 E 11I*********************************OOOOOO          I
+ I 0.140 I 3.144+-0.139 E 11I***********************************OOOOOOO       I
+ I 0.160 I 3.425+-0.160 E 11I***************************************OOOOOO    I
+ I 0.180 I 3.157+-0.133 E 11I************************************OOOOOO       I
+ I 0.200 I 3.067+-0.132 E 11I***********************************OOOOOO        I
+ I 0.220 I 2.986+-0.125 E 11I**********************************OOOOOO         I
+ I 0.240 I 3.247+-0.144 E 11I*************************************OOOOOO      I
+ I 0.260 I 3.228+-0.137 E 11I************************************OOOOOOO      I
+ I 0.280 I 3.139+-0.132 E 11I***********************************OOOOOOO       I
+ I 0.300 I 3.121+-0.125 E 11I***********************************OOOOOOO       I
+ I 0.320 I 3.486+-0.197 E 11I***************************************OOOOOOO   I
+ I 0.340 I 3.484+-0.188 E 11I***************************************OOOOOOO   I
+ I 0.360 I 3.189+-0.132 E 11I************************************OOOOOO       I
+ I 0.380 I 3.239+-0.145 E 11I************************************OOOOOOO      I
+ I 0.400 I 3.237+-0.151 E 11I************************************OOOOOOO      I
+ I 0.420 I 3.309+-0.152 E 11I*************************************OOOOOOO     I
+ I 0.440 I 2.950+-0.131 E 11I*********************************OOOOOOO         I
+ I 0.460 I 3.016+-0.138 E 11I**********************************OOOOOO         I
+ I 0.480 I 3.474+-0.196 E 11I***************************************OOOOOOO   I
+ I 0.500 I 3.142+-0.135 E 11I***********************************OOOOOOO       I
+ I 0.520 I 3.359+-0.157 E 11I**************************************OOOOOO     I
+ I 0.540 I 2.956+-0.128 E 11I*********************************OOOOOOO         I
+ I 0.560 I 3.425+-0.142 E 11I***************************************OOOOOO    I
+ I 0.580 I 2.976+-0.131 E 11I**********************************OOOOOO         I
+ I 0.600 I 2.970+-0.132 E 11I*********************************OOOOOOO         I
+ I 0.620 I 3.218+-0.146 E 11I************************************OOOOOOO      I
+ I 0.640 I 3.140+-0.144 E 11I***********************************OOOOOOO       I
+ I 0.660 I 3.097+-0.134 E 11I***********************************OOOOOO        I
+ I 0.680 I 3.304+-0.144 E 11I*************************************OOOOOOO     I
+ I 0.700 I 2.997+-0.131 E 11I**********************************OOOOOO         I
+ I 0.720 I 3.143+-0.141 E 11I***********************************OOOOOOO       I
+ I 0.740 I 3.105+-0.138 E 11I***********************************OOOOOOO       I
+ I 0.760 I 3.198+-0.158 E 11I************************************OOOOOOO      I
+ I 0.780 I 3.417+-0.152 E 11I**************************************OOOOOOO    I
+ I 0.800 I 3.034+-0.133 E 11I**********************************OOOOOOO        I
+ I 0.820 I 2.985+-0.130 E 11I**********************************OOOOOO         I
+ I 0.840 I 3.421+-0.153 E 11I***************************************OOOOOO    I
+ I 0.860 I 3.267+-0.141 E 11I*************************************OOOOOO      I
+ I 0.880 I 3.159+-0.142 E 11I************************************OOOOOO       I
+ I 0.900 I 3.110+-0.129 E 11I***********************************OOOOOOO       I
+ I 0.920 I 2.970+-0.153 E 11I**********************************OOOOOO         I
+ I 0.940 I 3.112+-0.157 E 11I***********************************OOOOOOO       I
+ I 0.960 I 2.932+-0.138 E 11I*********************************OOOOOO          I
+ I 0.980 I 3.629+-0.242 E 11I*****************************************OOOOOO  I
+ I  E  0 I 0.000        E  0I                                                 I
+ +-------+------------------+-------------------------------------------------+
+     x      d(Sigma)/dx     1.0E+11                                            
+                              Logarithmic Scale indicated by "O"
+ ************* Warning from XHSAVE *************
+  Histogram ID(    0 ) is illegal.
+  This call is neglected.
+ **********************************************
+
+
+     ==============================
+           Cross Section [fb]      
+               g g --> 2g        
+     ==============================
+ +-----------+---------------+---------------+---------------+-----+-----+
+ !   Ebeam   ! Cross Section !     Error     !     Stime     ! IT1 ! IT2 !
+ +-----------+---------------+---------------+---------------+-----+-----+
+ !    7000.0 !  0.316419E+12 !  0.185208E+10 !      2.53     !   5 !   5 !
+ +-----------+---------------+---------------+---------------+-----+-----+
+
+     =================================
+       g g --> 2g (Input Parameters)
+     =================================
+
+         Nini,  Nfin  =     2,     2
+         Ndim,  Nwild =     4,     4
+
+     =================================
+       g g --> 2g (Bases Parameters)
+     =================================
+
+         Ncall     =      10000
+         ITMX1,2   =        5,        5
+         ACC1,ACC2 =   0.0500,   0.0100
+
+     ================================
+       g g --> 2g (Kinematic Cuts)
+     ================================
+
+         Pt      =     20.0
+         Eta     =      2.5
+         Pt_jj   =     20.0
+
+     ==============================
+       g g --> 2g (PS variables)
+     ==============================
+
+         What_min     =     40.0
+         log(tau)_min =    -11.7
+
+
+      ================================
+         g g --> 2g (Cross section)
+      ================================
+
+        Ecm [GeV]          =    14000.0
+        Cross section [fb] =  0.316419E+12 +-  0.185208E+10 (  0.5853%)
+        CPU time [sec]     =       2.53    
+        # of iteration.    =     5    5
+

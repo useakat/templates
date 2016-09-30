@@ -1,0 +1,427 @@
+\vskip 1.0cm
+\leftline{\bf 3. Program Structure and usage }
+\bigskip
+In  the old version, users must prepare many subprograms,
+e.g.~{\tt USERIN}, {\tt FUNC}, {\tt USR\-OUT}, {\tt SP\-INIT}, {\tt SP\-EVNT},
+{\tt SP\-TERM} etc.~according to the specification of each subprogram.
+This complexity seems to give a pedestrian a high threshold to use this packge.
+Furthermore, the program flow is completely controlled by the {\small BASES/SPRING}
+package, and the numerical integration and the event generation are designed to be
+successively performed by two separate procedures.  This makes it less
+flexible particularly in the event generation, to pass generated events to
+detector simulation and data analysis. In order to dissolve these
+inconvieniencies, the program structure has been completely reformed.
+ \par
+\bigskip
+\leftline{\bf 3.1 Program components }
+\par\medskip
+When we study an elementary process, we first calculate an effective cross
+section by integrating the differential cross section with some kinematical cuts
+by {\tt BASES}, generate events of four momentum vectors of final state particles
+by {\tt SPRING}, pass through a detector simulation program to simulate the
+experimental data, and then analyze the resultant
+simulation data to compare with real data. 
+\par\noindent
+If the process has  a few particles in the final states, the numerical
+integration and the event generation do not take so much computing time that it
+is better to carry out the simulation study in one procedure for simplicity.
+If the process has many final state particles, however, the
+numerical integration may take much computing time.  It is then recommended to
+separate the integration part from the other parts consisting of the event
+generation and the detector simulation, etc.
+\par\noindent 
+Since, in the present version the numerical integration and the event generation
+are carried out by calling subroutines {\tt BASES} and {\tt SPRING}, respectively,
+the simulation study can be performed either in one procedure or in separate two
+or more procedures.
+In any case users are required to prepare main and function programs.
+In addition to the subroutines {\tt BASES} and {\tt SPRING}, a set of subroutines,
+described below, are prepared for use.
+It should be noticed that all the real variables used in the system are defined to be
+of double precision.
+\par
+{\small
+\begin{description}
+\item{\tt BSINIT} : To set the {\small BASES/SPRING} parameters equal to defaults. 
+\item{\tt BASES} : To make numerical integration and to prepare the probability
+information for event generation. 
+\item{\tt BSINFO} : To print a parameter list and convergency 
+behavior of the integration. 
+\item{\tt BHPLOT} : To print histograms and scatter plots, taken 
+in the integration. 
+\item{\tt SPRING} : To generate an event with weight one. 
+\item{\tt SPINFO} : To print statistical information about the 
+event generation.
+\item{\tt SHPLOT} : To print histograms and scatter plots, taken  
+in the event generation.
+\item{\tt BSWRIT} : To save the probability information into a file.
+\item{\tt BSREAD} : To read the probability information from a file.
+\end{description}}
+ \par
+\par\noindent
+An example of outputs from {\tt BSINFO}, {\tt BHPLOT}, {\tt SPINFO}, and {\tt
+SHPLOT} is shown and explained for a test run output in
+section 4.
+\par
+  The program flow is fully controlled by the main program written by users.
+Its specification is described in the next subsection together with the usage of
+these subroutines. 
+  
+\par  
+\bigskip 
+\leftline{\bf 3.2 Main program }  
+\par\medskip
+The main program can be divided into the initialization part of {\small
+BASES/SPRING}, the numerical integration part, and the
+event generation part.
+A list of the main program for the test run is given in Fig.1 as an example.
+\par\medskip
+\noindent
+(1) {\bf Initialization of BASES/SPRING}  
+\par\smallskip
+At the beginning, {\tt BSINIT} is called to set the parameters for {\small 
+BASES/SPRING} equal to default values and then the parameters for the integration and
+event generation are to be initialized to their proper values, which are passed
+to the system through the labeled commons {\tt BPARM1} and {\tt BPARM2}. 
+All real parameters in these two labeled commons are to be given with double
+precision. The content of common {\small\tt BPARM1} is as follows:      
+{\small \begin{verbatim}
+ COMMON /BPARM1/ XL(50),XU(50),NDIM, 
+.                NWILD,IG(50),NCALL 
+\end{verbatim}}
+\par
+{\small
+\begin{description}
+\item{\tt NDIM}~~: The number of independent variables ( dimension
+of integral) up to 50.
+\item{\tt NWILD}~~: The number of the wild variables up
+to 15.
+\item{\tt XL({\it i}), XL({\it i})}~~:The lower and the upper limits of i-th
+integral variable.  Notice 
+that the first {\tt NWILD} variables must be the wild variables in each array.
+\item{\tt IG({\it i})}~~: The flag to switch the sampling method for {\it i }-th
+variable.\\
+( 0 / others ) = ( uniform / improtance sampling)
+\item{\tt NCALL}~~: The number of sample points per iteration.
+\end{description}}
+\par\noindent
+The true number of sample points $N_{call}^{real}$ differs from a given number {\tt
+NCALL}, which is automatically determined by the following algorithm.
+The number of regions per variable $N_{region}$ is determend as the maximum number
+which satisfies the two inequalities:
+\[
+N_{region}  =  ({ N_{call} \over 2 })^{ 1 \over N_{wild}}  \leq 25
+\]
+\par\noindent
+and\par
+\[
+N_{region}^{N_{wild}}  <  32768.
+\]
+\par\noindent
+The number of hypercubes is given by $N_{cube}$ = ${N_{region}}^{N_{wild}}$, then the
+number of sample points per cube is $N_{sample} = N_{call}/N_{cube}$.
+Since the number $N_{sample}$ is an integer, the calculated number $N_{call}^{(real)}
+= N_{sample}\times N_{cube}$ may differ from the given number $N_{call}^{(given)}$
+(= {\tt NCALL}). \par
+ The content of common {\tt BPARM2} is as follows:
+ 
+{\small \begin{verbatim}
+ COMMON /BPARM2/ ACC1,ACC2,ITMX1,ITMX2
+\end{verbatim}}
+\par
+{\small
+\begin{description}
+\item{\tt ACC1}~~:  The desired accuracy of integration for the grid
+optimization step in units of percent.
+\item{\tt ACC2}~~:  The desired accuracy of integration for the integration
+step in units of percent.
+\item{\tt ITMX1}~~:  The number of iterations for the grid optimization
+step.
+\item{\tt ITMX2}~~:  The number of iterations for the integration step.
+\end{description}}
+\par\noindent
+In addition to the initialization of the parameters in these two labeled commons,
+parameters and constants, like center of mass energy or beam energy, 
+kinematical cut values, the fine structure constant and
+the numerical value of $\pi$, etc., should be set and be passed to the function
+program {\tt FUNC} through some labeled commons to calculate the differential cross
+section.
+\par
+When we make histograms and scatter plots of some variables, their
+initialization should be done here. 
+Usage of the histogram package proper the system is described in subsection 3.4. 
+\par\medskip
+\noindent
+(2) {\bf Numerical integration.}
+\par\smallskip
+In the grid optimization step, sizes of the subregions for each variable are
+optimized to the behavior of integrand, iteration by iteration, starting from a
+uniform size of subregions, as briefly described in section 1. The algorithm for the
+grid  optimization is identical to that of the
+old version and VEGAS, whose more detailed description is
+found in references $\lbrack 1 \rbrack$ and $\lbrack 3 \rbrack$.  
+\par\noindent
+In the integration step, by fixing the grid determined in the grid
+optimization step a cumulative estimate of the integral is calculated as well as the
+probability information for each hypercube spanned by the wild variables.
+\par\noindent
+ The both steps are terminated when the estimated accuracy of the integral reaches a
+required value or the number of iterations exceeds a given number. 
+\par
+The estimate of the
+integral and its error etc.~of the integration step are returned to users in the
+arguments of the subroutine {\tt BASES} as follows:
+{\small
+\begin{verbatim}
+ CALL BASES( FUNC, ESTIM, ERROR, 
+.                  CTIME, IT1,   IT2 )
+\end{verbatim}}
+\par\noindent
+{\small
+\begin{description}
+\item{\tt FUNC}~: The name of a function program, whose specification is
+described in subsection 3.3.  
+\item{\tt ESTIM}~: A cumulative estimate of the integral.  
+\item{\tt ERROR}~: The standard deviation of the estimate of the integral. 
+\item{\tt CTIME}~: The computing time used by the integration step in seconds. 
+\item{\tt IT1}~: The number of iterations made in the grid optimization
+step.  
+\item{\tt IT2}~: The number of iterations made in the
+integration step. 
+\end{description}} 
+\par
+By calling the subroutine {\tt BSINFO}, tables of the convergency behavior both
+for the grid optimization and the integration steps are printed on a logical
+unit
+ {\small\tt LU}.
+For example, the following statement:
+\par
+{\small\begin{verbatim}
+  LU   = 20
+  CALL BSINFO( LU )
+\end{verbatim}}
+\par\noindent
+print these tables on a file which
+should be opened in the initialization step (1).
+The contents of the tables are described in subsection 4.2.
+\par  
+When histograms and scatter plots are made, they
+can be printed on a logical unit {\small\tt LU } by  
+\par
+{\small\begin{verbatim}
+  CALL BHPLOT( LU ).
+\end{verbatim}}
+\par
+Subroutines {\tt BSINFO} and {\tt BHPLOT} need not to be called, unless outputs
+from them are neccessary.   \par
+If the numerical integration and the event generation are saparately performed
+by different procedures, the probability information made by {\tt BASES} should
+be saved on a file by calling {\tt BSWRIT} , for instance, as follows:
+\par
+{\small\begin{verbatim}
+  LN  = 23
+  CALL BSWRIT( LN ).
+\end{verbatim}} 
+The file allocated to the logical unit {\tt LN} must be opened at the
+initialization step (1).
+Futhermore, at the beginning of the event generation program and
+just after the initialiation of BASES / SPRING described above, subroutine
+{\tt BSREAD} should be called to read the probability information from
+the file as follows:
+\par
+{\small\begin{verbatim}
+  LN  = 23
+  CALL BSREAD( LN ),
+\end{verbatim}}
+\par\noindent
+then the event generation can be carried out. 
+\par\medskip 
+\noindent  
+(3) {\bf Event generation} 
+\par\smallskip
+After the integration events can be immediately generated by calling {\tt
+SPRING}. 
+For each call of subroutine {\tt SPRING} a set of values of independent
+variables is generated with weight one.
+The calling sequence of {\tt SPRING} is as follows:
+\par
+{\small
+\begin{verbatim}
+ CALL SPRING( FUNC, MXTRY )
+\end{verbatim}}
+\par
+{\small
+\begin{description}
+\item{\tt FUNC} : The name of a function program.
+\item{\tt MXTRY} : The maximum number of trials to generate one event.
+\end{description}}
+\par\noindent
+At the first call of {\tt SPRING} a cumulative
+probability distribution over all the hypercubes is calculated from the
+differential one, prepared by {\tt BASES}.
+This cumulative distribution is used to sample a hypercube according to
+its probability. 
+\par
+After a hypercube is sampled in this way, a point is selected in this hypercube by
+the importance sampling method and is examined whether it is accepted or not. 
+When this point is not accepted, another point is sampled in the same hypercube
+and tested again.
+If the grid is not optimized enough, there may be a possibility to get into
+an infinite loop of generation.
+To avoid this occurence the number of trials to get an event is limited to
+{\tt MXTRY } whose recommended number is 50.
+The case where an event could not be generated even by {\tt MXTRY} trials is called
+{\it
+ mis-generation}.
+If the number of mis-generations exceeds {\tt MXTRY}, a warn\-ing message
+is printed. 
+\par
+The event generation by {\tt SPRING} determines only a set of values of
+independent variables of the function parogram.
+Users are required to calculate the four-momentum vectors from this set
+of variables for themselves.
+A typical structure of the event generation step is as follows:
+\par
+\begin{center}{\footnotesize
+\begin{verbatim}
+    MXTRY  = 50
+    ISPRNG = 1
+    DO 100 NEV = 1, 10000
+      CALL SPRING(FUNC,ISPRNG,MXTRY)
+            . . . .
+      Calculate four momentum vectors
+            . . . .
+100 CONTIINUE
+\end{verbatim}}\end{center}
+\par\noindent
+Since in the function program the kinematics of the process is calculated,
+it is better to use the result of kinematics for calculating the four-momentum
+vectors. 
+\par
+After the event generation, statistical information about the generation can be
+obtained by calling {\tt SPINFO} as follows:
+\par
+{\small
+\begin{verbatim}
+  CALL SPINFO( LU ) ,
+\end{verbatim}}
+\par\noindent
+where {\tt LU} is the logical unit of an output device.
+Histograms and scatter plots can be also printed on the logical unit {\tt LU}
+by calling {\tt SHPLOT}. 
+\par
+{\small
+\begin{verbatim}
+  CALL SHPLOT( LU ).
+\end{verbatim}}
+\par \bigskip  
+\leftline{\bf 3.3 Function program }  
+\par\medskip
+In the function program the value of the integrand is calculated at the sample point
+fed by {\tt BASES}.
+ A set of numerical values of integral variables is passed through
+the argument of the function program.
+A typical structure of function program is as follows:
+\par\begin{center}
+{\footnotesize\begin{verbatim}
+  DOUBLE PRECISION FUNCTION FUNC(X)
+  REAL*8 X(2)
+  FUNC  =  0.0D0
+
+ ... Calculation of kinematics ...
+  IF(the point is outside of
+     the kinematical boundary) RETURN
+
+  FUNC = is calculated
+       from X(i) for i = 1, 2
+
+  CALL XHFILL(ID, V, FUNC)
+  CALL DHFILL(ID,VX, VY, FUNC )
+
+  RETURN
+  END
+\end{verbatim}}\end{center}
+\par\noindent
+A recipe for writing a function program is as follows:
+{\small\begin{description}
+\item{1)} Calculate the kinematical variables by which the differential cross
+section is described from the integral variables, {\tt X({\it i})} for {\it i}
+= 1 to {\tt NDIM}.
+\item{2)} If the point fed by {\tt BASES} is found to be outside the
+kinematical boundary, set the value of the function equal to zero and return.
+\item{3)} If the point is inside the kinematical boundary, calculate the
+numerical value of the function at the point and return  it as the function value.
+\item{4)} If a histogram is required, call subroutine {\tt XHFILL} once.
+\item{5)} If a scatter plot is required, call {\tt DHFILL} once.
+\end{description}}
+\par\noindent
+An example of {\tt FUNC} for the process $e^+e^-$ $\rightarrow$ $\nu_{\mu}
+\bar{\nu}_{\mu} \gamma$ is given in Fig.2.
+\par \bigskip  
+\leftline{\bf 3.4 Histogram package }   
+\par\medskip 
+{\tt BASES} has a proper histogram package, by which histograms and scatter plots of
+any variables can be made.
+A characteristic of this package is that there are two kinds of histograms, the
+one is called ``original histograms'' and another is ``additional histograms''.
+\par
+The original histogram is quite useful to check whether the frequency
+distribution of generated events really reproduces the distribution calculated in
+the integration stage. 
+On the other hand the additional histogram prints only the frquency distribution of
+ the generated events. 
+A detailed description of these two kinds of hitograms is found in subsection
+4.2.
+\par 
+The maximum numbers of histograms and scatter plots are 50 for each.
+If the initialization routine {\tt XHINIT} ( or {\tt DHINIT} ) is called more than 50
+times, subsequent calls are neglected.
+Usage of this histogram package  is as follows:
+\par
+{\small\begin{description}
+\item{1)} To initialize histograms and scatter plots the following routines are
+to be called:
+\begin{verbatim}
+ CALL XHINIT(ID#,
+.     lower_limit,
+.     upper_limit,# of bins, 
+.    'Title of histogram')
+\end{verbatim}
+and
+\begin{verbatim}
+ CALL DHINIT(ID#,
+.     x-lower_limit,
+.     x-upper_limit,# of x bins,
+.     y-lower_limit,
+.     y-upper_limit,# of y bins,
+.    'Title of scatter plot'),
+\end{verbatim}
+respectively.
+\item{2)} To fill the histograms and scatter plots the following routines are to be
+called in {\tt FUNC}:
+\begin{verbatim}
+ CALL XHFILL(ID#,V,FUNC)
+\end{verbatim}
+and
+\begin{verbatim}
+ CALL DHFILL(ID#,Vx,Vy,FUNC)
+\end{verbatim}
+respectively.
+\item{3)} To print the resultant histograms and scatter plots taken in the
+integration,
+\begin{verbatim}
+ CALL BHPLOT(LU)
+\end{verbatim}
+\noindent
+where {\tt LU} is a logical unit number.
+\item{4)} To print the resultant histograms and scatter plots taken in the
+event generation,
+\begin{verbatim}
+ CALL SHPLOT(LU)
+\end{verbatim}
+\noindent
+where {\tt LU} is a logical unit number.
+\end{description}}
+\par\noindent
+Examples of histograms and scatter plots printed by {\tt BHPLOT} and {\tt SHPLOT}
+are shown in the test run output.

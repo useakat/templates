@@ -1,0 +1,187 @@
+\vskip 1.0cm
+\leftline{\bf 4. Test Run}
+\par\medskip
+\leftline{\bf 4.1  Test of Algorithm}
+\par\smallskip
+For the test of the new version we take the process ${e^+e^-}$
+${\rightarrow}$ ${\nu \bar{\nu} \gamma}$ as an example, which was also used in 
+ref.~$\lbrack 1 \rbrack$.
+The integral variables are energy and polar angle of the photon.
+As shown in histograms of the test run output, the photon energy distribution
+has very sharp peaks at zero and the $Z^0$ mass, while the angular distribution
+has forward and backward peaks.
+In order to demonstrate that the new algorithm works well, we test our program
+in the following three cases:
+{\small\begin{description}
+\item{1)} Set the integration parameters, {\tt NDIM} = 2, {\tt NWILD} = 2, and
+{\tt NCALL} = 5000.
+          Since $N_{dim}$ = $N_{wild}$, the integration algorithm is exactly
+          identical to the old one.
+\item{2)} Set the parameters, {\tt NDIM} = 2, {\tt NWILD} = 1, {\tt IG(2)} = 1,
+and {\tt NCALL} = 5000.
+          Only the photon energy is considered as the wild variable and 
+          the polar angle is sampled by the importance sampling.
+\item{3)} Set the parameters, {\tt NDIM} = 2, {\tt NWILD} = 1, {\tt IG(2)} =
+0, and {\tt NCALL} = 5000.
+          The polar angle is uniformly sampled.
+\end{description}}
+\noindent
+As summarized in Table~1, cases 1) and 2) give a consistent result and almost
+identical speed of convergency.  
+The result of integration
+is not affected by the difference in algorithms. The efficiency of event
+generation by the new algorithm is slightly lower than that of the old one, but
+it is still high.
+This result shows that the new algorithm works very well.
+\par\noindent
+When we sample
+the polar angle variable uniformly ( case 3)), the convergency of the
+integration is much worse than the other two cases and the efficiency of event
+generation is very low. 
+It is very
+reasonable, since the sampling of the photon energy is never optimized. 
+\par 
+It is, however, noted that the uniform sampling may give much faster
+convergence than the importance one for those variables whose distributions are
+known to be nearly flat. The reason is as follows. The importance sampling is
+done by using the distribution taken at the previous iteration. If this
+distribution has some bias due to less statistics of sampling, the resultant
+importance sampling is also biased. In some cases, this bias may be cancelled
+interation to iteration, but in some cases it is enhanced. \par
+\medskip
+\leftline{\bf 4.2 Output from {\small BASES/SPRING}}
+\par\smallskip
+As the test run output, we take case 2).
+There are four sets of outputs, the outputs from the numerical integration
+part by calling {\tt BSINFO} and {\tt BHPLOT}, and  from the
+event generation part by calling {\tt SPINFO} and {\tt SHPLOT}. 
+\par\smallskip
+\leftline{\bf (1) Output from {\tt BSINFO} }
+\par\noindent
+On the first page of the output, detailed information about the integration
+parameters and computing time is printed.
+\par\noindent
+As the integration parameters,
+\par\noindent 
+{\small\begin{tabular}{p{1.0cm} p{6.0cm}}
+ $N_{dim}$ & : the number of integral variables (dimension), \cr
+ $N_{wild}$ & : the number of wild variables, \cr
+$N_{call}^{given}$ & : the given number of sample points per iteration, \cr
+ $N_{call}^{real}$ & : the true number of sample points, \cr
+ $N_g$ & : the number of subregions per variable, \cr
+ $N_{region}$ & : the number of regions per variable, \cr
+$N_{cube}$ & : the number of hypercubes, \cr
+{\tt XL({\it i})} & : the lower limit of {\it i }-th integral variable, \cr
+{\tt XU({\it i})} & : the upper limit of {\it i }-th integral variable, \cr
+{\tt IG({\it i})} & : the sampling flag for {\it i }-th integral variable, 
+\end{tabular}}
+\par\noindent
+{\small\begin{tabular}{ p{1.0cm} p{6.0cm}} 
+{\tt ITMX1} & : the maximum number of iterations for the grid optimization step, \cr
+{\tt ACC1} & : the desired accuracy in the grid optimization step, \cr
+{\tt ITMX2} & : the maximum number of iterations for the integration step, and
+\cr {\tt ACC2}& : the desired accuracy in the integraion step
+\end{tabular}} 
+\par\noindent
+are listed.
+As the computing time iformation, the consumed {\small CPU} time (in units 
+of hour, minute, and second)
+ each for the grid optimization step, the integration step, and the overhead
+by the remainders  is printed.
+Furthermore the expected computing time for 1000 event generation is estimated by
+assuming 70 percent of generation efficiency.
+\par
+On the second page of the output, the convergency behavior for the grid
+optimization step is printed, which consists of the result of each iteration
+and the cumulative result up to the iteration. In the result of each
+iteration, the iteration number, the hit rate of the kinematically allowed
+region, the fraction of sample points resulting in negative function values,
+ the estimate of the integral, and its accuracy are included. 
+The cumulative result consists of the cumulative estimate of the integral, its
+error, and its accuracy. Since at the first iteration  sampling points are
+uniformly distributed, the estimate of integral results in a smaller value than
+the final one, while  its accuray is worse than the final one.   
+They converge to some
+final values interation by iteration due to the grid optimization.
+\par 
+On the third page of the output, the convergency behavior for the
+integration step is printed, whose content is identical to that for
+the grid optimization step. 
+It is quite important to check if the estimate of the 
+integral and its accuracy are stable iteration to
+iteration.  If they fluctuate more than $3\sigma$, the number
+of sampling points per iteration is too small or the choice of integral variables
+is inadequate for the bahavior of the differential cross section.
+\par\smallskip
+\leftline{\bf (2) Output from {\tt BHPLOT} }
+\par\noindent
+{\tt BHPLOT} prints histograms and scatter plots made during the numerical
+integration.
+\par
+The first and the last bins of a histogram are underflow and
+overflow bins. The first column shows the lower value of each histogram bin.
+The second column represents  the estimated differential value and its
+error after the characters ``{\tt +-}'', both of which are to be multiplied by a
+factor $10^{\rm xx}$ shown by ``{\tt E xx}''.
+On the right hand side of these columns a histogram of the differential values
+is drawn both in the linear scale with the character ``{\tt *}'' and in the
+logarithmic scale with the character ``{\tt O}''.
+If negative values exist in some bins only the linear scale histogram is
+displayed.
+\par
+A scatter plot represents only the relative height of a function.
+The height of the function value is described by ten characters: {\tt 1}, {\tt 
+2}, {\tt 3},..., {\tt 8}, {\tt 9}, and {\tt *}, while the depth (for negative
+function values ) is displayed by the other ten characters: {\tt a}, {\tt b}, {\tt
+c},..., {\tt h}, {\tt  i} and {\tt \#}. 
+The point which results in a negative
+value but larger than the threshold of level ``{\tt a}'' is indicated by the
+character ``{\tt -}'', while the point desribing a positive value less than the
+threshold of level ``{\tt 1}'' is given either by the character ``{\tt +}'' (
+if a negative value exits somewhere) or by the character ``{\tt .}'' ( if only
+ positive values exist).  
+\par\smallskip
+\leftline{\bf (3) Output from {\tt SPINFO}}
+\par\noindent
+{\tt SPINFO} prints statistics of  event generation,
+which consists of the generation efficiency, the number of generated events,
+the computing time each for the event generation by {\tt SPRING}, for its
+overhead, and for the other part consumed by the calculation of four-momentum
+vectors and detector simulation, etc. 
+The maximum number of trials {\tt
+MXTRY} and the number of mis-generations are also printed.
+\par\smallskip
+\leftline{\bf (4) Output from {\tt SHPLOT}}
+\par\noindent
+{\tt SHPLOT} prints histograms and scatter plots made during event
+generation.
+There are two kinds of histograms as mentioned in subsection 3.4.
+\par
+The original histogram is to be defined before the numerical
+integration by calling {\tt BASES}.
+The contents of the histogram filled during the integration is
+compard with the fequency distribution made in the event generation.
+This comarison is made in the logarithmic scale, where the statistical error
+of each bin is represented by the characters ``{\tt <  >}''.
+If the error is smaller than the two character space, only the frequency is
+shown by the character ``{\tt O}''.
+The histogram filled during the integration is represented by the character
+``{\tt *}''.
+\par
+The additional histogram is to be initialized just
+before starting the event generation.
+Since there are no corresponding data made in the integration 
+step, only the frequency distribution of events is displayed both in the linear
+ and the logarithmic scales.
+\par
+On the first page of the output, a histogram displaying the number of trials to
+obtain an event is always printed in the format of an additional histogram.
+If this histogram has a sharp peak at the first bin, the efficiency
+of generation is high.
+\par\noindent
+ Then the original histograms and the additional
+histograms are successively printed if they are defined.  
+\par 
+The scatter plots printed by {\tt SHPLOT}
+describe only the frequency distribution in terms of the relative height with
+ten levels.

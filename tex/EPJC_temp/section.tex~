@@ -1,0 +1,126 @@
+%#BIBTEX jbibtex section
+\documentclass[final,5p,times,twocolumn]{elsarticle}
+\include{begin}
+\section{Reactor antineutrino flux}
+\label{basic}
+As well known, the vacuum $\bar{\nu_e}$ survival probability is expressed as
+\begin{align}
+ P_{ee} =& 1 -\cos^4\theta_{13}\ssol\sin^2\left(\dsol\right) \nn\\
+& -\cos^2\theta_{12}\srct\sin^2\left(\drct\right) \nn\\
+& -\sin^2\theta_{12}\srct\sin^2\left(\datm\right),
+\label{pee1}
+\end{align}
+where $\theta_{ij}$ is a neutrino mixing angle. $\Delta_{ij}$ is defined as
+\begin{equation}
+ \Delta_{ij} \equiv \frac{\delta m^2_{ij}L}{4E_{\nu}}, 
+ \hspace{1em}(\delta m^2_{ij} \equiv m^2_i -m^2_j)
+\label{deltaij}
+\end{equation}
+where $m_i, E_{nu}$ and $L$ are the mass of the $i_{th}$ lightest
+neutrino, the energy of the traveling electron antineutrino and the
+flight distance of the antineutrino. We further convert this expression to
+the one which manifests the dependence on the mass hierarchy more clearly;
+\begin{align}
+P_{ee} =& 1 -\cos^4\theta_{13}\ssol\sin^2\left(\dsol\right) \nn\\
+& -\srct\sin^2\left(\drct\right) \nn\\
+  &
+ -\sin^2\theta_{12}\srct\cos\left(\ddrct\right)\sin^2\left(\dsol\right) \nn\\
+& \pm \frac{\sin^2\theta_{12}}{2}\srct\sin\left(\ddrct\right)\sin\left(\ddsol\right).
+\label{pee2}
+\end{align}
+The plus or minus sign in the last term corresponds to the normal hierarchy (NH) or
+the inverted hierarchy (IH) cases, respectively. Only the last term
+depends on the mass hierarchy (MH). From this expression, it is obvious
+that the probability becomes most
+  sensitive to the mass hierarchy when 
+\begin{equation}
+\ddsol = \frac{2n-1}{2}\pi, (n = 1,2,3,\cdots),
+\label{condition1}
+\end{equation}
+and the MH difference vanishes when
+\begin{equation}
+\ddsol = n\pi, (n = 1,2,3,\cdots).
+\label{condition2}
+\end{equation}
+For example, for $L=50$km, the condition (\ref{condition1}) and
+(\ref{condition2}) with $n=1$
+correspond to $E_{\nu}\sim 6$MeV and 3 MeV, respectively. These conditions are important for determining
+MH using reactor neutrinos with intermediate baseline length, $L\sim
+10-100$ km as we will see in the following discussions. \\
+
+The energy distribution of $\nu_e$ with the energy $E_{\nu}$ MeV from a reactor complex with $P {\rm GW_{th}}$ can be
+estimated as \cite{Zhan:2008id}
+\begin{align}
+ \phi(E_{\nu}) =& f_{\,{}^{235}U}\exp(0.870-0.160E_{\nu}-0.091E_{\nu}^2)
+ \nn\\
+ &+f_{\,{}^{239}P_u}\exp\left( 0.896 -0.239E_{\nu} -0.0981E_{\nu}^2 \right) \nn\\
+ &+f_{\,{}^{238}U}\exp\left( 0.976 -0.162E_{\nu} -0.0790E_{\nu}^2 \right) \nn\\
+ &+f_{\,{}^{241}P_u}\exp \left( 0.793 -0.080E_{\nu} -0.1085E_{\nu}^2
+ \right) \left[ \frac{1}{{\rm MeV}} \right],
+\end{align}
+where $f_a$ denotes the averaged-fraction of the number of fission per
+second for the radio-active isotope $a$ in the reactor fuel; $f_{\,{}^{235}U}=0.58,
+\,f_{\,{}^{239}P_u}=0.30, \,f_{\,{}^{238}U}=0.07$ and
+$\,f_{\,{}^{241}P_u}=0.05$. Here we assume that the reactor fuel consists of only above
+four radio-active isotopes, and $\sum_a f_a =1$. Although these
+fractions reflect the fraction of each isotopes in the reactor fuel and
+variy over the running time of the reactors, we ignore this time
+dependence and treat it as constants in this study. The number density
+of reactor antineutrino with the energy $E_{\nu}$ MeV per second coming from reactors
+with $P \,{\rm [GW_{th}]}$ thermal power is then
+expressed as
+\begin{align}
+ \frac{dN_{RCT}}{dE_{\nu}} = \frac{P}{\sum_a f_a \epsilon_a}\sum_b
+ f_b\phi_b(E_{\nu}) \times 6.24\cdot 10^{21} \left[ \frac{1}{{\rm s\cdot MeV}}
+ \right],
+\end{align}
+where $\epsilon_a$ denotes the released energy in MeV per fission of the
+isotope $a$. $6.24\cdot 10^{21}$ just comes from the unit
+convention. 
+
+The current reactor experiments such as Daya Bay\cite{An:2012eh},
+RENO\cite{Ahn:2012nd} and Double Chooz\cite{Abe:2011fz}
+uses free protons in their scintillation detector as targets for reactor
+antineutrinos, and the interaction between the antineutrino and the
+detector occurs via the inverse beta decay (IBD),
+\begin{align}
+ \bar{\nu_e} +p \rightarrow e^+ +n,
+\label{IBD}
+\end{align}
+ where $p$ and $n$ denote the proton and the neutron. The tree-level total cross section
+ of IBD is known as
+ \begin{align}
+  \sigma_{IBD} = 0.0952\left( \frac{E_e p_e}{\rm 1MeV^2} \right)\times 10^{-42} [{\rm cm^2}],
+ \label{xsec}
+ \end{align}
+where $E_e$ and $p_e$ are the energy and momentum of the produced
+positron. The threshold $\bar{\ne_e}$ energy ($E^{thr}_{\nu}$) for this
+reaction is 
+\begin{align}
+ E^{thr}_{\nu} \sim& m_n -m_p +m_e \nn\\
+\sim& 1.81 GeV,
+\end{align}
+ and the positron energy is related to $E_{\nu}$ as
+\begin{align}
+ E_e = E_{\nu} -1.3 [{\rm GeV}].
+\end{align}
+
+Therefore, the number of electron antineutrinos observed at a far
+detector with $N_p$ target protons, the baseline of $L$ km and $T$ year
+exposure reads
+\begin{align}
+ N =&
+ \frac{N_{p}T4\pi}{L^2}\int^\infty_{E^{thr}_{\nu}}dE_{\nu}\int^\infty_0 dE^{'}_{\nu}
+ \frac{dN_{RCT}}{dE^{'}_{\nu}}
+ P_{ee}(L,E^{'}_{\nu}) \nn\\
+&\times \sigma_{IBD}(E^{'}_{\nu}) \,G(E^{'}_{\nu}-E_{\nu},\delta E_{\nu}),
+\end{align}
+where $G(E^{'}_{\nu}-E_{\nu},\delta E)$ is a detector response
+function which transforms the true neutrino energy $E^{'}_{\nu}$ to the
+observed one, $E_{\nu}$, with the finite energy resolution of the
+detector, $\delta E$; in this study we assume the 100\% efficiency of
+the detector.
+
+
+\include{biblio}
+\include{end}

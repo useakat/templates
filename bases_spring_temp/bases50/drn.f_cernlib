@@ -1,0 +1,32 @@
+      SUBROUTINE DRNSET(ISEED)
+
+      IMPLICIT NONE
+
+      INTEGER ISEED
+
+      INTEGER N1,N2
+
+
+      N1 = 0
+      N2 = 0
+
+C     CALL RM48IN(ISEED,N1,N2)
+
+      RETURN
+      END
+      DOUBLE PRECISION FUNCTION DRN(ISEED)
+
+      IMPLICIT NONE
+
+      INTEGER ISEED
+
+      INTEGER LVEC
+      PARAMETER (LVEC=1)
+      DOUBLE PRECISION RVEC(LVEC)
+
+      CALL RM48(RVEC,LVEC)
+
+      DRN = RVEC(1)
+
+      RETURN
+      END

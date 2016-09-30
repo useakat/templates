@@ -1,0 +1,101 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{url,cite,slashed}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{subfigure}
+\usepackage{color}
+
+\setlength{\textwidth}{16.5cm}
+\setlength{\textheight}{21.5cm}
+\setlength{\oddsidemargin}{-.3 cm}
+\setlength{\evensidemargin}{0cm}
+\setlength{\topmargin}{0cm}
+\setlength{\footskip}{1cm}
+
+\makeatletter
+    \renewcommand{\theequation}{%
+    \thesection.\arabic{equation}}
+    \@addtoreset{equation}{section}
+\makeatother
+
+\renewcommand{\topfraction}{1.0}
+\renewcommand{\bottomfraction}{1.0}
+
+\newcommand{\sss}{\tilde{s}}
+\newcommand{\nn}{\nonumber}
+\newcommand{\order}{{\mathcal O}}
+\newcommand{\invfb}{{\rm fb}^{-1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% remove when submitting
+\newcommand{\rem}[1]{\textcolor{red}{#1}}
+%\newcommand{\rem}[1]{{$\spadesuit$\bf #1$\spadesuit$}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\begin{titlepage}
+
+\begin{center}
+
+\hfill UT--16--\\
+
+\vskip .75in
+
+{\Large \bf 
+title
+}
+
+\vskip .75in
+
+{\large
+Yoshitaro Takaesu
+}
+
+\vskip 0.25in
+
+{\em Department of Physics, University of Tokyo, Tokyo 113--0033, Japan}
+\end{center}
+
+\vskip .5in
+
+\begin{abstract}
+abst
+\end{abstract}
+
+\end{titlepage}
+
+\setcounter{page}{1}
+\renewcommand{\thefootnote}{\#\arabic{footnote}}
+\setcounter{footnote}{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Method}
+\label{sec:method}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Results}
+\label{sec:results}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Conclusion}
+\label{sec:conclusion}
+We discussed 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Acknowledgements}
+This work was supported by JSPS KAKENHI Grant No.~ and
+No.~  (Y.T.).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\providecommand{\href}[2]{#2}
+\begingroup\raggedright
+\begin{thebibliography}{99}
+
+\end{thebibliography}
+\endgroup
+\end{document}

@@ -1,0 +1,8 @@
+*.aux
+date.txt
+*.bbl
+*.blg
+*.dvi
+*.log
+*.spl
+*.pdf

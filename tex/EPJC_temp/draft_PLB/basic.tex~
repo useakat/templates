@@ -1,0 +1,228 @@
+%#BIBTEX jbibtex basic
+\documentclass[final,5p,times,twocolumn]{elsarticle}
+\include{begin}
+\section{Reactor antineutrino flux}
+\label{basic}
+In this section, we briefly discuss the evaluation of
+how many electron antineutrinos $\bar{\nu}_e$ would be detected at
+a far detector with a medium 
+baseline length from reactor. 
+
+In nuclear reactor, antineutrinos are
+mainly produced
+via beta decay of the fission products of the four radio-active isotopes,
+${}^{235}U, {}^{238}U, {}^{239}P_u$ and ${}^{241}P_u$, in the fuel\footnote{Precisely speaking, there are
+contributions from other isotopes such as 
+${}^{240} P_u$ and ${}^{242}P_u,$ but their contributions are of the order of
+0.1\% or less~\cite{Bemporad:2001qy}.}. 
+The number of antineutrinos produced per fission depends on their energy~\cite{Vogel:1989iv}
+%\footnote{There are several studies for the
+%coefficients in the exponential with different
+%treatments of input data and uncertainties~\cite{flux}. The difference between those results should be considered as
+%the uncertainty of the neutrino flux, but we do not consider it
+%explicitly in this study, including it in the overall uncertainty, see
+%Sec.\ref{chi2} for more detail.}
+\begin{align}
+ \phi(E_{\nu}) &= \,f_{\,{}^{235}U}\exp\left(0.870-0.160E_{\nu}-0.091E_{\nu}^2\right)
+ \nn\\
+ &+f_{\,{}^{239}P_u}\exp\left( 0.896 -0.239E_{\nu} -0.0981E_{\nu}^2 \right) \nn\\
+ &+f_{\,{}^{238}U}\exp\left( 0.976 -0.162E_{\nu} -0.0790E_{\nu}^2 \right) \nn\\
+ &+f_{\,{}^{241}P_u}\exp \left( 0.793 -0.080E_{\nu} -0.1085E_{\nu}^2
+ \right),
+\end{align}
+where $f_k$ denotes the relative fission contribution of the
+isotope $k$ in the reactor fuel derived from the fission rate $N_k^{fiss}$ ($s^{-1}$) of
+isotope $k$ as
+\begin{align}
+f_k \equiv \frac{N_k^{fiss}}{\sum_i N_i^{fiss}}.
+\end{align}
+Although $f_k$ varies over time as the fuel is burned, it can be
+approximated for this type of experiments with the average value of the relative
+fission contributions: $f_{\,{}^{235}U}=0.58,
+\,f_{\,{}^{239}P_u}=0.30, \,f_{\,{}^{238}U}=0.07$ and
+$\,f_{\,{}^{241}P_u}=0.05$~\cite{Zhan:2008id}.
+%the total antineutrino
+%distribution over a long time period
+%is approximately obtained with the averaged values of the relative
+%fission contributions~\cite{Zhan:2008id}: $f_{\,{}^{235}U}=0.58,
+%\,f_{\,{}^{239}P_u}=0.30, \,f_{\,{}^{238}U}=0.07$ and
+%$\,f_{\,{}^{241}P_u}=0.05$.
+%this type of reactor antineutrino experiment uses the accumulated number
+%of antineutrinos over a long period of time.  
+The event rate of antineutrinos with energy $E_{\nu}$ (MeV) at
+a reactor of $P \,(\,{\rm GW_{th}})$ thermal power is then
+expressed as
+\begin{align}
+ \frac{dN}{dE_{\nu}} = \frac{P}{\sum_k f_k \epsilon_k}\phi(E_{\nu}) \times 6.24\times 10^{21},
+% f_i\phi_i(E_{\nu}) \times 6.24\times 10^{21},
+\end{align}where $\epsilon_k$ is the released energy per fission of the
+isotope $k$;
+$\epsilon_{\,{}^{235}U}=201.7~\mbox{MeV}, \epsilon_{\,{}^{239}P_u}=210.0~\mbox{MeV}, \epsilon_{\,{}^{238}U}=205.0~\mbox{MeV}$
+and $\epsilon_{\,{}^{241}P_u}=212.4$ MeV~\cite{Huber:2004xh}. The numerical factor comes 
+from unit conversion $6.24\times 10^{21} =$ 1 GW/MeV.
+
+This rate is then modulated by oscillation. The $\bar{\nu}_e$ survival probability is expressed
+as
+%\footnote{We neglect the earth matter effects here because such
+%effects are not relevant for the energy of reactor antineutrinos and the
+%baseline length studied in this paper.}
+\begin{align}
+ P_{ee} &= \left|\sum_{i=1}^3 U_{ei} \exp\left(-i \frac{m_i^2}{2E_i} \right)
+ U^*_{ei} \right|^2 \nn\\
+&= 1 -\cos^4\theta_{13}\ssol\sin^2\left(\dsol\right) \nn\\
+&\hspace{1.7em} -\cos^2\theta_{12}\srct\sin^2\left(\drct\right) \nn\\
+&\hspace{1.7em} -\sin^2\theta_{12}\srct\sin^2\left(\datm\right),
+\label{pee1}
+\end{align}
+where $U_{ei}$ is the neutrino mixing matrix element
+relating the electron neutrino to the mass eigenstate ${\nu_i}$. The variables $m_i$ and
+$E_i$ are the mass and energy of the corresponding mass eigenstate, 
+while $\theta_{ij}$ represent neutrino mixing angles. The oscillation
+phase $\Delta_{ij}$ are defined as,
+\begin{equation}
+ \Delta_{ij} \equiv \frac{\Delta m^2_{ij}L}{4E_{\nu}}, 
+ \hspace{1em}(\Delta m^2_{ij} \equiv m^2_i -m^2_j),
+\label{deltaij}
+\end{equation}
+with the baseline length $L$.  
+%The contribution of the matter effect is
+%estimated as $\sim 2
+%\times 10^{-6} {\rm eV}^2 \frac{L}{2E_{\nu}}}$, which can be safely neglected, being
+%significantly smaller than the smaller mass squared difference
+%contribution of $\sim 7.5 \times 10^{-5} {\rm
+% eV}^2$\cite{Hagiwara:2011kw}. 
+We have neglected the matter effect because it is
+small enough for the energy range and
+ baseline lengths we concern in this study~\cite{Hagiwara:2011kw}. In
+ obtaining the second line of (\ref{pee1}) we have also ignored the tiny energy
+ difference between the three mass eigenstates, $E_{\nu}\sim
+ E_1\sim E_2\sim E_3$. 
+
+To make the effect of mass hierarchy more clear, we would like to rewrite 
+Eq.~(\ref{pee1}) as,
+\begin{align}
+P_{ee} = 1 &-\cos^4\theta_{13}\ssol\sin^2\left(\dsol\right) \nn\\
+& -\srct\sin^2\left(|\drct|\right) \nn\\
+  &
+ -\sin^2\theta_{12}\srct\sin^2\left(\dsol\right)\cos\left(2|\drct|\right) \nn\\
+& \pm \frac{\sin^2\theta_{12}}{2}\srct\sin\left(\ddsol\right)\sin\left(2|\drct|\right),
+\label{pee2}
+\end{align}
+where only the last term depends on the mass hierarchy, which takes the
+plus and minus sign, respectively, for normal (NH) and inverted
+hierarchy (IH):
+\begin{subequations} %17:47の式群
+\begin{numcases}{\Delta m_{31}^2 \equiv }
+m_3^2 -m_1^2 > 0 \hspace{1em}({\rm NH}) \\
+m_3^2 -m_1^2 < 0  \hspace{1em}({\rm IH}).
+\end{numcases}
+\end{subequations}
+ It is clear from eq.~(\ref{pee2}) that the survival probability is most
+  sensitive to the mass hierarchy when $|\sin(\ddsol)| = 1$, or equivallently
+\begin{subequations}
+\begin{equation}
+\ddsol = (2n-1)\frac{\pi}{2} \hspace{1em} (n = 1,2,3,\cdots), 
+\label{condition1}
+\end{equation}
+and has no sensitivity at
+\begin{equation}
+\ddsol = n\pi \hspace{1em} (n = 0,1,2,3,\cdots).
+\label{condition2}
+\end{equation}
+\end{subequations}
+%
+where $\sin(\ddsol) = 0$.
+For example, at $L=50$ km, the condition (\ref{condition1}) for $n=1$ and 2 is satisfied at $E_{\nu} \sim 6$ MeV
+and 2 MeV, respectively. 
+%Although there is no sensitivity at
+%$E_{\nu}\sim 3$ MeV, at which $\ddsol \sim \pi$ in
+%eq.~(\ref{condition2}), 
+The last term in eq.~(\ref{pee2}) contributes with the opposite sign at these
+first and second maxima. In between, it vanishes and changes sign at $E_{\nu} = 3~\mbox{GeV}$, 
+corresponding to $n = 1$ in (\ref{condition2}). 
+It is this sign change that plays an important role for the mass
+hierarchy determination which will be further discussed in the next section.  
+
+Similar as the current reactor experiments, such as Daya Bay~\cite{DayaBay},
+RENO~\cite{Ahn:2012nd} and Double Chooz~\cite{Abe:2011fz},
+future medium baseline reactor antineutrino experiments can also
+use free protons as target to detect electron antineutrinos via the inverse neutron
+beta decay (IBD) process, %$\bar{\nu}_e +p \rightarrow e^+ +n$.
+\begin{align}
+ \bar{\nu}_e +p \rightarrow e^+ +n.
+\label{IBD}
+\end{align}
+ where $p$ and $n$ are the proton and the neutron, respectively. The threshold neutrino energy of this process is $E_{thr}\sim
+m_n -m_p $, and
+the cross section of this process is~\cite{Vogel:1999zy},
+ \begin{align}
+  \sigma_{IBD} = 0.0952\left( \frac{E_e p_e}{\rm 1MeV^2} \right)\times
+  10^{-42} \,{\rm cm^2},
+%E_e \sim& E_{\nu} -m_n +m_p, \nn\\
+%p_e =& \sqrt{ E_e^2 -m_e^2},
+ \label{xsec}
+ \end{align}
+where $E_e$ and $p_e$ are the energy and momentum of the
+positron, neglecting the kinetic energy of the proton and the
+neutron.  The positron's energy is roughly
+$E_e \sim E_{\nu} -(m_n -m_p)$.
+%The
+%  $\ve$ threshold energy ($E_{thr}$) for this process is $\sim 1.81 {\rm MeV}$,
+%\begin{align}
+% E_{thr} \sim& \,m_n -m_p +m_e \sim \,1.81 \,{\rm MeV},
+%\label{Ethr}
+%\end{align}
+% and the produced positron energy is related to $E_{\nu}$ as
+%The positron energy is related to $E_{\nu}$ as
+%\begin{align}
+% E_e \sim (E_{\nu} -1.3) \,\,{\rm MeV}.
+% E_e \sim E_{\nu} -E_{thr} +m_e
+%\label{Ee}
+%\end{align}
+%with the $\ve$ threshold energy of IBD, $E_{thr} \sim 1.81 {\rm MeV}$,
+%and the positron mass, $m_e$. 
+
+The produced positron then interacts with scintillator, converting its
+kinetic energy to photons. Eventually, the positron annihilates with an
+electron in the detector and emits two 0.5 MeV photons. The total
+energy of those photons are then accumulated as the visible energy,
+$E_{vis}$, which is a sum of the positron's total and one electron's rest energies,
+\begin{align}
+ E_{vis} \sim& E_e +m_e 
+ \sim ( E_{\nu} -0.8 ) \,{\rm MeV} .
+\end{align} 
+
+Finite energy resolution of the detector then distorts the true visible
+energy, $E_{vis}$, to the finally observed one, $E^{obs}_{vis}$.This effect can be modeled by a detector response function $G(E_{vis}
+-E^{obs}_{vis},\delta E_{vis})$ with energy resolution $\delta E_{vis}$. 
+In this study, we take the normalized
+gaussian function as the response function, i.e.,
+\begin{align}
+ G(E_{vis}-E^{obs}_{vis},\delta E_{vis}) = \frac{1}{\sqrt{2\pi}\delta
+ E_{vis}}\exp\left\{ -\frac{ \left(E_{vis} -E^{obs}_{vis}\right)^2  }{ 2(\delta E_{vis})^2
+ } \right\},
+\quad
+\label{eq:G}
+\end{align} 
+The detector energy resolution~\cite{Zhan:2009rs}
+ \begin{align}
+  \frac{ \delta E_{vis} }{E_{vis}} = \sqrt{\left( \frac{ a }{
+  \sqrt{E_{vis}/{\rm MeV}} } \right)^2
+  +b^2},
+ \label{eq:Eres}
+ \end{align}
+is composed of two parts.
+The first term in the square-root represents the statistical uncertainty, and
+the second one gives the systematic uncertainty\cite{Eres}. The observed
+antineutrino distribution by a detector with $N_p$ free protons after an exposure time $T$ can
+then be expressed as
+\begin{align}
+ \frac{dN}{dE^{obs}_{vis}} =&
+ \frac{N_pT}{4\pi L^2}\int^\infty_{E_{thr}} dE_{\nu}
+ \frac{dN}{dE_{\nu}}
+ P_{ee}(L,E_{\nu})\nn\\
+&\times \sigma_{IBD}(E_{\nu}) \,G(E_{\nu}-0.8 {\rm MeV} -E^{obs}_{vis},\delta E_{vis}).
+\label{Nobs}
+\end{align}
+\include{biblio}
+\include{end}

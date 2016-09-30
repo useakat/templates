@@ -1,0 +1,7 @@
+%% comment-k.sty :  exclude/include comment.
+%% 2002.01.01 K.Kodama
+%% See comment.sty for another approach.
+\long\def\ex@comment#1{\relax}
+\def\excomment#1{\expandafter\def\csname #1\endcsname{\ex@comment}}
+\def\incomment#1{\expandafter\def\csname #1\endcsname{\relax}}
+\endinput

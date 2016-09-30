@@ -1,0 +1,24 @@
+# Discription
+
+# INSTALL
+  ./makelib
+
+# PARAMETERS
+  see params.card
+
+# ROUTINES
+  ./run.sh: core program for minimization
+
+# HOW TO RUN
+1. normal mode
+   ./run.sh [run_name] [run_mode] [display] [email]
+   run_mode: 1:Serial mode 2:Parallel mode
+   display: 0: don't display the shell output 1:display the output
+   email: 0:don't send a notification mail when a job is finished 1:send
+
+# Cautions
+  13.MAY.31: accuracy of fiitting parameter should be less than that
+  	     of corresponding true parameter. Otherwise minimization
+	     routine shows numerical instability. 
+
+# Version history
