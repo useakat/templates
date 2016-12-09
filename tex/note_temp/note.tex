@@ -1,0 +1,146 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{url,cite,slashed}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{subfigure}
+\usepackage{color}
+
+\setlength{\textwidth}{16.5cm}
+\setlength{\textheight}{21.5cm}
+\setlength{\oddsidemargin}{-.3 cm}
+\setlength{\evensidemargin}{0cm}
+\setlength{\topmargin}{0cm}
+\setlength{\footskip}{1cm}
+
+\makeatletter
+    \renewcommand{\theequation}{%
+    \thesection.\arabic{equation}}
+    \@addtoreset{equation}{section}
+\makeatother
+
+\renewcommand{\topfraction}{1.0}
+\renewcommand{\bottomfraction}{1.0}
+
+\newcommand{\nn}{\nonumber}
+\newcommand{\order}{{\mathcal O}}
+\newcommand{\invfb}{{\rm fb}^{-1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% remove when submitting
+\newcommand{\rem}[1]{\textcolor{red}{#1}}
+%\newcommand{\rem}[1]{{$\spadesuit$\bf #1$\spadesuit$}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+% \begin{titlepage}
+
+% \begin{center}
+% {\Large \bf 
+% title
+% }
+% \end{center}
+
+% \end{titlepage}
+
+\setcounter{page}{1}
+\renewcommand{\thefootnote}{\#\arabic{footnote}}
+\setcounter{footnote}{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Check of our chi-square test statistics}
+We investigate that how well the definition of the chi-square test
+statistics bellow
+\begin{align}
+ \chi^2 = \sum_{i=1}^{N_{\rm bins}} \frac{(N^{\rm data}_i
+ -\overline{N}_i)^2}{N^{\rm data}_i} 
+\label{eq:ourchi2}
+\end{align}
+approximates the nominal definition
+\begin{align}
+ \chi^2 = \sum_{i=1}^{N_{\rm bins}} \frac{(N^{\rm data}_i
+ -\overline{N}_i)^2}{\sigma_i},
+\label{eq:chi2}
+\end{align}
+which obeys the $\chi^2$ distribution of $N_{\rm bins}$ degrees of
+freedom, where $N^{\rm data}_i$ are assumed to distributes by the normal
+distribution ${\cal N}(\overline{N}_i,\sigma_i)$.
+
+We produced 0.1 million sets of pseudo-data, where each data set is
+consisted with $N_{\rm bins}$ binned event numbers. We then calculate
+the test statistics, Eq.~\eqref{eq:ourchi2}, for each data set and make
+distribution of the test statistics. From the distributions, we estimate
+the statistical significance, $\sigma$ for several values of the test
+statistics. 
+
+Figs. 1, 2 and 3 show the estimated statistical significances for
+different $\overline{N}$ and $N_{\rm bins}$: Fig. 1, 2 and 3 corresponds to $\overline{N} = 1000, 100$ and 20,
+respectively, and $N_{\rm bins}
+= 1, 10 and 50$ from the left to the right panel in each Figure.
+The horizontal axis shows the statistical significance expected for the
+$\chi^2$ distribution of $N_{\rm bins}$ degrees of freedom, and the
+vertical axis shows the estimated statistical significance. The orange
+and blue dots show the results for the nominal definition of the $\chi^2$
+test statistics, Eq.~\eqref{eq:chi2}, and our definition of it, Eq.~\eqref{eq:ourchi2},
+respectively. The red line
+shows the exact results of the $\chi^2$ distribution of $N_{\rm bins}$
+degrees of freedom. 
+\begin{figure}[ht]
+ \centering
+\resizebox{1.0\textwidth}{!}{
+\includegraphics[width=1.0\textwidth]{figures/Nbar=1000.pdf}
+}
+  \caption{The estimated statistical significance as a function of the
+ expected significance in the case of the $\chi^2$ distribution of
+ $N_{\rm bins}$ d.o.f. $\overline{N} = 1000$. $N_{\rm bins} = 1, 10$ and
+ 50 from the left to the right panel. The orange
+and blue dots show the results for the nominal definition of the $\chi^2$
+test statistics, Eq.~\eqref{eq:chi2}, and our definition of it, Eq.~\eqref{eq:ourchi2},
+respectively. The red line
+shows the exact results for the $\chi^2$ distribution of $N_{\rm bins}$
+degrees of freedom.}
+\label{fig:nbar=1000}
+\end{figure}
+
+\begin{figure}[ht]
+ \centering
+\resizebox{1.0\textwidth}{!}{
+\includegraphics[width=1.0\textwidth]{figures/Nbar=100.pdf}
+}
+  \caption{Same as Fig.~\ref{fig:nbar=1000}, but $\overline{N} = 100$.}
+\label{fig:nbar=100}
+\end{figure}
+
+\begin{figure}[ht]
+ \centering
+\resizebox{1.0\textwidth}{!}{
+\includegraphics[width=1.0\textwidth]{figures/Nbar=20.pdf}
+}
+  \caption{Same as Fig.~\ref{fig:nbar=1000}, but $\overline{N} = 20$.}
+\label{fig:nbar=20}
+\end{figure}
+
+From the figures we see that our definition of the test
+statistics approximate the nominal definition well only for $\overline{N}
+> 1000$. Our definition may be used for rough estimation of the
+statistical significance for $\overline{N}\sim \order(100)$. However,
+for less $\overline{N}$, our definition gives significantly different
+significances from the nominal
+definition. This can be seen from the $\overline{N} = 20$ cases. 
+The approximation gets worse for larger $N_{\rm bins}$ cases in all the
+$\overline{N}$ cases. 
+
+We conclude that our definition of the test statistics should not be
+used for data sets where event numbers in each bin is at most $\order(10)$. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Acknowledgements}
+This note is written in replying to the referee comments for our
+manuscript ``Revisiting T2KK and T2KO physics potential and
+$\nu_\mu$-$\bar{\nu}_\mu$ beam ratio''.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\bibliographystyle{../../draft/biblio/general}
+%\bibliography{../../draft/biblio/reference}
+
+\end{document}
