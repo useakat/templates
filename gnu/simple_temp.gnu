@@ -2,7 +2,8 @@
 #{/Symbol ~n{.4-}}
 ##########################################################################
 fix_bbox = 0  # 0:Do not fix Bounding Box of an eps file  1:Fix Bounding Box
-pdf_output = 1  # 0:no pdf conversion 1:pdf conversion
+eps_output = 0  # 0:no eps output 1:eps output
+pdf_output = 1  # 0:no pdf output 1:pdf output
 ####################### Definitions ######################################
 file1 = 'ae_xsec.dat'
 c1 = 'red'			
@@ -62,3 +63,5 @@ if (fix_bbox == 1) \
    ; command = "rm -rf tmp.eps"; system command
 if (pdf_output == 1) \
    command = sprintf("ps2pdf -dEPSCrop %s", output_file); system command
+if (eps_output == 0) \
+   command = "rm -rf *.eps"; system command
